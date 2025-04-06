@@ -3,6 +3,10 @@ include <materials.scad>
 use <functions.scad>
 use <polyedge.scad>
 
+//
+// Fridge
+// 
+
 // Bushman DC85-X Fridge
 fridgeMain = [475, 500, 625];
 fridgeDoor = [475, 50, 625];
@@ -100,7 +104,6 @@ cutout = [[0,0,r2], [0,d-c,r1], [c,d,r1], [w-c,d,r1], [w,d-c,r1], [w,0,r2]];
 
 function sink() = sink;
 
-$fn=40;
 module Sink() {
 	difference() {
 		color("Silver") linear_extrude(sink[height]) polyedge(sinkPoly);
@@ -124,6 +127,9 @@ difference() {
 	}
 }
 
+//
+// Hob
+// 
 safierySingle = [276, 366, 65];
 safieryDual = [290, 520, 55];
 safierySingleCutout = [252, 342, benchThickness+10];
@@ -155,38 +161,3 @@ module HobCutout() {
 	translate([0,0,-5]) cube(hobCutout);
 }
 
-thetford335 = [342,382,313];
-thetford345 = [383,427,330];
-thetford365 = [383,427,414];
-toilet = thetford345;
-
-function toilet() = toilet;
-
-module Toilet() {
-	r = 50;
-	bottom = 50;
-	middle = 50;
-	top = toilet[z] - bottom - middle;
-	color(vividWhite)
-	translate([r,r,0]) linear_extrude(bottom) offset(r=r) square(toilet[x]-2*r,toilet[y]-2*r);
-	color("grey")
-	translate([r,r,bottom]) linear_extrude(middle) offset(r=r) square(toilet[x]-2*r,toilet[y]-2*r);
-	color(vividWhite)
-	translate([r,r,bottom+middle]) linear_extrude(top) offset(r=r) square(toilet[x]-2*r,toilet[y]-2*r);
-	translate([50,0,150]) rotate([90,0,0]) color("black") text("Toilet Front", size=40);
-}
-
-CAN_SB39 = [550, 390, 200];
-CAN_SB57 = [550, 390, 290];
-Vetus42 = [610, 350, 400];
-Vetus61 = [780, 350, 400];
-
-waterTank = CAN_SB57;
-
-function tank() = waterTank;
-function tankGap() = [10,10,50];
-
-module WaterTank() {
-	color("green") cube(waterTank);	
-	translate([50,0,100]) rotate([90,0,0]) color("black") text("Water Tank 57 litres", size=40);
-}

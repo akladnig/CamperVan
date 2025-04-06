@@ -1,16 +1,22 @@
 include <van_dimensions.scad>
+include <dimlines.scad>
 include <materials.scad>
 
+use <common.scad>
 // Double Bed
 bedLength = 1880;
 bedWidth = 1240;
 
 // Matresses
 clarkRubberComfortDeluxe = [1880, 1220, 100]; 
+clarkRubberComfortDeluxe2 = [1840, 1220, 100]; 
 clarkRubber = 142; 
 newentor = 220;
 
-mattress= clarkRubberComfortDeluxe;
+mattress = clarkRubberComfortDeluxe2;
+
+// Head Board
+headBoardBox = [mattress[width],150,380];
 
 // Couch
 // Is made from mattress and cut into 3x pieces
@@ -19,12 +25,13 @@ mattress= clarkRubberComfortDeluxe;
 // 
 // Build a test frame using a single slat to confirm lengths and operation
 // 
-seatWidth  = 553.5-hingeClosed[z]/2; // - hinge depths
+seatWidth  = 557-hingeClosed[z]/2; // - hinge depths
 seatHeight = 460;
 backShelf = 100;
-angle = 14;
+headBoardShelf = [mattress[y], headBoardBox[y], slatDepth];
+angle = 15;
 
-base = [bedWidth,850,seatHeight-mattress[height]];
+base = [mattress[width],850,seatHeight-mattress[height]];
 
 function base() = base;
 
@@ -43,7 +50,6 @@ function sofaBedWidth() = base[width] + mattress[height] + slatDepth + rearDoorC
 
 
 module sofaBed(sofaMode, perforatedPanel, showPanels) {
-	// supportFrame();
 	module sofaBedPanel(perforatedPanel, panelWidth) {
 		if (perforatedPanel) {
 			sofaBedPerforatedPanel(panelWidth);
@@ -72,16 +78,13 @@ module sofaBed(sofaMode, perforatedPanel, showPanels) {
 			translate([base[width]-backShelf-slatDepth-hingeClosed[z],0,base[height]]) {
 		    rotate([0,90,0])
 		    rotate([0,0,90])
-				union() {
-			    sofaBedPanel(perforatedPanel, rearSupport);
-					translate([slatDepth+5,0,-slatDepth])
-					color(woodColour) cube([base[length]-2*slatDepth-10,slatWidth,slatDepth]);
-				}
+		    sofaBedPanel(perforatedPanel, rearSupport);
 			}
-	}
-	translate([base[width]-backShelf,0,base[height] - slatDepth]) {
-		color(woodColour) cube([backShelf, base[length], slatDepth]);
-	}
+
+			translate([base[width]-backShelf,0,base[height] - slatDepth]) {
+				color(woodColour) cube([backShelf, base[length], slatDepth]);
+			}
+		}
 
 	// Bed Mode
 	} else {
@@ -110,9 +113,10 @@ module sofaBed(sofaMode, perforatedPanel, showPanels) {
 		    rotate([0,0,90])
 		    sofaBedPanel(perforatedPanel, rearSupport);
 			}
-		}
-		translate([base[width]-backShelf,0,base[height] - slatDepth]) {
-			color(woodColour) cube([backShelf, base[length], slatDepth]);
+		
+			translate([base[width]-backShelf,0,base[height] - slatDepth]) {
+				color(woodColour) cube([backShelf, base[length], slatDepth]);
+			}
 		}
 	}
 }
@@ -217,29 +221,40 @@ module sofaBedSlatPanel(panelWidth) {
 //
 
 module sofaBedPerforatedPanel(panelWidth) {
-	radius = 38;
-	gap = 15;
+	diameter = 86;
+	radius = diameter/2;
+	gap = round(0.2*radius+15);
 	rg = radius + gap;
 
 	n = round((base[length]-2*rg)/2/rg);
 	m = round((panelWidth-4*rg)/3.464/rg);
 
-	xoffset = (base[length]-2*n*rg)/2;
-	yoffset = (panelWidth - 2*(1+m*1.732)*rg)/2;
+	xoffset = round((base[length]-2*n*rg)/2);
+	yoffset = round((panelWidth - 2*(1+m*1.732)*rg)/2);
 
+	if (yoffset > 2*radius) {
+		newGap = (panelWidth-(2+m)*diameter)/(m+1);
+		echo(gap=gap, newGap=newGap);
+	}
 	echo(n=n, m=m, xoff=xoffset, yoff=yoffset);
 
 	difference() {
 		color(woodColour)
 		cube([base[length], panelWidth, slatDepth]);
+		color("white") translate([0,0,slatDepth]) dim_dimension(length=(xoffset+gap), loc="right", weight=$weight, offset=50);
+		color("white") translate([0,panelWidth,slatDepth]) rotate([0,0,-90]) dim_dimension(length=(yoffset+gap), loc="right", weight=$weight, offset=50);
+		color("white") translate([200,panelWidth-yoffset-gap-diameter,slatDepth]) rotate([0,0,-90]) dim_dimension(length=gap, loc="left", weight=$weight, offset=50);
+
 		for (i = [0:n-1]) {
 			for (j = [0:m]) {
-				translate([xoffset + rg + i*2*rg,yoffset+rg+j*3.464*rg,-1]) cylinder(h=slatDepth+2,r=radius);
+				translate([xoffset + rg + i*2*rg,yoffset+rg+j*3.464*rg,-1])
+				cylinder(h=slatDepth+2,r=radius);
 			}
 		}
 		for (i = [0:n-2]) {
 			for (j = [0:m-1]) {
-				translate([xoffset + 2*rg + i*2*rg,yoffset+2.732*rg+j*3.464*rg,-1]) cylinder(h=slatDepth+2,r=radius);
+				translate([xoffset + 2*rg + i*2*rg,yoffset+2.732*rg+j*3.464*rg,-1])
+				cylinder(h=slatDepth+2,r=radius);
 			}
 		}
 	}
@@ -248,119 +263,17 @@ module sofaBedPerforatedPanel(panelWidth) {
 overhang = 50;
 
 //
-// Internal support panel
-//
-module internalSupport() {
-
-	// Top Support
-	translate([slatDepth+overhang,0,base[height]-slatWidth-slatDepth]) {
-    color(woodColour5) 
-		cube([base[width]-2*slatDepth-overhang, slatDepth, slatWidth]);
-	}
-
-	// Bottom Support
-	translate([slatWidth+overhang,0,slatDepth]) {
-    color(woodColour5) 
-		cube([base[width]-2*slatWidth-overhang, slatDepth, slatWidth]);
-	}
-
-	// Left Support
-	translate([overhang,0,slatDepth]) {
-    color(woodColour) 
-		cube([slatWidth, slatDepth, base[height]-slatWidth-2*slatDepth]);
-	}
-
-	// Right Support
-	translate([base[width]-slatWidth,0,slatDepth]) {
-    color(woodColour) 
-		cube([slatWidth, slatDepth, base[height]-slatWidth-2*slatDepth]);
-	}
-}
-
-//
-// Support frame
-//
-module supportFrame() {
-	
-	// OuterFrame
-	outerFrameOffset = wheelArch[width]+slatDepth;
-	translate([0,outerFrameOffset,0]) {
-		internalSupport();
-	}
-
-	// MiddleFrame
-	middleFrameOffset = (base[length]+wheelArch[width]-slatDepth)/2;
-	translate([0,middleFrameOffset ,0]) {
-		internalSupport();
-	}
-
-	// InnerFrame
-	innerFrameOffset = base[length]-2*slatDepth; 
-	translate([0,innerFrameOffset,0]) {
-		internalSupport();
-	}
-
-	frontPlateLength = base[length]-wheelArch[width]-2*slatDepth;
-	frontPlateOffset = wheelArch[width]+slatDepth;
-
-	// Front Top Plate
-	translate([overhang,frontPlateOffset ,base[height]-slatWidth-slatDepth]) {
-		color(woodColour3)
-		cube([slatDepth, frontPlateLength , slatWidth]);
-	}
-
-	// Rear Top Plate
-	translate([base[width]-slatDepth,frontPlateOffset ,base[height]-slatWidth-slatDepth]) {
-		color(woodColour3)
-		cube([slatDepth, frontPlateLength , slatWidth]);
-	}
-
-	// Front Bottom Plate
-	translate([overhang,frontPlateOffset ,0]) {
-		color(woodColour3)
-		cube([slatWidth, frontPlateLength , slatDepth]);
-	}
-
-	// Rear Bottom Plate
-	translate([base[width]-slatWidth,frontPlateOffset ,0]) {
-		color(woodColour3)
-		cube([slatWidth, frontPlateLength , slatDepth]);
-	}
-
-	sidePlateLength = base[width]-2*slatWidth-overhang;
-
-	// Outer frame bottom plate
-	translate([slatWidth+overhang,outerFrameOffset,0]) {
-		color(woodColour6)
-		cube([sidePlateLength, slatWidth, slatDepth]);
-	}
-
-	// Middle frame bottom plate
-	translate([slatWidth+overhang,middleFrameOffset-slatWidth/2+slatDepth/2,0]) {
-		color(woodColour6)
-		cube([sidePlateLength, slatWidth, slatDepth]);
-	}
-
-	// Inner frame bottom plate
-	translate([slatWidth+overhang,innerFrameOffset-slatWidth+slatDepth,0]) {
-		color(woodColour6)
-		cube([sidePlateLength, slatWidth, slatDepth]);
-	}
-
-}
-
-//
 // Outer Sliding Support frame
 //
 module outerSlidingSupport() {
 
-	supportX = base[width]-wheelArchOffset-2*slatWidth-slatDepth-overhang;
+	supportX = base[width]+headBoardBox[y]-wheelArchOffset-2*slatWidth-slatDepth-overhang;
 	offsetX = supportX+overhang+slatWidth;
 
 	// Top Support
 	translate([overhang,0,base[height]-slatWidth-slatDepth]) {
     color(woodColour) 
-		cube([base[width]-wheelArchOffset-slatWidth, slatDepth, slatWidth]);
+		cube([supportX+2*slatWidth, slatDepth, slatWidth]);
 	}
 
 	// Bottom Support
@@ -414,6 +327,7 @@ module innerSlidingSupport() {
 		cube([slatWidth, slatDepth, base[height]-slatWidth-slatDepth]);
 	}
 }
+
 //
 // Outer frame is attached to the seatSlat and is pulled out to transform from Sofa to Bed
 //
@@ -437,13 +351,30 @@ module outerSlidingFrame() {
 
 	// Front Legs
 	translate([overhang-slatDepth,wheelArch[width],0]) {
-    color(woodColour2) 
-		cube([slatDepth, legWidth, base[height]-slatDepth]);
+    color(woodColour2)
+		difference() {
+			cube([slatDepth, legWidth, base[height]-slatDepth]);
+			translate([-0.1,slatDepth,base[height]-slatDepth-ply15-spacing])
+			cube([slatDepth+0.2,legWidth-slatDepth+0.1,ply15+spacing+0.1]);
+		}
 	}
 
 	translate([overhang-slatDepth,base[length]-legWidth-slatDepth,0]) {
     color(woodColour2) 
-		cube([slatDepth, legWidth, base[height]-slatDepth]);
+		difference() {
+			cube([slatDepth, legWidth, base[height]-slatDepth]);
+			translate([-0.1,-0.1,base[height]-slatDepth-ply15-spacing])
+			cube([slatDepth+0.2,legWidth-slatDepth+0.1,ply15+spacing+0.1]);
+		}
 	}
 }
 
+//
+// Head Board Box
+// 
+function headBoardBox() = headBoardBox;
+
+module HeadBoardBox() {
+	rotate([0,0,90])
+	OpenBox(box=headBoardBox, colour=woodColour);
+}

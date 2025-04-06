@@ -9,7 +9,8 @@ vanInternal = [2700, 1760, 1340];
 rearDoorWidth = 1500;
 step = [1010, 215,200];
 stepOffset = 160;
-frontSeatOffset = 230;
+// frontSeatOffset = 230;
+frontSeatOffset = 160;
 
 vi = vanInternal;
 r = 20;

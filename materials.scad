@@ -23,16 +23,32 @@ gap = 10; // gap between appliances and panels
 spacing = 2; // spacing between doors/draws and cupboard panels
 lip = 10; // lip over benchtop
 
-benchThickness = 16;
-panelDepth = 16;
-ply6= 6;
-ply9= 9;
-ply12 = 12;
+// Use Gaboon Ply - sheet size is 2400x1200
+ply3= 3; // 4.5kg
+ply6= 6; // 9kg
+ply9= 9; // 13.4kg
+ply12 = 12; // 19.9kg
 ply15 = 15;
-ply18 = 18;
+ply18 = 18; // 26.8kg
+
+panelDepth = ply15;
+benchThickness = ply15;
+
+panelPly = ply3;
+boxPly = ply6;
+facePly = ply12;
+shelfPly = ply12;
+
+plyMm = panelPly + facePly;
+benchPly = ply15;
+framingPly = ply12;
+framingWidth = 50;
 
 slatWidth = 64;
-slatDepth = 19;
+slatDepth = ply15;
+slat = [64,19];
+
+rail = [64,19];
 
 hingeClosed = [75, 35, 3];
 

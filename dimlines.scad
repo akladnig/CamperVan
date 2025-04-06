@@ -286,14 +286,15 @@ function text_or_length(length, text, prefix="") =
  * weight: Thickness of the line relative to dim_linewidth(). With default
  *         values, this will draw a 1pt thickness line.
  * loc: Position of label
- * offset: If set, offset dimension line by this value and draw extension lines
+ * offset: If set, offset dimension line by this value and draw extension line
+ * ext: If set (default) will draw the extension line
  * center: (bool) Center dimension line across the x axis if true.
  *
  * This module draws a dimensioned line with a label. By default it draws the
  * line broken with the label in the middle. Placement of the label and
  * dimension lines can be controlled with the 'loc' argument.
  */
-module dim_dimension(length, text=undef, weight=1, loc=undef, offset=undef, center=false)
+module dim_dimension(length, text=undef, weight=1, loc=undef, offset=undef, center=false, ext=true)
 {
     _label = text_or_length(length, text);
     space = len(_label) * dim_fontsize();
@@ -336,7 +337,7 @@ module dim_dimension(length, text=undef, weight=1, loc=undef, offset=undef, cent
         }
     }
 
-    if (offset)
+    if (offset && ext)
          for (x=[xoff,xoff+length])
             translate([x,0]) rotate([0,0,offset < 0 ? -90 : 90])
                 translate([dim_linewidth()*2,0])
