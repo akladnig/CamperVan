@@ -121,23 +121,16 @@ module Kitchen(showCupboardDoors, doorOpen, rightOpening) {
 
     // Right side panel of bench
     translate([bench[length],champfer+plyMm,0])
-        color(woodColour) cube([panelPly, cupboard[width]+lip-plyMm, vanInternal[height]]);
+		KitchenBenchEndPanel();
+        // color(woodColour) cube([panelPly, cupboard[width]+lip-plyMm, vanInternal[height]]);
 
-    // Water Tank top panel
+    // Water Tank top shelf
     translate([
         fridgePanelRight+plyMm,
         champfer+plyMm,
         tank()[height]+tankGap()[z]
     ])
     color(woodColour3) cube([2*kitchenCupboardWidth+4*plyMm, cupboard[width]+lip-plyMm, shelfPly]);
-
-		// Water Tank side panel
-		translate([
-        fridgePanelRight+plyMm+tankGap()[x]+tank()[x]+tankGap()[x],
-		    champfer+plyMm,
-		    0
-		])
-		color(woodColour) cube([panelPly, cupboard()[width], tank()[height]+tankGap()[z]]);
 
     // Fridge
     // airgap is inlcuded in fridge depth

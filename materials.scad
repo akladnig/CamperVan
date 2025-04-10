@@ -44,6 +44,8 @@ benchPly = ply15;
 framingPly = ply12;
 framingWidth = 50;
 
+floorPly = ply9;
+
 slatWidth = 64;
 slatDepth = ply15;
 slat = [64,19];

@@ -73,7 +73,7 @@ module Table(showDims) {
 }
 
 //
-// Lagun Table Design
+// Lagun Table
 // 
 lagunTable = [750,500,750];
 function lagunTable() = lagunTable;
@@ -101,5 +101,5 @@ module LagunTable(showDims) {
 }
 
 module Cupboard(showDoors) {
-  translate([frontSeatOffset+bench()[x]+kitchenCupboardWidth,vi[y]-cupboard[width]+lip-plyMm,0]) color(woodColour) cube([panelPly, cupboard[width]+lip-plyMm, vanInternal[height]]);
+  translate([vi[x]-wheelArchOffset,vi[y]-cupboard[width]+lip-plyMm,0]) color(woodColour) cube([panelPly, cupboard[width]+lip-plyMm, vanInternal[height]]);
 }

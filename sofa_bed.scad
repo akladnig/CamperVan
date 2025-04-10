@@ -376,5 +376,5 @@ function headBoardBox() = headBoardBox;
 
 module HeadBoardBox() {
 	rotate([0,0,90])
-	OpenBox(box=headBoardBox, colour=woodColour);
+	OpenBox(box=headBoardBox, openSide="top", colour=woodColour);
 }

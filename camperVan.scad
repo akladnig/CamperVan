@@ -1,14 +1,15 @@
 include <constants.scad>
 include <materials.scad>
 include <van_dimensions.scad>
-
 use <functions.scad>
+
 use <kitchen_bench.scad>
+include <cabinets.scad>
 use <sofa_bed.scad>
 use <appliances.scad>
 use <water.scad>
-include <cabinets.scad>
 use <electrical.scad>
+use <heater.scad>
 use <storage.scad>
 
 use <draw_dimensions.scad>
@@ -66,19 +67,14 @@ if (storeTable || !sofaMode) {
     Table(showTableDimensions);
 }
 }
-railLength = vi[x] - base()[width] - stepOffset-step[x];
+railLength = vi[x] - base()[width] - stepOffset - step[x];
+echo(railLength=railLength);
 translate([stepOffset+step[x],cladding,tableHeight-rail[x]]) cube([railLength,rail[y],rail[x]]);
 
 //
 // Kitchen
 // 
 Kitchen(showCupboardDoors, fridgeDoorOpen, fridgeRightOpening);
-
-// Pullout vertical draw behind driver's seat
-// frontDraw = [frontSeatOffset,bench()[width], 680];
-// translate([0,vi[width]-frontDraw[width],0]) rotate([0,15,0]) cube([plyMm, frontDraw[width], 1035]);
-
-// cupboard depth =  spacing = 383 + 20 = 403
 
 //
 // CupBoard
@@ -131,37 +127,28 @@ translate([vanInternal[length], base()[width]-3*slatDepth-cladding+toilet()[widt
 }
 
 // WaterTank
-waterTankPanelOffset = wheelArchFrontOffset - plyMm - cladding;
+waterTankPanelOffset = vi[x]-wheelArchOffset-tank()[x]-gap;
 translate([
-    // waterTankPanelOffset - tank()[length]+plyMm,
-    vi[x]-wheelArchOffset-tank()[x]-gap,
+    waterTankPanelOffset,
     vanInternal[width] - tank()[width] - gap,
     0
 ])
 WaterTank();
 
 // Hot Water
-// translate([vi[x]-hotWater()[x], vi[y]-hotWater()[y]])
-// HotWater();
+translate([waterTankPanelOffset-2*hotWater()[y]-gap, vi[y]-cladding])
+translate([hotWater()[y],0,0]) rotate([0,0,-90]) HotWater();
 
-// Gas Bottle
-translate([vi[x]-gasBottle()[diameter]/2-gap, vi[y]-gasBottle()[diameter]/2-cladding])
-GasBottle();
+// Water Pump
+translate([panel2,vi[y]-pump()[x]-cladding,0]) Pump();
 
-// Shower
-// clearance between top of gas bottle and shower base
-clearance = 150;
-translate([vi[x], vi[y]-shower()[x],gasBottle()[h]+clearance])
-rotate([0,0,90])
-Shower();
-
-// Jerry Can - 22l
-// model = "dw";
-// translate([
-//     frontSeatOffset+bench()[x]+cupboard[width]-hotWaterContainer(model=model)[x],
-//     vi[y]-wheelArch[width]-hotWaterContainer(model=model)[y]-20])
-// rotate([0,0,0])
-// HotWaterContainer(model);
+// Water Filter
+translate([
+    panel2+filter()[diameter]/2,
+    vi[y]-cladding-filter()[diameter]/2,
+    tank()[z]+tankGap()[z]
+])
+Filter("twin");
 
 //
 // Electrics
@@ -203,4 +190,18 @@ zoff=pack("overland")[x];
 translate([xoff,yoff,zoff]) rotate([90,90,0]) Pack(model="overland");
 translate([xoff-pack("overland")[y],yoff,zoff]) rotate([90,90,0]) Pack(model="overland");
 
+//
+// Heater
+//
+translate([stepOffset+step[x]-heater()[x],290-heater()[y],-step[z]]) Heater("separated");
+// translate([panel2+hotWater()[y]+heater()[y],vi[y]-heater()[x],0]) rotate([0,0,90])
+// Heater("separated");
+translate([heater()[y],vi[y]-heater()[x],0]) rotate([0,0,90])
+Heater("vertical");
+echo(panel2=panel2);
 Dimensions();
+
+//
+// Floor Filler
+//
+color(woodColour) translate([stepOffset+doorOpening,0,-floorPly]) DoorFill();

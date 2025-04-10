@@ -88,16 +88,39 @@ module KitchenMiddlePanel() {
 	color(woodColour6) translate([panelPly,0,benchFrameHeight-drawHeight-framingWidth])
 	cube([framingPly,cupboard()[width], framingWidth]);
 
-	// Bottom Shelf Plate
-	color(woodColour6) translate([panelPly,0,tank()[height]+tankGap()[z]-framingWidth])
-	cube([framingPly,cupboard()[width], framingWidth]);
-
 	// Bottom Plate
 	color(woodColour6) translate([panelPly,0,0])
 	cube([framingPly,cupboard()[width], framingWidth]);
 }
 
 module KitchenBenchEndPanel() {
+
+	drawHeight = 150;
+	panelHeight = vi[z]-wheelArch[z];
+	verticalPlate = panelHeight;
+
+	// The Panel
+  color(woodColour) translate([0,0,wheelArch[z]]) cube([panelPly, cupboard()[width], panelHeight]);
+
+	// Front Plate
+	color(woodColour5) translate([panelPly,0,wheelArch[z]-framingWidth])
+	cube([framingPly,framingWidth,verticalPlate]);
+
+	// Rear Plate
+	color(woodColour5) translate([panelPly,cupboard()[width]-framingWidth,framingWidth])
+	cube([framingPly,framingWidth,verticalPlate]);
+
+	// Top Plate
+	color(woodColour6) translate([panelPly,0,benchFrameHeight-framingWidth])
+	cube([framingPly,cupboard()[width], framingWidth]);
+
+	// Top Draw Plate
+	color(woodColour6) translate([panelPly,0,benchFrameHeight-drawHeight-framingWidth])
+	cube([framingPly,cupboard()[width], framingWidth]);
+
+	// Bottom Plate
+	color(woodColour6) translate([panelPly,0,0])
+	cube([framingPly,cupboard()[width], framingWidth]);
 }
 
 module CupboardMiddlePanel() {

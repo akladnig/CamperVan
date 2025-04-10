@@ -14,6 +14,7 @@ Cardboard cutouts
 ## Kitchen Bench
 - [ ] Rebate van floor by say 4mm and mount panels into the rebate
 - [ ] Bottom shelf cutout notches
+- [ ] Rubbish bin
 
 ## Fridge Table
 - [ ] How

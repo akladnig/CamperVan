@@ -3,6 +3,8 @@ include <materials.scad>
 include <van_dimensions.scad>
 include <common_dimensions.scad>
 
+use <common.scad>
+
 //
 // Toilet
 // 
@@ -28,6 +30,26 @@ module Toilet() {
 }
 
 //
+// HotWater
+// 
+
+// Volume = 29l
+duoettoMk2 = [430,250,270];
+// Volume = 33l
+duoettoG3 = [450,275,265];
+// Volume = 40l
+girard = [317.5,317.5,393.7];
+
+hotWater = duoettoMk2;
+
+function hotWater() = hotWater;
+
+module HotWater() {
+	color("white") cube(hotWater);
+	color("blue") translate([50,0,100]) rotate([90,0,0]) text("Duoetto Mk2", size=40);
+}
+
+//
 // Water Tank
 // 
 CAN_SB39 = [550, 390, 200];
@@ -40,7 +62,8 @@ Vetus61 = [780, 350, 400];
 a = 300;
 b = cupboard[y]-wheelArch[y]-gap;
 
-tank = [a+wheelArch[x], cupboard[y]-gap-framingPly, wheelArch[z]+cladding];
+tankGap = [10,10,50];
+tank = [a+wheelArch[x], cupboard[y]-gap-framingPly, hotWater[z]-tankGap[z]];
 
 custom = [
 	[0,0],
@@ -51,16 +74,56 @@ custom = [
 	[tank[length],0],
 ] ; //97.5 litres
 
-volume = (tank[length]*tank[width]-wheelArch[x]*(wheelArch[y]+gap))*wheelArch[z]/1000/1000;
+volume = (tank[length]*tank[width]-wheelArch[x]*(wheelArch[y]+gap))*tank[z]/1000/1000;
 tankStr = str("Water Tank ", floor(volume), " litres"); 
 
 function tank() = tank;
 function tankGap() = [10,10,50];
 
 module WaterTank() {
-	echo(volume=volume);
-	color("green") linear_extrude(wheelArch[z]) polygon(custom);	
+	echo(tank=tank);
+	color("green") linear_extrude(tank[z]) polygon(custom);	
 	translate([50,0,100]) rotate([90,0,0]) color("black") text(tankStr, size=40);
+}
+
+//
+// Water Pump
+//
+seaflo43 = [114.5,111,202.5];
+
+pump = seaflo43;
+
+function pump() = pump;
+
+module Pump() {
+	color("orange") cube(pump);
+}
+
+//
+// Water Filter
+// 
+//  https://www.filtersystemsaustralia.com.au/heavy-duty-single-outdoor-caravan-water-filter-system-watermark-certified-gt1-0.html
+
+FSAFilter = [380,150];
+FSAFilterTwin = [235,130,235];
+FSAFilterTwinD = [190,105];
+
+filter = FSAFilter;
+
+function filter(type) = type == "single" ? FSAFilter : FSAFilterTwin;
+
+module Filter(type) {
+	if (type == "single") {
+		color("blue") cylinder(h=filter[h], d=filter[diameter]);
+	} else {
+		color("white") {
+			translate([-FSAFilterTwinD[diameter]/2,FSAFilterTwinD[diameter]/2,FSAFilterTwinD[h]]) cube([FSAFilterTwin[x],5, FSAFilterTwin[z]-FSAFilterTwinD[h]]);
+			cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
+			translate([FSAFilterTwin[x]-FSAFilterTwinD[diameter],0,0])
+			cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
+		}
+		// cube(FSAFilterTwin);
+	}
 }
 
 //
@@ -87,21 +150,10 @@ module HotWaterContainer(model) {
 }
 
 //
-// HotWater
-// 
-
-duoettoG3 = [450,275,265];
-hotWater = duoettoG3;
-
-function hotWater() = hotWater;
-
-module HotWater() {
-	color("white") cube(hotWater);	
-}
-
-//
 // Shower
 // 
+
+// Volume = 22l
 joolca = [290,170,450];
 
 shower = joolca;
@@ -129,12 +181,12 @@ module GasBottle() {
 }
 
 //
-// Heater
-// 
-vevorVertical = [150, 380, 410];
-heater = vevorVertical;
-function heater() = heater;
+// Gas Bottle Storage Box
+//
+gasBox = [310,400,390];
 
-module Heater() {
-	cube(heater);
+function gasBox() = gasBox;
+
+module GasBox() {
+	OpenBox(gasBox,"front", "white");
 }

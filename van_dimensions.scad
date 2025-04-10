@@ -8,9 +8,10 @@ vanExternal = [5265, 1950, 1990];
 vanInternal = [2700, 1760, 1340];
 rearDoorWidth = 1500;
 step = [1010, 215,200];
-stepOffset = 160;
-// frontSeatOffset = 230;
-frontSeatOffset = 160;
+stepOffset = 130;
+frontSeatOffset = 130;
+
+doorOpening = 520;
 
 vi = vanInternal;
 r = 20;
@@ -54,4 +55,8 @@ difference() {
 	}
 	translate([stepOffset,-0.1,0.1]) color("green") cube(step);
 	}
+}
+
+module DoorFill() {
+	cube([step[x]-doorOpening, step[y],floorPly]);
 }
