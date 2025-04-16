@@ -13,6 +13,8 @@ The electrical system for the camper van needs to power the following devices:
 - Water Pump -
 - Lights & Fan - 
 
+![schematic](schematic.png)
+
 The power system needs to provide off-grid power for 3 days, which required a 4.8kW or 400Ah battery system.
 
 Since 12V, 400A would require massive fuses, switches and cable etc. I've decided to run the system as 2x isolated batteries, rather than in parallel. This will reduce the need for 400A fuses and switches to 200A fuses ans switches.
@@ -34,5 +36,11 @@ Automatic mode will select the battery to use for powering appliances. When the 
 Automatic mode will also swap chargers during driving to ensure the optimum charge time for both batteries. When the ignition is off, charging via solar cells will automatically switch to the second battery when the first is fully charged.
 
 Schematic design software used is [Kicad](https://www.kicad.org/)
+
+## TODO
+ - add RS485 interfaces to the Duetto Hot Water heater and 20A DC-DC battery charger
+ - add an Oled touch panel
+ - ignition switch input
+
 
 
