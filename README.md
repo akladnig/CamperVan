@@ -1,5 +1,8 @@
 # CamperVan
 
+## Design
+I used [OpenScad](https://openscad.org/) to do the campervan design. Whilst I have used SketchUp in the past OpenScad appealed to me more as it is a programmers CAD program plus it is a parametric CAD program which allow me to quickly change a parameter to see how it affects the van layout e.g. visualising the Sofa Bed as a Sofa or a Bed, or easily changing the width of a cupboard, which would cause all other dependent cupboards to adjust accordingly.
+
 ## Electrical System
 
 The electrical system for the camper van needs to power the following devices:
