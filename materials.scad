@@ -19,10 +19,6 @@ woodColour = woodColour4;
 
 couchCushionColour = "LightSkyBlue";
 
-gap = 10; // gap between appliances and panels
-spacing = 2; // spacing between doors/draws and cupboard panels
-lip = 10; // lip over benchtop
-
 // Use Gaboon Ply - sheet size is 2400x1200
 ply3= 3; // 4.5kg
 ply6= 6; // 9kg
@@ -31,18 +27,17 @@ ply12 = 12; // 19.9kg
 ply15 = 15;
 ply18 = 18; // 26.8kg
 
-panelDepth = ply15;
-benchThickness = ply15;
-
 panelPly = ply3;
 boxPly = ply6;
 facePly = ply12;
 shelfPly = ply12;
 
-plyMm = panelPly + facePly;
-benchPly = ply15;
+// benchPly = ply15;
 framingPly = ply12;
 framingWidth = 50;
+
+panelThickness = panelPly+framingPly;
+benchThickness = ply15;
 
 floorPly = ply9;
 

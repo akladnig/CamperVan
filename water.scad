@@ -34,18 +34,29 @@ module Toilet() {
 // 
 
 // Volume = 29l
-duoettoMk2 = [430,250,270];
-// Volume = 33l
-duoettoG3 = [450,275,265];
-// Volume = 40l
-girard = [317.5,317.5,393.7];
+duoettoMk2Dims = [410,250,270];
+d2d = duoettoMk2Dims;
+rf = 100;
+rr = 50;
+duoettoMk2Poly = [[0,0, rf], [0,d2d[z],rf], [d2d[y],d2d[z],rr],[d2d[y],0,rr]];
 
-hotWater = duoettoMk2;
+IO = [20,20];
+
+hotWater = duoettoMk2Dims;
+hotWaterPoly = duoettoMk2Poly;
+
 
 function hotWater() = hotWater;
 
 module HotWater() {
-	color("white") cube(hotWater);
+	color("white") translate([d2d[x],0,d2d[z]])
+	rotate([-90,0,0])
+	rotate([0,-90,0])
+	linear_extrude(hotWater[x]) polyedge(hotWaterPoly);
+	color("red") translate([d2d[x],d2d[y]/2,d2d[z]-50]) rotate([0,90,0])
+	cylinder(h=IO[h], d=IO[diameter]);
+	color("blue") translate([d2d[x],d2d[y]/2,50]) rotate([0,90,0])
+	cylinder(h=IO[h], d=IO[diameter]);
 	color("blue") translate([50,0,100]) rotate([90,0,0]) text("Duoetto Mk2", size=40);
 }
 
@@ -59,7 +70,7 @@ Vetus42 = [610, 350, 400];
 Vetus61 = [780, 350, 400];
 
 // Custom L shape
-a = 300;
+a = tankL;
 b = cupboard[y]-wheelArch[y]-gap;
 
 tankGap = [10,10,50];
@@ -79,6 +90,11 @@ tankStr = str("Water Tank ", floor(volume), " litres");
 
 function tank() = tank;
 function tankGap() = [10,10,50];
+
+//
+// Tank Shelf Height
+// 
+function tankShelfHeight() = tank()[z] + tankGap()[z];
 
 module WaterTank() {
 	echo(tank=tank);
@@ -117,10 +133,14 @@ module Filter(type) {
 		color("blue") cylinder(h=filter[h], d=filter[diameter]);
 	} else {
 		color("white") {
-			translate([-FSAFilterTwinD[diameter]/2,FSAFilterTwinD[diameter]/2,FSAFilterTwinD[h]]) cube([FSAFilterTwin[x],5, FSAFilterTwin[z]-FSAFilterTwinD[h]]);
+			translate([0,-5,FSAFilterTwinD[h]]) {
+				cube([FSAFilterTwin[x],5, FSAFilterTwin[z]-FSAFilterTwinD[h]]);
+			}
+			translate([FSAFilterTwinD[diameter]/2,-FSAFilterTwinD[diameter]/2,0]) {
 			cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
 			translate([FSAFilterTwin[x]-FSAFilterTwinD[diameter],0,0])
 			cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
+			}
 		}
 		// cube(FSAFilterTwin);
 	}
@@ -163,30 +183,4 @@ function shower() = shower;
 module Shower() {
 	color("white") cube(shower);
 	translate([50,0,100]) color(monument)rotate([90,0,0]) text("Shower", size=40);
-}
-
-//
-// Gas Bottle
-// 
-4kg = [350,250];
-9kg = [464,314];
-
-gasBottle = 4kg;
-
-function gasBottle() = gasBottle;
-
-module GasBottle() {
-	color("blue") translate([0,0,gasBottle[x]/2])
-	cylinder(h=gasBottle[x], d=gasBottle[y], center=true);	
-}
-
-//
-// Gas Bottle Storage Box
-//
-gasBox = [310,400,390];
-
-function gasBox() = gasBox;
-
-module GasBox() {
-	OpenBox(gasBox,"front", "white");
 }

@@ -7,6 +7,7 @@ cladding = 3+6;
 vanExternal = [5265, 1950, 1990];
 vanInternal = [2700, 1760, 1340];
 rearDoorWidth = 1500;
+
 step = [1010, 215,200];
 stepOffset = 130;
 frontSeatOffset = 130;
@@ -36,7 +37,8 @@ rearToWheel = 1105;
 rearDoorClearance = 50;
 wheelArch = [840, 240, 240];
 wheelArchOffset = 500;
-wheelArchFrontOffset = vi[x]-wheelArchOffset-wheelArch[x];
+wheelArchFront = vi[x]-wheelArchOffset-wheelArch[x];
+wheelArchRear = vi[x]-wheelArchOffset;
 
 r1 = 280;
 r2 = 160;

@@ -1,4 +1,3 @@
-
 include <constants.scad>
 include <materials.scad>
 include <van_dimensions.scad>
@@ -9,50 +8,36 @@ use <functions.scad>
 use <appliances.scad>
 use <water.scad>
 
-
 // Kitchen Bench
-// width = 366 + 50 + 50 + 15 = 481
 
-fridgeCupboard = 500;
+cutleryDrawHeight = 80;
 
 //
 // Kitchen Panel Placement relative to the Kitchen Bench
 //
 
-fridgePanelLeft = lip;
-fridgePanelRight = fridgePanelLeft + plyMm + gap + fridge()[x] + gap;
-hobPanelRight = fridgePanelRight + plyMm + plyMm + kitchenCupboardWidth + plyMm;
-kitchenBenchEndPanel = hobPanelRight + plyMm + kitchenCupboardWidth;
-waterTankPanelRight = fridgePanelRight + plyMm + tankGap()[x] + tankGap()[x];
-
-bench = [
-    kitchenBenchEndPanel + plyMm,
-    500,
-    benchHeight
-];
+kitchenOffset = panelOffset - frontSeatOffset*panelIdentity;
 
 function bench() = bench;
 
-topOfBenchCabinet = bench[height]-benchPly;
-
-benchChampfer = bench[y] - cupboard[y];
-benchNarrow = [bench[x], bench[y]-benchChampfer, 900];
+topOfBenchCabinet = bench[z]-benchThickness;
 
 champfer = bench[y] - cupboard[y];
 
-kitchenBench = [bench[length], bench[width]+lip, plyMm];
+kitchenBenchTop = [bench[x], bench[y]+lip, benchThickness];
  
-sinkBenchWidth = lip+plyMm+gap+fridge()[x]+gap+plyMm+lip;
+sinkBenchX = lip+panelThickness+gap+fridge()[x]+gap+panelThickness+lip;
+
 kitchenPoly = [
     [0,0],
-    [0, bench[width]+lip],
-    [bench[length],bench[width]+lip],
-    [bench[length],benchChampfer],
-    [sinkBenchWidth+benchChampfer,benchChampfer], // create a champfer
-    [sinkBenchWidth,0],
+    [0, bench[y]+lip],
+    [bench[x],bench[y]+lip],
+    [bench[x],champfer],
+    [sinkBenchX+champfer,champfer], // create a champfer
+    [sinkBenchX,0],
 ];
 
-backingBoard = [bench[x], plyMm, 100];
+backingBoard = [bench[x], benchThickness, 100];
 
 hobs = 1;
 
@@ -60,82 +45,122 @@ hobs = 1;
 // Kitchen Bench 
 // 
 
-module Kitchen(showCupboardDoors, doorOpen, rightOpening) {
-	translate([frontSeatOffset, vanInternal[width]-kitchenBench[width]-cladding,0]) {
-    color(benchColour)
+module Kitchen(showCupboardDoors, showBenchTop, doorOpen, rightOpening) {
+	{
+		if (showBenchTop) {
+	    color(benchColour)
 
-    // Cutout sink and hob then insert
-    difference() {
-        translate([0,0,topOfBenchCabinet]) {
-            color(benchColour)
-            linear_extrude(benchPly)
-            polygon(kitchenPoly);
-        }
-        translate([centre(sinkBenchWidth,sink()[length]),50, topOfBenchCabinet]) {
-            SinkCutout();
-        }
-        translate([sinkBenchWidth+50,champfer+50,topOfBenchCabinet]) {
-            rotate([0,0,0]) HobCutout();            
-        }
-    }
-    translate([centre(sinkBenchWidth,sink()[length]),50,bench[height] - sink()[height]+5]) Sink();
+	    // Cutout sink and hob then insert
+	    difference() {
+	        translate([0,0,topOfBenchCabinet]) {
+	            color(benchColour)
+	            linear_extrude(benchThickness)
+	            polygon(kitchenPoly);
+	        }
+	        translate([centre(sinkBenchX,sink()[x]),50, topOfBenchCabinet]) {
+	            SinkCutout();
+	        }
+	        translate([sinkBenchX+50,champfer+50,topOfBenchCabinet]) {
+	            rotate([0,0,0]) HobCutout();            
+	        }
+	    }
+	    translate([centre(sinkBenchX,sink()[x]),50,bench[z] - sink()[z]+5]) Sink();
 
-    translate([sinkBenchWidth+50,champfer+50,bench[height] - hob()[height]+5]) {
-        translate([0,0,0])
-        Hob(1);
-    }
+	    translate([sinkBenchX+50,champfer+50,bench[z] - hob()[z]+5]) {
+	        translate([0,0,0])
+	        Hob(1);
+	    }
 
-    // translate([50,50,bench[height]+5]) SinkCover();
-
-    // Add a backing board
-        translate([0,kitchenBench[width]-benchPly,bench[height]]) color(benchColour) cube(backingBoard);
+	    // Add a backing board
+	        translate([0,kitchenBenchTop[y]-benchThickness,bench[z]]) color(benchColour) cube(backingBoard);
+		}
   
     // Left side fridge panel
-    translate([fridgePanelLeft,lip,0]) FridgeLeftPanel();
+    translate([0,lip,0]) FridgeLeftPanel();
 
     // Fridge cover panel
     if (showCupboardDoors) {
-    translate([facePly+gap+spacing,lip,fridge()[height]+gap]) color(woodColour)
-    cube([
-        fridge()[x]+2*gap-2*spacing,
-        facePly,
-        topOfBenchCabinet-spacing-gap-fridge()[height]]);
+	    translate([facePly+gap+spacing,lip,fridge()[z]+gap]) color(woodColour)
+	    cube([
+	        fridge()[x]+2*gap-2*spacing,
+	        facePly,
+	        topOfBenchCabinet-spacing-gap-fridge()[z]]);
     }
-    // Right side fridge panel
-    translate([fridgePanelRight,lip,0]) FridgeRightPanel();
 
-    translate([fridgePanelRight+plyMm,champfer+lip, topOfBenchCabinet-hob()[z]-120-spacing]) {
-			
-	    Draw(kitchenCupboardWidth, 120, benchNarrow[y], showCupboardDoors);
-	    translate([kitchenCupboardWidth+2*ply15,0,-50]) Draw(kitchenCupboardWidth, 120, benchNarrow[y], showCupboardDoors);
+    // Right side fridge panel
+    translate([kitchenOffset[fr],lip,0]) {
+			FridgeRightPanel();
+
+			// Add cover panels and draws from top down
+			coverHeight = hob()[z]-benchThickness;
+
+			translate([
+				panelThickness,
+				champfer,
+				topOfBenchCabinet - coverHeight
+			]) {
+				// Hob cover Panel
+				color(woodColour6) cube([cupboardWidth[1],facePly,coverHeight]);
+
+				// Cutlery Draw
+		    translate([0,0,-cutleryDrawHeight])
+				Draw(kitchenCupboardWidth, cutleryDrawHeight, cupboard[y]-facePly, showCupboardDoors);
+			}
 		}
+
+    translate([
+			kitchenOffset[km]+panelThickness,
+			champfer+lip,
+			topOfBenchCabinet-hob()[z]-120-spacing
+		])
+		Draw(kitchenCupboardWidth, 120, cupboard[y]-facePly, showCupboardDoors);
+
+		// Water Filter mounting plate
+		mountingHeight = benchHeight-cutleryDrawHeight-hob()[z];
+		translate([kitchenOffset[fr]+panelThickness,bench[y],mountingHeight -framingWidth])
+		color(woodColour) cube([kitchenCupboardWidth, framingPly, framingWidth]);
 
     // Kitchen Middle panel
         translate([
-            hobPanelRight,
+            kitchenOffset[km],
             champfer+lip,
-            tank()[z]+tankGap()[z]+shelfPly
+            tankShelfHeight()+shelfPly
         ])
         color(woodColour)
 				KitchenMiddlePanel();
 
-    // Right side panel of bench
-    translate([bench[length],champfer+plyMm,0])
+    // End of bench
+    translate([kitchenOffset[be],champfer+lip,0])
 		KitchenBenchEndPanel();
-        // color(woodColour) cube([panelPly, cupboard[width]+lip-plyMm, vanInternal[height]]);
 
     // Water Tank top shelf
     translate([
-        fridgePanelRight+plyMm,
-        champfer+plyMm,
-        tank()[height]+tankGap()[z]
-    ])
-    color(woodColour3) cube([2*kitchenCupboardWidth+4*plyMm, cupboard[width]+lip-plyMm, shelfPly]);
+      kitchenOffset[fr]+panelPly,
+      champfer+lip,
+			tankShelfHeight()
+		])
+    color(woodColour3)
+		cube([
+			2*kitchenCupboardWidth+3*panelThickness-2*panelPly,
+			cupboard[y],
+			shelfPly
+		]);
 
+		// Water Tank Shelf support panel
+		translate([kitchenOffset[wa]-tank()[x]-2*gap-panelThickness,champfer+lip,0]) WaterTankLeftPanel();
+		
     // Fridge
     // airgap is inlcuded in fridge depth
     airGap = 0;
-    translate([fridgePanelLeft+plyMm+gap,kitchenBench[width] - fridge()[width] - airGap,0])
+    translate([panelThickness+gap,kitchenBenchTop[y] - fridge()[y] - airGap,0])
     Fridge(doorOpen,rightOpening);
+
+		// Water Filter
+		translate([
+		    kitchenOffset[1]+panelThickness+clearance,
+		    bench[y],
+		    mountingHeight - filter("twin")[z],
+		])
+		Filter("twin");
 	}
 }

@@ -12,6 +12,7 @@ use <electrical.scad>
 use <heater.scad>
 use <storage.scad>
 
+use <kitchen_appliances.scad>
 use <draw_dimensions.scad>
 
 /* [Sofa Bed] */
@@ -19,6 +20,9 @@ sofaMode = true; // false = bed mode
 showSofaSlats = false;
 showSofaCushions = false;
 perforatedPanel = true; // false = slat panel
+
+/* [Kitchen] */
+showBenchTop = true;
 
 /* [Cupboard and Draws] */
 showCupboardDoors = false;
@@ -38,8 +42,6 @@ showKitchenDims = false;
 showTableDimensions = false;
 
 module __Customiser_Limit__() {}
-
-plyMm = ply15;
 
 //
 // Draw the van base
@@ -74,7 +76,8 @@ translate([stepOffset+step[x],cladding,tableHeight-rail[x]]) cube([railLength,ra
 //
 // Kitchen
 // 
-Kitchen(showCupboardDoors, fridgeDoorOpen, fridgeRightOpening);
+translate([frontSeatOffset, vi[y]-bench[y]-lip-cladding,0])
+Kitchen(showCupboardDoors, showBenchTop, fridgeDoorOpen, fridgeRightOpening);
 
 //
 // CupBoard
@@ -82,9 +85,9 @@ Kitchen(showCupboardDoors, fridgeDoorOpen, fridgeRightOpening);
 Cupboard(showCupboardDoors);
 
 // Panel on side of bed - needs to be robust to support bed
-translate([vanInternal[length]-base()[width], base()[length]+cladding, 0]) {
+translate([vi[x]-base()[width], base()[length]+cladding, 0]) {
     color(woodColour5)
-    cube([base()[width], panelDepth, base()[height]-slatDepth]);
+    cube([base()[width], panelThickness, base()[height]-slatDepth]);
 }
 
 //
@@ -99,11 +102,9 @@ if (storeTable) {
 //
 // Sofa Bed placement
 //
-sbx =  vanInternal[length]- base()[width]-headBoardBox()[width];
-sby = base()[width]+cladding;
-translate([sbx,cladding,0]) {
-    sofaBed(sofaMode, perforatedPanel, showSofaSlats);
-    sofaBedCushions(sofaMode, showSofaCushions);
+translate([sofaBedOffset[x],cladding,0]) {
+    SofaBed(sofaMode, perforatedPanel, showSofaSlats);
+    SofaBedCushions(sofaMode, showSofaCushions);
 }
 
 //
@@ -112,17 +113,17 @@ translate([sbx,cladding,0]) {
 translate([vi[x],cladding,base()[z]-slatDepth]) HeadBoardBox();
 
 // Couch rail bolted to side of van - use unistrut plus a support plate or just a support plate?
-translate([stepOffset+step[length],cladding,base()[height]-slatWidth-slatDepth]) cube([vanInternal[length]-stepOffset-step[length], slatDepth, slatWidth]);
+translate([stepOffset+step[length],cladding,base()[height]-slatWidth-slatDepth]) cube([vi[x]-stepOffset-step[length], slatDepth, slatWidth]);
 
 // Second short rail bolted to cupboard
-translate([sbx,base()[length]-slatDepth+cladding,base()[height]-slatWidth-slatDepth]) cube([base()[width], slatDepth, slatWidth]);
+translate([sofaBedOffset[x],base()[length]-slatDepth+cladding,base()[height]-slatWidth-slatDepth]) cube([base()[width], slatDepth, slatWidth]);
 
 //
 // Toilet, Shower and Water Tank Placement
 // 
 
 // Toilet placement
-translate([vanInternal[length], base()[width]-3*slatDepth-cladding+toilet()[width]-toilet()[length],0]) {
+translate([vi[x], base()[width]-3*slatDepth-cladding+toilet()[width]-toilet()[length],0]) {
     rotate([0,0,90]) Toilet();
 }
 
@@ -130,25 +131,20 @@ translate([vanInternal[length], base()[width]-3*slatDepth-cladding+toilet()[widt
 waterTankPanelOffset = vi[x]-wheelArchOffset-tank()[x]-gap;
 translate([
     waterTankPanelOffset,
-    vanInternal[width] - tank()[width] - gap,
+    vi[y] - tank()[width] - gap,
     0
 ])
 WaterTank();
 
-// Hot Water
-translate([waterTankPanelOffset-2*hotWater()[y]-gap, vi[y]-cladding])
-translate([hotWater()[y],0,0]) rotate([0,0,-90]) HotWater();
-
-// Water Pump
-translate([panel2,vi[y]-pump()[x]-cladding,0]) Pump();
+// Pump
+translate([panelInnerOffset[wa], vi[y]-cladding-hotWater()[y]-30-pump()[y], 0])
+ Pump();
 
 // Water Filter
-translate([
-    panel2+filter()[diameter]/2,
-    vi[y]-cladding-filter()[diameter]/2,
-    tank()[z]+tankGap()[z]
-])
-Filter("twin");
+// Filter("twin");
+
+// Hot Water
+translate([panelInnerOffset[wa],vi[y]-hotWater()[y]-cladding-30,0]) HotWater();
 
 //
 // Electrics
@@ -159,27 +155,24 @@ qty = 2;
 echo(batteryBox=batteryBox(qty));
 
 translate([
-    // sbx + 2*slatDepth,
-    sbx + 50 - slatDepth,
+    // sofaBedOffset[x] + 2*slatDepth,
+    sofaBedOffset[x] + 50 - slatDepth,
     base()[length]+cladding-slatDepth-legWidth-batteryBox(qty)[length],
     0
 ]) 
 translate([batteryBox(qty)[width],0,0]) rotate([0,0,90]) BatteryBox(qty);
 
-// translate([bench()[length],vi[y]-wheelArch[y]-battery(1)[width],0]) Battery(1);
-
-// Inverter
-// translate([0,0,0])
-// translate([
-//     frontSeatOffset+bench()[x]+cupboard[width]-inverter()[x],
-//     vi[y]-wheelArch[width]-inverter()[y],
-//     0
-// ]) color("green") rotate([0,0,0]) Inverter();
 translate([
-    sbx + 2*slatDepth+batteryBox(qty)[width],
-    base()[length]+cladding-3*slatDepth,
-    inverter()[width]
-]) color("green") rotate([-90,0,-90]) Inverter();
+    panelInnerOffset[be],
+    vi[y]-cladding-inverter()[y],
+    tankShelfHeight()+shelfPly,
+]) color("green") Inverter();
+
+translate([
+    panelInnerOffset[be],
+    vi[y]-cladding-dcdc()[y],
+    tankShelfHeight()+2*shelfPly+inverter()[z],
+]) color("blue") DcDc("IP67");
 
 // Packs
 
@@ -205,3 +198,10 @@ Dimensions();
 // Floor Filler
 //
 color(woodColour) translate([stepOffset+doorOpening,0,-floorPly]) DoorFill();
+
+//
+// Kitchen Appliances
+//
+translate([panelInnerOffset[2], cupboardFace,tankShelfHeight()+shelfPly]) AirFryer();
+
+echo(cupboardWidth=cupboardWidth);

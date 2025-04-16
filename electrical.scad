@@ -41,7 +41,7 @@ function batteryBox(qty) = [
 ];
 
 module BatteryBox(qty) {
-	OpenBox(batteryBox(qty), "red");
+	OpenBox(batteryBox(qty), "top", "red");
 	translate([boxPly,boxPly,boxPly]) {
 		translate([gap[y],gap[y]]) Battery();
 		translate([gap[y],battery[y]+gap[y],0]) Battery();
@@ -63,20 +63,39 @@ renogy2000WInverter = [442,220,92];
 renogy3000WInverter = [482,220,92];
 
 inverter = renogy2000WInverter;
+inverterGap = [200,200,0];
 
-function inverter() = inverter;
-function inverterGap() = 100;
+function inverter() = inverter+inverterGap;
+function inverterGap() = inverterGap;
 
 module Inverter() {
-	cube(inverter);
+	union() {
+		cube([inverter[x]+inverterGap[x], inverter[y]+inverterGap[y],1]);
+		translate([inverterGap[x]/2, inverterGap[y]/2, 0]) cube(inverter);
+	}
 }
 
 //
 // DC - DC convertor
 //
 
-module DcDc() {
-	
+DCC50S = [244, 146, 96];
+dcDc60A = [311, 175,68];
+
+IP67_50A = [178,122,36];
+IP67_50AGap = [300,300,0];
+
+function dcdc() = IP67_50A + IP67_50AGap;
+
+module DcDc(model) {
+	if (model=="IP67") {
+		union() {
+			cube([IP67_50A[x]+IP67_50AGap[x], IP67_50A[x]+IP67_50AGap[x],1]);
+			translate([IP67_50AGap[x]/2, IP67_50AGap[y]/2, 0]) cube(IP67_50A);
+		}
+	} else if (model=="DCC50S") {
+		cube(dcDc60A);
+	}
 }
 
 //

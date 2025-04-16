@@ -130,7 +130,7 @@ difference() {
 //
 // Hob
 // 
-safierySingle = [276, 366, 65];
+safierySingle = [276, 366, 75];
 safieryDual = [290, 520, 55];
 safierySingleCutout = [252, 342, benchThickness+10];
 safieryDualCutout = [270, 497, benchThickness+10];

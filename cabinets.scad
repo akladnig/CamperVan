@@ -3,6 +3,7 @@ include <constants.scad>
 include <materials.scad>
 include <common_dimensions.scad>
 
+use <panels.scad>
 use <kitchen_bench.scad>
 use <sofa_bed.scad>
 
@@ -21,29 +22,28 @@ module Draw(frontWidth, frontHeight, drawDepth, showFront=true) {
 
 	module DrawSide() {
 		// Sides - to be finger jointed
-		translate([drawPly,ply15,bottomGap])
-		rotate([0,0,90])
-		cube([draw[y], drawPly, draw[z]]);
+		translate([0,facePly,bottomGap])
+		cube([drawPly, draw[y], draw[z]]);
 	}
 
 	module DrawFrontBack() {
 		// front and back to be finger jointed
-		translate([ply15 + sideGap,ply15, bottomGap])
+		translate([sideGap,facePly, bottomGap])
 		cube([draw[x], drawPly, draw[z]]);
 	}
 
 	union() {
 		// Front panel
 		if (showFront) {
-			translate([spacing/2,0]) color(woodColour)
-			cube([frontWidth+2*ply15-spacing, ply15, frontHeight]);
+			translate([spacing/2,0,spacing/2]) color(woodColour)
+			cube([frontWidth-spacing, facePly, frontHeight-spacing]);
 			color(woodColour3) DrawFrontBack();
 		}
 		color(woodColour3) translate([0,drawDepth-rearGap-drawPly]) DrawFrontBack();
-		color(woodColour5) translate([ply15+sideGap,0]) DrawSide();
-		color(woodColour5) translate([frontWidth+ply15-drawPly-sideGap,0]) DrawSide();
+		color(woodColour5) translate([sideGap,0]) DrawSide();
+		color(woodColour5) translate([frontWidth-drawPly-sideGap,0]) DrawSide();
 		// bottom
-		color(woodColour) translate([ply15 + sideGap, ply15, bottomGap])
+		color(woodColour) translate([sideGap, facePly, bottomGap])
 		cube([draw[x], draw[y], ply6]);
 	}
 }
@@ -101,5 +101,16 @@ module LagunTable(showDims) {
 }
 
 module Cupboard(showDoors) {
-  translate([vi[x]-wheelArchOffset,vi[y]-cupboard[width]+lip-plyMm,0]) color(woodColour) cube([panelPly, cupboard[width]+lip-plyMm, vanInternal[height]]);
+	cupboardYOffset =  vi[y]-cupboard[width]+lip-panelThickness;
+	// Middle Panel
+	translate([panelOffset[wa],cupboardYOffset,0]) CupboardMiddlePanel();
+	// Bottom Shelf
+	translate([panelInnerOffset[be],cupboardYOffset, tankShelfHeight()])
+	color(woodColour) cube([cupboardWidth[3],cupboard[y],shelfPly]);
+	// Middle Shelf
+	translate([panelInnerOffset[be],cupboardYOffset, seatHeight])
+	color(woodColour) cube([cupboardWidth[3],cupboard[y],shelfPly]);
+	// Top Shelf
+	translate([panelInnerOffset[be],cupboardYOffset, vi[z]-shelfPly])
+	color(woodColour) cube([cupboardWidth[3],cupboard[y],shelfPly]);
 }

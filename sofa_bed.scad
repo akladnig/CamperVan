@@ -1,4 +1,5 @@
 include <van_dimensions.scad>
+include <common_dimensions.scad>
 include <dimlines.scad>
 include <materials.scad>
 
@@ -16,7 +17,7 @@ newentor = 220;
 mattress = clarkRubberComfortDeluxe2;
 
 // Head Board
-headBoardBox = [mattress[width],150,380];
+headBoardBox = [mattress[width],headBoardBoxWidth,380];
 
 // Couch
 // Is made from mattress and cut into 3x pieces
@@ -26,12 +27,11 @@ headBoardBox = [mattress[width],150,380];
 // Build a test frame using a single slat to confirm lengths and operation
 // 
 seatWidth  = 557-hingeClosed[z]/2; // - hinge depths
-seatHeight = 460;
 backShelf = 100;
 headBoardShelf = [mattress[y], headBoardBox[y], slatDepth];
 angle = 15;
 
-base = [mattress[width],850,seatHeight-mattress[height]];
+base = [mattress[width],baseWidth,seatHeight-mattress[height]];
 
 function base() = base;
 
@@ -46,39 +46,40 @@ rearSupport = mattress[length] -seatWidth -backrest -backShelf-3*hingeClosed[z];
 function mattress() = mattress;
 
 // 850 + 142 + 19 + 50 = 1061
-function sofaBedWidth() = base[width] + mattress[height] + slatDepth + rearDoorClearance;
+function sofaBed(sofaMode) = sofaMode ?
+	[base[width] + mattress[height] + slatDepth + rearDoorClearance,0] : [0,0];
 
 
-module sofaBed(sofaMode, perforatedPanel, showPanels) {
-	module sofaBedPanel(perforatedPanel, panelWidth) {
+module SofaBed(sofaMode, perforatedPanel, showPanels) {
+	module SofaBedPanel(perforatedPanel, panelWidth) {
 		if (perforatedPanel) {
-			sofaBedPerforatedPanel(panelWidth);
+			SofaBedPerforatedPanel(panelWidth);
 		} else {
-			sofaBedSlatPanel(panelWidth);
+			SofaBedSlatPanel(panelWidth);
 		}
 	}
 
 	echo(seatWidth=seatWidth, backrest=backrest, rearSupport=rearSupport);
 
 	if (sofaMode) {
-		outerSlidingFrame();
+		OuterSlidingFrame();
 
 		if (showPanels) {
 			translate([seatWidth, 0, base[height] - slatDepth]) {
-				rotate([0,0, 90])
-				sofaBedPanel(perforatedPanel, seatWidth);
+				rotate(z90)
+				SofaBedPanel(perforatedPanel, seatWidth);
 			}
 
 			translate([seatWidth+hingeClosed[z],0, base[height]]) {
 		    rotate([0,90+angle,0])
-		    rotate([0,0,90])
-		    sofaBedPanel(perforatedPanel, backrest);
+				rotate(z90)
+		    SofaBedPanel(perforatedPanel, backrest);
 			}
 
 			translate([base[width]-backShelf-slatDepth-hingeClosed[z],0,base[height]]) {
 		    rotate([0,90,0])
-		    rotate([0,0,90])
-		    sofaBedPanel(perforatedPanel, rearSupport);
+				rotate(z90)
+		    SofaBedPanel(perforatedPanel, rearSupport);
 			}
 
 			translate([base[width]-backShelf,0,base[height] - slatDepth]) {
@@ -91,7 +92,7 @@ module sofaBed(sofaMode, perforatedPanel, showPanels) {
 		seatOffset = base[width] - rearSupport - backrest - backShelf ;
 
 		translate([seatOffset-seatWidth, 0, 0]) {
-			outerSlidingFrame();
+			OuterSlidingFrame();
 		}
 
 		if (showPanels) {
@@ -99,19 +100,19 @@ module sofaBed(sofaMode, perforatedPanel, showPanels) {
 			translate([xOffset, 0, base[height] - slatDepth]) {
 				translate([seatWidth,0,0])
 				rotate([0,0, 90])
-				sofaBedPanel(perforatedPanel, seatWidth);
+				SofaBedPanel(perforatedPanel, seatWidth);
 			}
 
 			translate([xOffset+seatWidth+hingeClosed[z],0, base[height] - slatDepth]) {
 				translate([backrest,0,0])
 		    rotate([0,0,90])
-		    sofaBedPanel(perforatedPanel, backrest);
+		    SofaBedPanel(perforatedPanel, backrest);
 			}
 
 			translate([xOffset+seatWidth+backrest+2*hingeClosed[z],0,base[height] - slatDepth]) {
 				translate([rearSupport,0,0])
 		    rotate([0,0,90])
-		    sofaBedPanel(perforatedPanel, rearSupport);
+		    SofaBedPanel(perforatedPanel, rearSupport);
 			}
 		
 			translate([base[width]-backShelf,0,base[height] - slatDepth]) {
@@ -124,7 +125,7 @@ module sofaBed(sofaMode, perforatedPanel, showPanels) {
 //
 // SofaBed Cushions
 //
-module sofaBedCushions(sofaMode, showCushions) {
+module SofaBedCushions(sofaMode, showCushions) {
 	
 couchSeat = [seatWidth, base[length], mattress[height]];
 backrestM = [backrest, base[length], mattress[height]];
@@ -182,7 +183,7 @@ slatGap = round((base[length] - slatWidth)/slats) - slatWidth;
 //
 // Sofa Bed Panels
 // 
-module sofaBedSlatPanel(panelWidth) {
+module SofaBedSlatPanel(panelWidth) {
 	// Bottom
 	translate([slatWidth,0,0]) {
 		color(woodColour5)
@@ -220,7 +221,7 @@ module sofaBedSlatPanel(panelWidth) {
 // Sofa Bed hole panel
 //
 
-module sofaBedPerforatedPanel(panelWidth) {
+module SofaBedPerforatedPanel(panelWidth) {
 	diameter = 86;
 	radius = diameter/2;
 	gap = round(0.2*radius+15);
@@ -265,7 +266,7 @@ overhang = 50;
 //
 // Outer Sliding Support frame
 //
-module outerSlidingSupport() {
+module OuterSlidingSupport() {
 
 	supportX = base[width]+headBoardBox[y]-wheelArchOffset-2*slatWidth-slatDepth-overhang;
 	offsetX = supportX+overhang+slatWidth;
@@ -298,7 +299,7 @@ module outerSlidingSupport() {
 //
 // Inner Sliding Support frame
 //
-module innerSlidingSupport() {
+module InnerSlidingSupport() {
 
 	supportX = base[width]-wheelArchOffset-2*slatWidth-slatDepth-overhang;
 	offsetX = supportX+overhang+slatWidth;
@@ -331,16 +332,16 @@ module innerSlidingSupport() {
 //
 // Outer frame is attached to the seatSlat and is pulled out to transform from Sofa to Bed
 //
-module outerSlidingFrame() {
+module OuterSlidingFrame() {
 	
 	// OuterFrame
 	translate([0,wheelArch[width],0]) {
-		outerSlidingSupport();
+		OuterSlidingSupport();
 	}
 
 	// InnerFrame
 	translate([0,base[length]-2*slatDepth,0]) {
-		innerSlidingSupport();
+		InnerSlidingSupport();
 	}
 
 	// Front Top Plate
