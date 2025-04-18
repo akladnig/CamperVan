@@ -75,7 +75,6 @@ The following devices are bluetooth enabled:
 Schematic design software used is [Kicad](https://www.kicad.org/)
 
 ## TODO
- - add RS485 interfaces to the Duetto Hot Water heater and 20A DC-DC battery charger
  - add an Oled touch panel
  - ignition switch input
 
