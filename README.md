@@ -1,5 +1,13 @@
 # CamperVan
 
+<!--toc:start-->
+- [CamperVan](#campervan)
+  - [Design](#design)
+  - [Electrical System](#electrical-system)
+    - [Sensors](#sensors)
+  - [TODO](#todo)
+<!--toc:end-->
+
 ## Design
 I used [OpenScad](https://openscad.org/) to do the campervan design. Whilst I have used SketchUp in the past OpenScad appealed to me more as it is a programmers CAD program plus it is a parametric CAD program which allow me to quickly change a parameter to see how it affects the van layout e.g. visualising the Sofa Bed as a Sofa or a Bed, or easily changing the width of a cupboard, which would cause all other dependent cupboards to adjust accordingly.
 
@@ -13,7 +21,7 @@ The electrical system for the camper van needs to power the following devices:
 - Water Pump -
 - Lights & Fan - 
 
-![schematic](schematic.png)
+![schematic](electrical/schematic.png)
 
 The power system needs to provide off-grid power for 3 days, which required a 4.8kW or 400Ah battery system.
 
@@ -34,6 +42,35 @@ Manual mode will override any automatic setting and allows the selection of:
 Automatic mode will select the battery to use for powering appliances. When the battery charge falls below a certain threshold it will swap to the other battery.
 
 Automatic mode will also swap chargers during driving to ensure the optimum charge time for both batteries. When the ignition is off, charging via solar cells will automatically switch to the second battery when the first is fully charged.
+
+### Sensors
+There are a variety of sensors in use:
+- voltage dividers
+- RS485 which will require some reverse engineering
+- Hall effect devices
+- Bluetooth for the smart batteries and 50A DC-DC
+
+The following devices are monitored for the associated properties using a voltage divider:
+- Starter Battery voltage
+- Battery 1 input voltage (before 60A fuse)
+- Battery 1 output voltage (after 200A fuse)
+- Battery 2 input voltage (before 60A fuse)
+- Battery 2 output voltage (after 200A fuase)
+- Battery 2 charge switch status
+- Battery 2 switch status
+
+The following are monitored via RS485:
+- 20A DC-DC battery charger
+- Duoetto Heater
+
+The following are monitored via hall effect devices:
+- Water input flow
+- Water output flow
+
+The following devices are bluetooth enabled:
+- Battery 1
+- Battery 2
+- 50A DC-DC charger
 
 Schematic design software used is [Kicad](https://www.kicad.org/)
 
