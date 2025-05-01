@@ -1,5 +1,4 @@
 (sym_lib_table
   (version 7)
-  (lib (name "Renogy")(type "KiCad")(uri "/Users/adrian/Documents/Campervan/renogy.kicad_sym")(options "")(descr "Renogy Devices"))
   (lib (name "camper_van")(type "KiCad")(uri "${KIPRJMOD}/camper_van.kicad_sym")(options "")(descr ""))
 )

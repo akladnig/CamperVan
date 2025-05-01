@@ -450,7 +450,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "camper_van.kicad_pro",
+    "filename": "campervan_management.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -610,7 +610,7 @@
   },
   "sheets": [
     [
-      "e095b45b-2ed6-497c-8100-020e1086a4e5",
+      "870a08cc-a6e6-4310-b4b3-ae6af01530aa",
       "Root"
     ]
   ],
