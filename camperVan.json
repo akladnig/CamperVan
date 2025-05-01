@@ -1,0 +1,36 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "  ": {
+            "fridgeDoorOpen": "false",
+            "fridgeRightOpening": "false",
+            "perforatedPanel": "true",
+            "showApplianceDims": "false",
+            "showCupboardDoors": "false",
+            "showExternalDims": "true",
+            "showKitchenDims": "false",
+            "showSofaCushions": "true",
+            "showSofaSlats": "true",
+            "showTable": "true",
+            "showTableDimensions": "false",
+            "sofaMode": "true",
+            "storeTable": "false"
+        },
+        "New set 1": {
+            "fridgeDoorOpen": "false",
+            "fridgeRightOpening": "false",
+            "perforatedPanel": "true",
+            "showApplianceDims": "false",
+            "showBenchTop": "true",
+            "showCupboardDoors": "true",
+            "showExternalDims": "true",
+            "showKitchenDims": "false",
+            "showSofaCushions": "false",
+            "showSofaSlats": "false",
+            "showTable": "false",
+            "showTableDimensions": "false",
+            "sofaMode": "true",
+            "storeTable": "true"
+        }
+    }
+}
