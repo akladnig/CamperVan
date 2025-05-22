@@ -1,14 +1,19 @@
-# CamperVan
+# CamperVan Design and Arduino Circuit Design
 
 <!--toc:start-->
-- [CamperVan](#campervan)
-  - [Design](#design)
+- [CamperVan Design and Arduino Circuit Design](#campervan-design-and-arduino-circuit-design)
+  - [Campervan Design Overview](#campervan-design-overview)
+  - [Dashboard App](#dashboard-app)
   - [Electrical System](#electrical-system)
     - [Sensors](#sensors)
+  - [Circuit Design](#circuit-design)
+    - [Battery and voltage monitoring](#battery-and-voltage-monitoring)
+      - [Voltage Divider Design](#voltage-divider-design)
+      - [Low Pass Filter](#low-pass-filter)
   - [TODO](#todo)
 <!--toc:end-->
 
-## Design
+## Campervan Design Overview
 I used [OpenScad](https://openscad.org/) to do the campervan design. Whilst I have used SketchUp in the past OpenScad appealed to me more as it is a programmers CAD program plus it is a parametric CAD program which allow me to quickly change a parameter to see how it affects the van layout e.g. visualising the Sofa Bed as a Sofa or a Bed, or easily changing the width of a upboard, which would cause all other dependent cupboards to adjust accordingly.
 
 ## Dashboard App
