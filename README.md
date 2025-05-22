@@ -83,15 +83,17 @@ Schematic design software used is [Kicad](https://www.kicad.org/)
 The typical battery voltage ranges from 10.0V - 14.4V and the maximum input voltage levels are ether 3.3V or 5V depending on the Arduino device used.
 In order to keep power consumption low large value resistors in the 100k range will be used. But with such large values noise increases and the inputs to the ADC on the Arduino or external ADC (MCP3008 or MCP3208) require a low impedance source so a unity gain low pass filter will be required.
 
-![Voltage Divider](electrical/divider.jpg)
+![Voltage Divider](electrical/divider)
 
 Equation for the voltage divider is:
+
 R1 = R2(Vin - Vout)/Vout
 
 Using an input voltage of 15.0V and choosing R2 = 100k
 Gives:
-R1 = 357k 1% for a 3.3V output
-R1 = 200k 1% for a 5V output
+
+- R1 = 357k 1% for a 3.3V output
+- R1 = 200k 1% for a 5V output
 
 #### Low Pass Filter
 A simple 2 pole Butterworth low pass filter will be used.
@@ -100,7 +102,7 @@ A quick web search shows that a 0.1Hz - 1Hz filter should be used, which sounds 
 ![Butterworth Filter](electrical/butterworth.png)
 
 Formula for a low pass filter is:
-RC = 1/(2*pi*Cn*f)
+- RC = 1/(2*pi*Cn*f)
 
 Cn and K are constants that are used to set various low pass filter types. For a 2 pole Butterworth the values are:
 - Cn = 1
@@ -113,8 +115,8 @@ For:
 - C = 1uF
 
 Gives:
-R = 154k 1%
-Rga = (K-1)R = 5k9 1% 
+- R = 154k 1%
+- Rga = (K-1)R = 5k9 1% 
 
 ## TODO
  - add an Oled touch panel
