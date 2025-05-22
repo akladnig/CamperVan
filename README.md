@@ -102,7 +102,7 @@ A quick web search shows that a 0.1Hz - 1Hz filter should be used, which sounds 
 ![Butterworth Filter](electrical/butterworth.png)
 
 Formula for a low pass filter is:
-- RC = 1/(2*pi*Cn*f)
+- RC = 1/(2\*pi\*Cn\*f)
 
 Cn and K are constants that are used to set various low pass filter types. For a 2 pole Butterworth the values are:
 - Cn = 1
