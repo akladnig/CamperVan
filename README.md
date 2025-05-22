@@ -83,7 +83,7 @@ Schematic design software used is [Kicad](https://www.kicad.org/)
 The typical battery voltage ranges from 10.0V - 14.4V and the maximum input voltage levels are ether 3.3V or 5V depending on the Arduino device used.
 In order to keep power consumption low large value resistors in the 100k range will be used. But with such large values noise increases and the inputs to the ADC on the Arduino or external ADC (MCP3008 or MCP3208) require a low impedance source so a unity gain low pass filter will be required.
 
-![Voltage Divider](electrical/divider)
+![Voltage Divider](electrical/divider.png)
 
 Equation for the voltage divider is:
 
