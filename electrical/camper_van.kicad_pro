@@ -612,6 +612,18 @@
     [
       "e095b45b-2ed6-497c-8100-020e1086a4e5",
       "Root"
+    ],
+    [
+      "8911fc44-6978-4d71-8336-cad6b9cf3456",
+      "Management Module"
+    ],
+    [
+      "8cfb607c-fd04-476e-ade0-99bf53a1af07",
+      "Fuse and Switch Module"
+    ],
+    [
+      "91acac86-faa4-4d81-9e47-c92be50b558f",
+      "Touch Screen Display"
     ]
   ],
   "text_variables": {}

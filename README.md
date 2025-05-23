@@ -14,7 +14,7 @@
 <!--toc:end-->
 
 ## Campervan Design Overview
-I used [OpenScad](https://openscad.org/) to do the campervan design. Whilst I have used SketchUp in the past OpenScad appealed to me more as it is a programmers CAD program plus it is a parametric CAD program which allow me to quickly change a parameter to see how it affects the van layout e.g. visualising the Sofa Bed as a Sofa or a Bed, or easily changing the width of a upboard, which would cause all other dependent cupboards to adjust accordingly.
+I used [OpenScad](https://openscad.org/) to do the campervan design. Whilst I have used SketchUp in the past OpenScad appealed to me more as it is a programmers CAD program plus it is a parametric CAD program which allow me to quickly change a parameter to see how it affects the van layout e.g. visualising the Sofa Bed as a Sofa or a Bed, or easily changing the width of a cupboard, which would cause all other dependent cupboards to adjust accordingly.
 
 ## Dashboard App
 The dashboard app on ios/macos to control the electrical system is written in Flutter and communicates to the Arduino control board via websockets. See [Campervan Flutter](https://github.com/akladnig/campervan_flutter) for details.
@@ -86,7 +86,7 @@ Schematic design software used is [Kicad](https://www.kicad.org/)
 ### Battery and voltage monitoring
 #### Voltage Divider Design
 The typical battery voltage ranges from 10.0V - 14.4V and the maximum input voltage levels are ether 3.3V or 5V depending on the Arduino device used.
-In order to keep power consumption low large value resistors in the 100k range will be used. But with such large values noise increases and the inputs to the ADC on the Arduino or external ADC (MCP3008 or MCP3208) require a low impedance source so a unity gain low pass filter will be required.
+In order to keep power consumption low large value resistors in the 100k range will be used. But with such large values noise increases (Johnson noise) and the inputs to the ADC on the Arduino or external ADC (MCP3008 or MCP3208) require a low impedance source so a unity gain low pass filter will be required.
 
 ![Voltage Divider](electrical/divider.png)
 
