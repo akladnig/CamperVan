@@ -30,7 +30,7 @@ vanInternalPoly = [
 	[vi[x], vi[y]-cy,r],
 	[vi[x], cy,r],
 	[vi[x]-cx, 0,r],
-	];
+];
 
 wheelBase = 3210;
 frontToWheel = 950;
@@ -52,13 +52,13 @@ module WheelArch() {
 }
 
 module VanBase() {
-difference() {
-	union() {
-		linear_extrude(step[height]) polyedge(vanInternalPoly);
-		translate([vi[x] - wheelArch[x]-wheelArchOffset,0,step[z]]) WheelArch();
-		translate([vi[x] - wheelArch[x]-wheelArchOffset,vi[y]-wheelArch[y],step[z]]) WheelArch();
-	}
-	translate([stepOffset,-0.1,0.1]) color("green") cube(step);
+	difference() {
+		union() {
+			linear_extrude(step[height]) polyedge(vanInternalPoly);
+			translate([vi[x] - wheelArch[x]-wheelArchOffset,0,step[z]]) WheelArch();
+			translate([vi[x] - wheelArch[x]-wheelArchOffset,vi[y]-wheelArch[y],step[z]]) WheelArch();
+		}
+		translate([stepOffset,-0.1,0.1]) color("green") cube(step);
 	}
 }
 

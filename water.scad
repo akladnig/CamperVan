@@ -202,9 +202,9 @@ module Filter(type) {
 				cube([FSAFilterTwin[x],5, FSAFilterTwin[z]-FSAFilterTwinD[h]]);
 			}
 			translate([FSAFilterTwinD[diameter]/2,-FSAFilterTwinD[diameter]/2,0]) {
-			cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
-			translate([FSAFilterTwin[x]-FSAFilterTwinD[diameter],0,0])
-			cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
+				cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
+				translate([FSAFilterTwin[x]-FSAFilterTwinD[diameter],0,0])
+				cylinder(h=FSAFilterTwinD[h], d=FSAFilterTwinD[diameter]);
 			}
 		}
 	}
@@ -219,8 +219,12 @@ dunnWatson20 = [500,240,221];
 
 hotWaterContainer = dunnWatson20;
 
-function hotWaterContainer(model) = model == "square" ? waterCube :
-	model == "dw" ? dunnWatson20 : jerryCan;
+function hotWaterContainer(model) =
+	model == "square" ?
+		waterCube :
+		model == "dw" ?
+			dunnWatson20 :
+			jerryCan;
 
 module HotWaterContainer(model) {
 	color("lightBlue")
