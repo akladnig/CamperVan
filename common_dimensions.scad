@@ -11,17 +11,19 @@ clearance = 50; // General clearance between things
 
 shelfLipHeight = 75;
 drawSetback = 50;
+
 //
 // Custom Tank - the width of the L shape
 //
-tankL = 300;
+tankL = 350;
 
 //
 // Sofa Bed
 //
 seatHeight = 460;
 baseWidth = 850;
-headBoardBoxWidth = 150;
+// headBoardBoxWidth = 150;
+headBoardBoxWidth = 200;
 
 sofaBedWidth = baseWidth+headBoardBoxWidth;
 sofaBedOffset = [vi[x]-sofaBedWidth,0];
@@ -30,7 +32,8 @@ sofaBedOffset = [vi[x]-sofaBedWidth,0];
 // Kitchen cupboard width calculations based on a 50mm clearance from the end of the bench
 // and the sofa which will effectively set the bench length.
 //
-benchHeight = 900;
+// benchHeight = 900;
+benchHeight = 850;
 benchLength = sofaBedOffset[x]-clearance-frontSeatOffset;
 bench = [benchLength, fridge()[y]-50,benchHeight];
 
@@ -91,10 +94,10 @@ cupboardWidth = [
 ];
 
 //
-// Kitchen Bench Height
+// Cupboard Width and Height
 // 
 
-cupboard = [600, 500, vanInternal[height]];
+cupboard = [600, 400, vanInternal[height]];
 function cupboard() = cupboard;
 
 cupboardFace = vi[y]-cladding-cupboard[y];
