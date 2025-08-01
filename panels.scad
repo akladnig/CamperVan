@@ -40,9 +40,10 @@ module VerticalPlate(panelHeight, plateColour=woodColour5) {
 	}
 }
 
-//
+//----------------------------------------------------------------------------------------------
 // Base panel with framing on all sides
-// 
+//----------------------------------------------------------------------------------------------
+ 
 module BasePanel(panelWidth, panelHeight) {
 
 	// The Panel
@@ -65,6 +66,56 @@ module BasePanel(panelWidth, panelHeight) {
 	HorizontalPlate(panelWidth);
 }
 
+//----------------------------------------------------------------------------------------------
+// Full height Cupboard base panel with framing on all sides
+//----------------------------------------------------------------------------------------------
+ 
+// The offset of the champfer above the bench
+panelZOffset = 0;
+
+module CupboardBasePanel(panelWidth, panelHeight) {
+	
+	panelPoly = [
+		[0,0],
+		[0,panelHeight-vi[z]+bench()[z]+panelZOffset],
+		[panelWidth-popTopClearance, panelHeight],
+		[panelWidth, panelHeight],
+		[panelWidth,0]
+	];
+	
+	// The Panel
+  color(woodColour) {
+		rotate([90,0,0])
+		rotate([0,90,0])
+		linear_extrude(panelPly)
+		polygon(panelPoly);
+	}
+
+	// Vertical Front Plate
+	translate([panelPly,0,0])
+	VerticalPlate(panelHeight-vi[z]+bench()[z]+panelZOffset);
+
+	// Angled Top Front Plate
+	// translate([panelPly,0,0])
+	// VerticalPlate(panelHeight);
+
+	// Rear Plate
+	translate([panelPly,panelWidth-framingWidth,0])
+	VerticalPlate(panelHeight);
+
+	// Top Plate
+	translate([panelPly,panelWidth-popTopClearance,panelHeight-framingWidth])
+	HorizontalPlate(popTopClearance);
+
+	// Bottom Plate
+	translate([panelPly,0,0])
+	HorizontalPlate(panelWidth);
+}
+
+//----------------------------------------------------------------------------------------------
+// Fridge Left Panel
+//----------------------------------------------------------------------------------------------
+
 module FridgeLeftPanel() {
 	// Needs to be high enough to mount the Lagun table mounting plate
 	bottomPlate = 100;
@@ -72,6 +123,10 @@ module FridgeLeftPanel() {
 	translate([0,lip,0])
 	BasePanel(bench()[width], benchFrameHeight);
 }
+
+//----------------------------------------------------------------------------------------------
+// Fridge Right Panel
+//----------------------------------------------------------------------------------------------
 
 module FridgeRightPanel() {
 	drawHeight = 150;
@@ -87,6 +142,10 @@ module FridgeRightPanel() {
 	cube([framingPly,bench()[width], framingWidth]);
 }
 
+//----------------------------------------------------------------------------------------------
+// Sink Cover Panel
+//----------------------------------------------------------------------------------------------
+
 module SinkCoverPanel(showCupboardDoors) {
   if (showCupboardDoors) {
     color(woodColour)
@@ -99,6 +158,10 @@ module SinkCoverPanel(showCupboardDoors) {
   }
 }
 
+//----------------------------------------------------------------------------------------------
+// Kitchen Mid Panel
+//----------------------------------------------------------------------------------------------
+
 module KitchenMiddlePanel() {
 	drawHeight = 150;
 	panelHeight = benchFrameHeight-tank()[z]-tankGap()[z]-shelfPly;
@@ -109,6 +172,10 @@ module KitchenMiddlePanel() {
 	translate([panelPly,0,panelHeight-drawHeight-framingWidth])
 	HorizontalPlate(cupboard()[y]);
 }
+
+//----------------------------------------------------------------------------------------------
+// Kitchen Bench End Panel
+//----------------------------------------------------------------------------------------------
 
 module KitchenBenchEndPanel() {
 	drawHeight = 150;
@@ -145,36 +212,62 @@ module KitchenBenchEndPanel() {
 	cube([framingPly, panelWidth, tankGap()[z]-(wheelArch[z]-tank()[z])]);
 }
 
+//----------------------------------------------------------------------------------------------
+// Cupboard First Panel
+//----------------------------------------------------------------------------------------------
+
 module CupboardFirstPanel() {
 	panelHeight = vi[z]-wheelArch[z];
 	panelWidth = cupboard()[y];
 
-	translate([0,0,wheelArch[z]]) BasePanel(panelWidth,panelHeight)
+	translate([0,0,wheelArch[z]]) CupboardBasePanel(panelWidth,panelHeight)
 
 	// Bench Plate
 	color(woodColour6) translate([0,0,benchFrameHeight-framingWidth])
 	cube([framingPly, panelWidth, framingWidth]);
 }
 
+//----------------------------------------------------------------------------------------------
+// Cupboard Middle Panel
+//----------------------------------------------------------------------------------------------
+
 module CupboardMiddlePanel() {
-	BasePanel(cupboard()[width], vi[z]);
+	CupboardBasePanel(cupboard()[width], vi[z]);
 }
 
-// End Panels
+//----------------------------------------------------------------------------------------------
+// Cupboard End Panel
+//----------------------------------------------------------------------------------------------
 
 endPanelWidth =  panelOffset[vr]-panelInnerOffset[wa];
 
+endPanelAngle = atan((cupboard()[width]-popTopClearance)/(vi[z]-bench()[z]-panelZOffset));
+endPanelFactor = 1/cos(endPanelAngle);
+
 endPanelPoly = [
 	[0,0],
-	[0,vi[z]],
-	[endPanelWidth-rearDoorChampfer[x],vi[z]],
-	[endPanelWidth, vi[z]-rearDoorChampfer[y]],
+	[0,endPanelFactor*(vi[z]-bench()[z]-panelZOffset)],
+	[endPanelWidth-rearDoorChampfer[x],endPanelFactor*(vi[z]-bench()[z]-panelZOffset)],
 	[endPanelWidth,0]
 ];	
 
+YOffset = panelThickness*sin(endPanelAngle);
+
 module CupboardEndPanel() {
-	translate([0,panelThickness]) rotate(x90) linear_extrude(panelThickness) polygon(endPanelPoly);
+	translate([endPanelWidth,0,0])
+	rotate(z90) BasePanel(endPanelWidth,bench()[z]+panelZOffset);
+	translate([0,0,bench()[z]+panelZOffset]) {
+	rotate([-endPanelAngle,0,0])
+	translate([0,panelThickness,0])
+		rotate(x90)
+		linear_extrude(panelThickness)
+		polygon(endPanelPoly);
+	}
 }
+
+//----------------------------------------------------------------------------------------------
+// Cupboard Backing Panel
+//----------------------------------------------------------------------------------------------
 
 module CupboardBackingPanel() {
 	color(woodColour)
@@ -184,6 +277,10 @@ module CupboardBackingPanel() {
 		translate([panelInnerOffset[wa]-panelThickness,vi[y]-cladding,0]) cube([endPanelWidth-rearDoorChampfer[x],panelPly,vi[z]]);
 	}
 }
+
+//----------------------------------------------------------------------------------------------
+// Champfer Panel
+//----------------------------------------------------------------------------------------------
 
 module ChampferPanel(side) {
 	position = side == "right" ? 
@@ -197,6 +294,10 @@ module ChampferPanel(side) {
 		rotate([0,0,angle])
 		cube([cl,panelPly,vi[z]]);
 }
+
+//----------------------------------------------------------------------------------------------
+// Water Tank Left Panel
+//----------------------------------------------------------------------------------------------
 
 module WaterTankLeftPanel() {
 	BasePanel(cupboard()[width], tank()[z]+tankGap()[z]);
