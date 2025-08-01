@@ -232,27 +232,29 @@ module Cupboard(showDoors, showBackPanel) {
 	// Middle Panel
 	translate([panelOffset[wa],cupboardYOffset,0]) CupboardMiddlePanel();
 
-	// Bottom Shelf
+	// Bottom Shelf just above water tank
 	translate([panelInnerOffset[be],cupboardYOffset, tankShelfHeight()])
 	color(woodColour) cube([cupboardWidth[clothes],cupboard[y],shelfPly]);
 
-	// Middle 1 Shelf
-	translate([panelInnerOffset[be],cupboardYOffset, seatHeight])
+	// Middle 1 Shelf supports the inverter with a 50mm air gap above the inverter
+	// translate([panelInnerOffset[be],cupboardYOffset, seatHeight])
+	translate([panelInnerOffset[be],cupboardYOffset, tankShelfHeight()+inverter()[z]+clearance])
 	color(woodColour) cube([cupboardWidth[clothes],cupboard[y],shelfPly]);
 
 	// Middle 2 Shelf
 	translate([panelInnerOffset[be],cupboardYOffset, benchHeight-benchThickness])
 	color(woodColour) cube([cupboardWidth[clothes],cupboard[y],shelfPly]);
 
-	// Top Shelf - needs more of an offset due to split face panel
-	translate([panelInnerOffset[be]-panelPly,cupboardYOffset, vi[z]-shelfPly])
+	// Cupboard Top - needs more of an offset due to split face panel
+	translate([panelInnerOffset[be]+panelPly,vi[y]-popTopClearance-cladding, vi[z]-shelfPly])
 	color(woodColour) cube([
 		cupboardWidth[clothes]+cupboardWidth[end]-rearDoorChampfer[x]+panelThickness,
-		cupboard[y],
+		popTopClearance,
 		shelfPly
 	]);
 
 	// Panel at rear on side of bed
+	// 90 degrees to other panels
 	translate([panelInnerOffset[wa],cupboardYOffset, 0])
 	color(woodColour) CupboardEndPanel();
 
