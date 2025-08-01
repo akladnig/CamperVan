@@ -1,27 +1,20 @@
 # Design
 
 # Design Considerations
-## Insulation
-- Allow free air flow in between ridges to allow any moisture to escape?
-  If so how to deal with end gaps?'
-
 ## Cupboards
 - [ ] Make shelves removeable and adjustable - cut notches out each corner and support on plates
 - [ ] Keep shelves in place with 4x screws? or pins?
 
 # Build Order
 ## Insulation and Floor
-- [ ] Clean floor and walls
-- [ ] Install sound deadening on walls and wheel arches - some on the floor maybe
+- [x] Clean floor and walls
+- [x] Install sound deadening on walls and wheel arches - some on the floor maybe
 - [ ] Foam spray inside ridges
 - [ ] Install Van Liner closed cell foam
-- [ ] Havelock wool inside low wells
-- [ ] Havelock wool in blank panel areas except kitchen window
-- [ ] Use shadecloth to keep wool in place
-- [ ] Cut foam board insulation and install full sheets
-- [ ] Cut furring strips with extra strips under batteries and water tank.
-- [ ] Cut foam board insulation to fit between furring strips
-- [ ] Cut full ply wood floor and adjust
+- [x] Cut foam board insulation and install full sheets
+- [x] Cut furring strips with extra strips under batteries and water tank.
+- [x] Cut foam board insulation to fit between furring strips
+- [x] Cut full ply wood floor and adjust
 - [ ] Cut out cupboard section from floor ply to allow future floor removal if required
 
 ## Battery Box standalone build and testing
@@ -61,6 +54,8 @@
 - Input flow sensor
 - Output flow sensor
 
+- 9DOF -  BHI360 - use the shuttle board 
+
 #### Devices to manage
 - Solar switch
 - 12V power on/off or isolation
@@ -77,16 +72,21 @@
 - [x] TPMS
 - [ ] Mounting plate for Stedi
 - [ ] Grease around light covers
-- [ ] Determine hole positions
 - [ ] Build bed
-- [ ] Install Swivel seat
-- [ ] Install pop top
+- [x] Install Swivel seat
+- [x] Install pop top
 - [ ] Investigate window - 300x500
 - [ ] Install floor
 - [ ] Build sample boxes
 - [ ] Build router jig
 
 # TODO
+## Front Cabin
+- [ ] Mirror on passenger fold down
+- [ ] Upgrade bulbs to led
+- [ ] sunglass holder
+- [x] TPMS
+
 ## Main Table
 - [ ] padbolts on legs to hold table in place when stowed
 - [ ] finger slots under table to pullout
@@ -104,11 +104,13 @@
 ## Fridge Table
 - [ ] Lagun style from Dick Smith
 
+## Sofa Bed
+- [ ] Roller shutter for headbox
+
 ## Electrical
 - [ ] DC to DC convertor
 - [ ] Oled display
-- [ ] monitor tank water temp
-
+- [ ] monitor hot water tank temp
 
 ## Storage
 - [x] 2x packs
@@ -124,10 +126,24 @@
 - [x] Quote from Atlas
 
 ## Bull Bar
-- [x] Quote
+- [ ] Quote
 - [ ] place order
+
+## Suspension and Tyres
+- [ ] Thor air bag quote - full on board air
+- [ ] Boss management system
+- [ ] Max tyre size
+- [ ] 25mm lift
 
 ## Miscellaneous
 - [ ] Mirror
 - [ ] Fire Extinguisher
 - [ ] Air compressor
+- [ ] Fire Alarm
+- [ ] Rear door extension latch
+
+## Windows
+- [ ] Blind for rear window
+- [ ] Mosquito net for rear door
+- [ ] Mosquito net for side door
+- [ ] Blind or curtain for side door - custom pleated blinds
