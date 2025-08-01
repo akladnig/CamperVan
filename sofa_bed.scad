@@ -10,15 +10,24 @@ use <electrical.scad>
 bedLength = 1880;
 bedWidth = 1240;
 
+// Mattress Sizes
+// Double: 1880 x 1370
+// Queen:  2030 x 1530
+
 // Matresses
 clarkRubberComfortDeluxe = [1880, 1220, 100]; 
 clarkRubberComfortDeluxe2 = [1840, 1220, 100]; 
+custom = [1840, 1340, 100]; 
 clarkRubber = 142; 
 newentor = 220;
 
-mattress = clarkRubberComfortDeluxe2;
+// mattress = clarkRubberComfortDeluxe2;
+mattress = custom;
 
-headBoardBox = [mattress[width],headBoardBoxWidth,550];
+//
+// Headboard box should be around 600x200 to fit the doona inside
+// 
+headBoardBox = [mattress[width],headBoardBoxWidth,600];
 
 // Couch
 // Is made from mattress and cut into 3x pieces
