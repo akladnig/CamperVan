@@ -3,6 +3,7 @@ include <materials.scad>
 include <van_dimensions.scad>
 use <functions.scad>
 
+use <windows.scad>
 use <kitchen_bench.scad>
 include <cabinets.scad>
 use <sofa_bed.scad>
@@ -11,6 +12,7 @@ use <water.scad>
 use <electrical.scad>
 use <heater.scad>
 use <storage.scad>
+use <grey_water_tank.scad>
 
 use <kitchen_appliances.scad>
 use <draw_dimensions.scad>
@@ -20,13 +22,16 @@ sofaMode = true; // false = bed mode
 showSofaSlats = false;
 showSofaCushions = false;
 perforatedPanel = true; // false = slat panel
-angle = 45;
+showHeadBoard = true;
+rearDrawAngle = 45;
 
 /* [Kitchen] */
 showBenchTop = true;
 showAppliances = true;
+showSplashBack = true;
 
 /* [Cupboard and Draws] */
+// cupBoardDepth = 420;
 showCupboardDoors = false;
 showBackPanel = false;
 openDrawsAndDoors = false;
@@ -53,6 +58,19 @@ module __Customiser_Limit__() {}
 //
 
 translate([0,0,-step[height]]) color(floorColour) VanBase();
+
+//
+// Draw the Windows
+// 
+WindowFrame();
+
+//
+// Draw the furring strips
+//  
+
+// for (s = [0:440:vi[x]]) {
+//     translate([s,0,0]) cube([40,1760,15]);
+// }
 
 //
 // Rear angled panel on passenger side
@@ -93,6 +111,7 @@ Kitchen(
     showCupboardDoors,
     openDrawsAndDoors,
     showBenchTop,
+    showSplashBack,
     showAppliances,
     showBackPanel,
     drawTypeIsBox,
@@ -107,7 +126,8 @@ Cupboard(showCupboardDoors, showBackPanel);
 
 // Panel on side of bed - needs to be robust to support bed
 translate([vi[x]-base()[width], base()[length]+cladding, 0]) {
-    color(woodColour5)
+    // color(woodColour5)
+    color("red")
     cube([base()[width], panelThickness, base()[height]-slatDepth]);
 }
 
@@ -131,7 +151,9 @@ translate([sofaBedOffset[x],cladding,0]) {
 //
 // HeadBoard Box
 //
-translate([vi[x],cladding,base()[z]-slatDepth]) HeadBoardBox(angle);
+if (showHeadBoard) {
+    translate([vi[x],cladding,base()[z]-slatDepth]) HeadBoardBox(rearDrawAngle);
+}
 
 // Couch rail bolted to side of van - use unistrut plus a support plate or just a support plate?
 color(woodColour)
@@ -162,7 +184,7 @@ translate([
 WaterTank();
 
 // Hot Water Tank
-translate([panelInnerOffset[wa]+hotWater()[y],vi[y]-hotWater()[x]-cladding-clearance,0])
+translate([panelInnerOffset[wa]+hotWater()[y],vi[y]-hotWater()[x]-cladding,0])
 rotate(z90)
 HotWater();
 
@@ -188,25 +210,15 @@ translate([
     wheelArch[z]+2*gap+slatDepth,
     0
 ]) 
-translate([batteryBox()[width],0,0]) rotate([0,0,90]) BatteryBox();
+translate([batteryBox("long")[width],0,0]) rotate([0,0,90]) BatteryBox("long");
 
 translate([
     panelInnerOffset[be],
     vi[y]-cladding-inverter()[y],
     tankShelfHeight()+shelfPly,
-]) color("green") Inverter();
-
-// translate([
-//     panelInnerOffset[be],
-//     vi[y]-cladding-dcdc()[y],
-//     tankShelfHeight()+2*shelfPly+inverter()[z],
-// ]) color("blue") DcDc("IP67");
-
-// translate([
-//     panelInnerOffset[be],
-//     vi[y]-cladding-dcdc()[y],
-//     tankShelfHeight()+2*shelfPly+inverter()[z]+gap,
-// ]) color("blue") DcDc("DCDC20A");
+]) color("green")
+// rotate([90,0,0]) Inverter();
+rotate([0,0,0]) Inverter();
 
 // Packs
 
@@ -216,16 +228,6 @@ zoff=pack("overland")[x];
 
 translate([xoff,yoff,zoff]) rotate([90,90,0]) Pack(model="overland");
 translate([xoff-pack("overland")[y]-spacing,yoff,zoff]) rotate([90,90,0]) Pack(model="overland");
-
-//
-// Heater
-//
-// translate([stepOffset+step[x]-heater()[x],290-heater()[y],-step[z]]) Heater("separated");
-// translate([panel2+hotWater()[y]+heater()[y],vi[y]-heater()[x],0]) rotate([0,0,90])
-// Heater("separated");
-translate([heater()[y],vi[y]-heater()[x],0]) rotate([0,0,90])
-Heater("vertical");
-echo(panel2=panel2);
 
 // Show Dimensions
 Dimensions();
@@ -238,12 +240,31 @@ color(woodColour) translate([stepOffset+doorOpening,0,-floorPly]) DoorFill();
 //
 // Kitchen Appliances
 //
-translate([panelInnerOffset[2], cupboardFace,tankShelfHeight()+shelfPly]) AirFryer();
+translate([panelInnerOffset[2]+airFryer()[y], cupboardFace,tankShelfHeight()+shelfPly]) rotate(z90) AirFryer();
 
 echo(cupboardWidth=cupboardWidth);
 
+if (showAppliances) {
+
+    filter = "single";
+
+    translate([panelOffset[4]+2*clearance,vi[y]-cladding,hotWater()[z]])
+    {
+    	// Pump
+    	Pump();
+
+    	// Strainer
+    	translate([
+    		pump()[x]-pumpInlet()[x]+strainer()[x]/2,
+    		pumpInlet()[y],
+    		pumpInlet()[z]
+    	])
+    	Strainer();
+    }
+}
+
 //
-// Air Compressor
-//
-translate([stepOffset+step[x]-clearance,step[y],-step[z]])
-rotate([0,0,180]) AirCompressor();
+// Grey Water Tank
+// 
+
+translate([wheelArchFront-greyWaterTank()[x],vi[y]-greyWaterTank()[y],-greyWaterTank()[z]]) GreyWaterTank();
