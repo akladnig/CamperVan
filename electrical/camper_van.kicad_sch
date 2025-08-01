@@ -5484,12 +5484,6 @@
 		(uuid "21812111-48fc-4ff0-90c9-ed79ec770b61")
 	)
 	(junction
-		(at 193.04 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "33c78ea4-57b8-4be1-9af3-4b7fd1db3e4d")
-	)
-	(junction
 		(at 88.9 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5597,11 +5591,21 @@
 		(color 0 0 0 0)
 		(uuid "cafe793c-4658-4b64-87c6-a2d4815ff794")
 	)
-	(junction
-		(at 195.58 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e083ff53-721e-4edf-9c94-0bd8a6c00f58")
+	(no_connect
+		(at 200.66 120.65)
+		(uuid "35579118-dc2e-44ae-9d2b-a0cd063c32ea")
+	)
+	(no_connect
+		(at 198.12 120.65)
+		(uuid "392a91d4-142f-405f-aa1e-da1a762115b5")
+	)
+	(no_connect
+		(at 200.66 151.13)
+		(uuid "50a4392e-390b-4741-a007-3ba024f6b7a2")
+	)
+	(no_connect
+		(at 198.12 151.13)
+		(uuid "a58bb8e3-9d08-4b5d-b47d-57a5ff75dec0")
 	)
 	(wire
 		(pts
@@ -5692,16 +5696,6 @@
 			(type default)
 		)
 		(uuid "0e8c6eff-1822-422f-b899-abdeb10b6bea")
-	)
-	(wire
-		(pts
-			(xy 185.42 39.37) (xy 193.04 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f5b03f9-7eb0-4802-a26f-74eb29c89e18")
 	)
 	(wire
 		(pts
@@ -5955,7 +5949,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 52.07) (xy 224.79 52.07)
+			(xy 193.04 52.07) (xy 224.79 52.07)
 		)
 		(stroke
 			(width 0)
@@ -6105,16 +6099,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 74.93) (xy 195.58 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f18fa81-782c-4ccd-b6e2-31236d211eb4")
-	)
-	(wire
-		(pts
 			(xy 88.9 200.66) (xy 102.87 200.66)
 		)
 		(stroke
@@ -6225,7 +6209,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 120.65) (xy 198.12 52.07)
+			(xy 193.04 120.65) (xy 193.04 52.07)
 		)
 		(stroke
 			(width 0)
@@ -6485,7 +6469,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 82.55) (xy 222.25 82.55)
+			(xy 195.58 82.55) (xy 222.25 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6825,7 +6809,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 39.37) (xy 210.82 39.37)
+			(xy 185.42 39.37) (xy 210.82 39.37)
 		)
 		(stroke
 			(width 0)
@@ -6895,7 +6879,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 120.65) (xy 200.66 82.55)
+			(xy 195.58 120.65) (xy 195.58 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6995,16 +6979,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 39.37) (xy 193.04 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae91c3ef-fdcb-4e27-a68a-fa77ecb570aa")
-	)
-	(wire
-		(pts
 			(xy 243.84 147.32) (xy 190.5 147.32)
 		)
 		(stroke
@@ -7025,7 +6999,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 74.93) (xy 195.58 74.93)
+			(xy 185.42 74.93) (xy 210.82 74.93)
 		)
 		(stroke
 			(width 0)
@@ -7232,16 +7206,6 @@
 			(type default)
 		)
 		(uuid "e28625cf-1658-43b0-833a-692c0a2472bf")
-	)
-	(wire
-		(pts
-			(xy 195.58 74.93) (xy 210.82 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3759de4-87a5-4339-8fa5-b918eb4421d8")
 	)
 	(wire
 		(pts
@@ -7514,7 +7478,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05700a11-96e2-4cad-bd66-c7aae5c76348")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR025"
 			(at 370.84 187.96 0)
 			(effects
 				(font
@@ -7564,7 +7528,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR020")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -7618,6 +7582,15 @@
 			)
 		)
 		(property "Description" "Single solar cell"
+			(at 387.35 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 387.35 166.37 0)
 			(effects
 				(font
@@ -7688,6 +7661,15 @@
 		)
 		(property "Description" "Relay SPST, normally open, EN50005"
 			(at 294.64 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 294.64 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7770,6 +7752,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 120.65 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9951a30a-b69a-4bc3-8d40-d84584db54a8")
 		)
@@ -7794,7 +7785,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "202d7d2c-fddd-4892-8013-1be653ef5aec")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR022"
 			(at 287.02 66.04 0)
 			(effects
 				(font
@@ -7844,7 +7835,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR017")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -7898,6 +7889,15 @@
 		)
 		(property "Description" "Relay SPDT, monostable, EN50005"
 			(at 177.8 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 177.8 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7982,6 +7982,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 140.97 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "46d1676b-5b23-4b69-9737-3ed597a63d74")
 		)
@@ -8010,7 +8019,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e977f14-7b87-4edb-97bf-eb5b8c4733a8")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR08"
 			(at 146.05 59.69 0)
 			(effects
 				(font
@@ -8060,7 +8069,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR04")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -8119,6 +8128,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 254 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "88b331f1-ce87-4707-bbc4-82cc1ada33a0")
 		)
@@ -8144,7 +8162,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "34d05ffc-4aed-4af9-b930-43a61983e403")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR016"
 			(at 213.36 119.38 0)
 			(effects
 				(font
@@ -8194,7 +8212,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR011")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -8210,7 +8228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "36c605b7-c3c7-48d1-b340-255d0dfd3e2c")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR010"
 			(at 146.05 115.57 0)
 			(effects
 				(font
@@ -8260,7 +8278,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR06")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -8318,6 +8336,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 135.89 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "86f83acb-baab-4dc1-84f5-82e1f6c6a698")
 		)
@@ -8358,7 +8385,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3919d5a4-39d3-404e-9159-341c6b6dfc47")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR09"
 			(at 146.05 87.63 0)
 			(effects
 				(font
@@ -8408,7 +8435,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR05")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -8424,7 +8451,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39cffc21-7a2c-4d08-8aec-d1512aa547d9")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR012"
 			(at 148.59 213.36 0)
 			(effects
 				(font
@@ -8474,7 +8501,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR08")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -8490,7 +8517,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b57d80f-da9e-4e29-8428-d8a8a20f9ea8")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR020"
 			(at 245.11 58.42 0)
 			(effects
 				(font
@@ -8540,7 +8567,7 @@
 		(instances
 			(project ""
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR015")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -8592,6 +8619,15 @@
 			)
 		)
 		(property "Description" "Multiple-cell battery"
+			(at 245.11 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 245.11 44.45 0)
 			(effects
 				(font
@@ -8669,6 +8705,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 177.8 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "A1"
 			(uuid "542ebbd6-6735-4f9d-a256-e434bc36fca9")
 		)
@@ -8703,7 +8748,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "539e5a97-c481-408b-b57b-466145358586")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR021"
 			(at 245.11 95.25 0)
 			(effects
 				(font
@@ -8753,7 +8798,7 @@
 		(instances
 			(project ""
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR016")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -8805,6 +8850,15 @@
 			)
 		)
 		(property "Description" "DC Motor"
+			(at 25.4 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 25.4 85.09 0)
 			(effects
 				(font
@@ -8882,6 +8936,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 294.64 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "A1"
 			(uuid "f1193669-3d8c-4cca-a1a9-77a161068b89")
 		)
@@ -8947,6 +9010,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 134.62 38.1 0)
 			(effects
 				(font
@@ -9030,6 +9102,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 77.47 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1cf53724-f8dc-4c6a-b1d5-93ab1d8d2dc2")
 		)
@@ -9088,6 +9169,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 373.38 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 373.38 210.82 0)
 			(effects
 				(font
@@ -9173,6 +9263,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 95.25 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7b253b0d-e5bb-4eef-b41e-1017d83e86b9")
 		)
@@ -9242,6 +9341,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 146.05 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "511288c5-4a1d-43ba-99d5-97bd9f49e5e8")
 		)
@@ -9270,7 +9378,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7687b3e5-feff-4e10-899f-5b585d472de5")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR05"
 			(at 102.87 222.25 0)
 			(effects
 				(font
@@ -9320,7 +9428,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR030")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -9373,6 +9481,15 @@
 			)
 		)
 		(property "Description" "Multiple-cell battery"
+			(at 53.34 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 53.34 86.36 0)
 			(effects
 				(font
@@ -9442,6 +9559,15 @@
 		)
 		(property "Description" "Generic connector, single row, 01x16, script generated"
 			(at 195.58 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 195.58 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9559,6 +9685,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 214.63 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "efe6976f-1a2d-474f-bfdd-9dd2c270e02c")
 		)
@@ -9584,7 +9719,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7fe6dbad-80cc-4a4b-8840-e9120517dc7f")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR07"
 			(at 120.65 114.3 0)
 			(effects
 				(font
@@ -9634,7 +9769,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR03")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -9694,6 +9829,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 88.9 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "558c82fa-2230-449d-bed6-626584fe411f")
 		)
@@ -9725,7 +9869,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "86a42048-73a9-4817-ba00-a04045af4dda")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR019"
 			(at 228.6 118.11 0)
 			(effects
 				(font
@@ -9775,7 +9919,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR014")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -9791,7 +9935,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ba4e9c3-901f-40de-a7dd-161b06b817ea")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR06"
 			(at 120.65 87.63 0)
 			(effects
 				(font
@@ -9841,7 +9985,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR02")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -9857,7 +10001,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8e306a19-a439-4030-92aa-703ba089764f")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR023"
 			(at 287.02 101.6 0)
 			(effects
 				(font
@@ -9907,7 +10051,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR018")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -9966,6 +10110,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 140.97 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9901417d-82d9-482e-b23a-8c3c191f6d04")
 		)
@@ -9994,7 +10147,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "918b29f2-9305-41da-923f-be6623c38851")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR015"
 			(at 187.96 86.36 0)
 			(effects
 				(font
@@ -10044,7 +10197,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR010")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -10060,7 +10213,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91f59f45-9011-4f03-9863-773a06785875")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR024"
 			(at 314.96 38.1 0)
 			(effects
 				(font
@@ -10110,7 +10263,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR019")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -10126,7 +10279,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "96a060d7-5c39-4ff9-beb9-552eab57749d")
-		(property "Reference" "#PWR0128"
+		(property "Reference" "#PWR013"
 			(at 154.94 96.52 0)
 			(effects
 				(font
@@ -10135,7 +10288,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
+		(property "Value" "VCC_3V3"
 			(at 154.94 87.63 0)
 			(effects
 				(font
@@ -10176,7 +10329,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR0128")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -10236,6 +10389,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 115.57 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "27b27fec-80e8-46e4-8f79-f0fbbf26b3c8")
 		)
@@ -10264,7 +10426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9cb06ae1-609a-43d3-a019-ce0eafe0296b")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR026"
 			(at 381 227.33 0)
 			(effects
 				(font
@@ -10314,7 +10476,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR021")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -10376,6 +10538,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 370.84 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "28f5bef4-5d64-4dee-be08-a027adea7585")
 		)
@@ -10401,7 +10572,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a85f5541-a3de-42c0-90ef-d99682462a9e")
-		(property "Reference" "#PWR0125"
+		(property "Reference" "#PWR04"
 			(at 102.87 198.12 0)
 			(effects
 				(font
@@ -10451,7 +10622,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR0125")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -10510,6 +10681,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 254 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "10c9ef50-0764-4955-9fb6-b4234895a173")
 		)
@@ -10535,7 +10715,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b222a88c-1cb2-4826-91c7-3ec74cf31f2a")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR014"
 			(at 187.96 50.8 0)
 			(effects
 				(font
@@ -10585,7 +10765,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR09")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -10601,7 +10781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8c74009-a04c-44e2-9a6f-93a8bb143a49")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR017"
 			(at 215.9 151.13 0)
 			(effects
 				(font
@@ -10651,7 +10831,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR012")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -10703,6 +10883,15 @@
 			)
 		)
 		(property "Description" "Programmable Linear Hall Effect Sensor, +0.6 to +1.3mV/G, SIP-4"
+			(at 88.9 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 88.9 184.15 0)
 			(effects
 				(font
@@ -10786,6 +10975,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 245.11 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9e93eb83-90e7-4351-8591-da4ebf5326d6")
 		)
@@ -10811,7 +11009,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7d8c1d3-1733-482b-86fd-54aae2a1d2a8")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR018"
 			(at 222.25 143.51 0)
 			(effects
 				(font
@@ -10861,7 +11059,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR013")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -10877,7 +11075,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3f23ebb-902f-4984-9cd1-d16dca58e3f8")
-		(property "Reference" "#PWR0126"
+		(property "Reference" "#PWR02"
 			(at 88.9 180.34 0)
 			(effects
 				(font
@@ -10886,7 +11084,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
+		(property "Value" "VCC_3V3"
 			(at 88.9 171.45 0)
 			(effects
 				(font
@@ -10927,7 +11125,7 @@
 		(instances
 			(project ""
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR0126")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -10988,6 +11186,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 60.96 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "eedce62a-dbe9-44cf-8567-c33498df4973")
 		)
@@ -11010,7 +11217,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da984109-d274-4c32-84b8-f9aedde9f86a")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR027"
 			(at 387.35 175.26 0)
 			(effects
 				(font
@@ -11060,7 +11267,7 @@
 		(instances
 			(project ""
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR022")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -11112,6 +11319,15 @@
 		)
 		(property "Description" "Fuse"
 			(at 214.63 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 214.63 39.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11187,6 +11403,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 95.25 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "43c7d55d-7383-4ea0-94bc-dee9e7b23bb0")
 		)
@@ -11212,7 +11437,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb10acda-1e53-4250-bfae-f4c6aa496c4a")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR011"
 			(at 148.59 195.58 0)
 			(effects
 				(font
@@ -11262,7 +11487,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR07")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -11314,6 +11539,15 @@
 		)
 		(property "Description" "Generic connector, single row, 01x16, script generated"
 			(at 195.58 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 195.58 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11433,6 +11667,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 115.57 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "f3fc40a9-0a0f-4ced-9e60-2be40147b617")
 		)
@@ -11461,7 +11704,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f416a879-3bb1-4a54-9155-4317cc8a5055")
-		(property "Reference" "#PWR0127"
+		(property "Reference" "#PWR03"
 			(at 88.9 204.47 0)
 			(effects
 				(font
@@ -11470,7 +11713,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
+		(property "Value" "VCC_3V3"
 			(at 88.9 195.58 0)
 			(effects
 				(font
@@ -11511,7 +11754,7 @@
 		(instances
 			(project "camper_van"
 				(path "/e095b45b-2ed6-497c-8100-020e1086a4e5"
-					(reference "#PWR0127")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -11636,6 +11879,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 360.68 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "acaab120-c559-4588-b37a-357429d85a3c")
 		)
@@ -11726,7 +11978,7 @@
 				(justify right)
 			)
 		)
-		(pin "5V" passive
+		(pin "3V3" output
 			(at 187.96 151.13 90)
 			(uuid "c9582c88-da59-4ee2-9919-2392739af617")
 			(effects
@@ -11776,16 +12028,6 @@
 				(justify right)
 			)
 		)
-		(pin "Battery 1 In Sensor" input
-			(at 198.12 151.13 90)
-			(uuid "9b058723-d26c-42dd-b729-25ce180b8b87")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "Battery 1 Out Sensor" input
 			(at 203.2 151.13 90)
 			(uuid "6c7a9fe5-d614-4b46-a2f3-9e2cc32e24af")
@@ -11799,16 +12041,6 @@
 		(pin "Battery 1 Relay" output
 			(at 208.28 151.13 90)
 			(uuid "c58fb81f-1421-4a9f-80ce-a9d124717bbd")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Battery 2 In Sensor" input
-			(at 200.66 151.13 90)
-			(uuid "9a498d8e-a8a4-4303-8814-7ead7ac2351f")
 			(effects
 				(font
 					(size 1.27 1.27)

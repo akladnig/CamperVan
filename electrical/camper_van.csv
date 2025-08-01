@@ -1,0 +1,85 @@
+Reference,Qty,Value,DNP,Exclude from BOM,Exclude from Board,Footprint,Datasheet
+A1,1,Alternator 180A,,,,,~
+A2,1,Arduino_Nano_ESP32,,,,Module:Arduino_Nano,https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf
+"A3,A4",2,Arduino_Nano_v3.x,,,,Module:Arduino_Nano,http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+"C1,C2,C3,C4,C5,C16,C19,C21,C25,C26,C27,C29,C30,C31,C32,C33",16,100nF,,,,,~
+"C6,C7,C22,C46",4,0.33uF,,,,,~
+"C8,C9,C10,C11,C12,C13,C15,C18,C20,C24,C28,C34,C35,C36,C37,C38,C39,C40,C41,C42,C43,C44,C45",23,1uF,,,,,~
+C14,1,0.1uF,,,,Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm,~
+"C17,C23,C47",3,22uF,,,,,~
+"D1,D2,D3,D5,D6,D7,D8",7,1N4001,,,,Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal,http://www.vishay.com/docs/88503/1n4001.pdf
+D4,1,1N914,,,,Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal,http://www.vishay.com/docs/85622/1n914.pdf
+D9,1,4V7,,,,Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal,https://www.vishay.com/docs/85816/1n4728a.pdf
+"DC-DC 20A1,DC-DC 50A MPPT1,Duoetto_Heater1",3,~,,,,,
+F1,1,100A,,,,,~
+F2,1,30A,,,,,~
+"F3,F4",2,60A,,,,,~
+"F5,F6",2,200A,,,,,~
+"F7,F8",2,20A,,,,,~
+F9,1,50A,,,,,~
+F10,1,5A,,,,,~
+F11,1,10A,,,,,~
+F12,1,15A,,,,,~
+F13,1,Fuse,,,,,~
+F14,1,250A,,,,,~
+J1,1,Starter Battery,,,,,~
+J2,1,Ignition,,,,,~
+J3,1,Input Flow Sensor,,,,,~
+J4,1,Output Flow Sensor,,,,,~
+"J5,J10",2,Input Flow Sensor,,,,Connector_Molex:CONN_SD-172648-0000_02_MOL,~
+"J6,J11",2,Output Flow Sensor,,,,Connector_Molex:CONN_SD-172648-0000_02_MOL,~
+J7,1,Battery Box,,,,,~
+"J8,J17",2,Battery Box,,,,Connector_Molex:Molex_Mini-Fit_Jr_5569-16A2_2x08_P4.20mm_Horizontal,~
+J9,1,Duoetto Remote,,,,,~
+J12,1,Lights,,,,Connector_Molex:Molex_Mini-Fit_Jr_5569-02A1_2x01_P4.20mm_Horizontal,~
+J13,1,Fuse and Switch Box,,,,Connector_Molex:Molex_Mini-Fit_Jr_5569-06A1_2x03_P4.20mm_Horizontal,~
+J14,1,Duoetto Remote,,,,Connector_Molex:Molex_Mini-Fit_Jr_5569-02A1_2x01_P4.20mm_Horizontal,~
+J15,1,Fuse and Switch,,,,Connector_Molex:Molex_Mini-Fit_Jr_5569-02A1_2x01_P4.20mm_Horizontal,~
+J16,1,Starter Battery,,,,Connector_Molex:Molex_Mini-Fit_Jr_5569-02A2_2x01_P4.20mm_Horizontal,~
+"J18,J19",2,Power,,,,,~
+"J20,SW2",2,Solar Panel 1,,,,,~
+"J21,SW3",2,Solar Panel 2,,,,,~
+J22,1,Fuse and Switch Box,,,,,~
+"K1,K2",2,Relay 200A,,,,,~
+"K3,K4",2,Relay 250A,,,,,~
+K5,1,G5V-1,,,,Relay_THT:Relay_SPDT_Omron-G5Q-1,https://www.omron.com/ecb/products/pdf/en-g5q.pdf
+M1,1,Battery Box Fan,,,,,~
+"Q1,Q2,Q3,Q4,Q5,Q6",6,STP40NF30L,,,,Package_TO_SOT_THT:TO-220F-3_Vertical,
+Q7,1,2N2222,,,,Package_TO_SOT_THT:TO-18-3,http://www.b-kainka.de/Daten/Transistor/BC108.pdf
+"R1,R2,R3,R4,R5,R10,R17",7,4k7,,,,,~
+"R6,R7,R8,R11",4,180,,,,,~
+"R9,R13,R19,R20",4,??,,,,,~
+"R12,R14,R15,R18",4,390,,,,,~
+R16,1,82R 2W,,,,,~
+R21,1,150,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+"R22,R24,R26,R54,R56,R67,R69,R71,R73",9,5k9,,,,,~
+"R23,R25,R27,R32,R45,R46,R47,R48,R49,R50,R51,R53,R55,R57,R63,R64,R66,R68,R70,R72,R74,R83,R84,R85,R86,R91,R92,R93,R94,R96",30,10k,,,,,~
+"R28,R29,R30,R33,R34,R35,R58,R59,R60,R61,R75,R76,R77,R78,R79,R80,R81,R82",18,154k,,,,,~
+"R31,R52,R95",3,68k,,,,,~
+"R36,R37,R38",3,22k,,,,,~
+"R39,R40,R41",3,1k2,,,,,~
+"R42,R43,R44",3,100k,,,,,~
+R62,1,35.7K 1%,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+"R65,R87,R88,R89,R90",5,6k2,,,,,~
+"Renogy 200Ah1,Renogy 200Ah2,Starter1",3,Battery,,,,,~
+"SC1,SC2",2,Solar_Cell,,,,,~
+SW1,1,SW_Push,,,,Button_Switch_SMD:SW_SPST_EVQP2,~
+SW4,1,12V Power On/Off,,,,,~
+SW5,1,Battery 2 On/Off,,,,,~
+SW6,1,Solar/50A charge Battery 2,,,,,~
+SW7,1,Hot Water,,,,,~
+SW8,1,Inverter,,,,,~
+SW9,1,Pump,,,,,~
+SW10,1,Fridge,,,,,~
+SW11,1,Lights & Aux,,,,,~
+U1,1,Input Flow Sensor,,,,Sensor_Current:Allegro_SIP-4,http://www.allegromicro.com/~/media/Files/Datasheets/A1363-Datasheet.ashx?la=en
+U2,1,Output Flow Sensor,,,,Sensor_Current:Allegro_SIP-4,http://www.allegromicro.com/~/media/Files/Datasheets/A1363-Datasheet.ashx?la=en
+"U3,U12",2,DS18B20,,,,Package_TO_SOT_THT:TO-92_Inline,http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
+"U4,U5,U6,U7,U8,U9,U10,U11",8,CNY17-3,,,,,http://www.vishay.com/docs/83606/cny17.pdf
+"U13,U21,U22,U24",4,MCP6004,,,,,http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf
+U14,1,MCP6002-xP,,,,,http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf
+U15,1,LM7805,,,,Package_TO_SOT_THT:TO-220-3_Vertical,https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF
+"U16,U23,U25",3,BA00,,,,Package_TO_SOT_THT:TO-220-5_P3.4x3.8mm_StaggerOdd_Lead7.13mm_TabDown,http://www.zen22142.zen.co.uk/Circuits/Power/l200.pdf
+U17,1,RS485-TTL,,,,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,https://www.renesas.com/en/document/dst/isl3170e-isl3171e-isl3172e-isl3173e-isl3174e-isl3175e-isl3176e-isl3177e-isl3178e-datasheet
+"U18,U19,U20",3,IL300,,,,,http://www.vishay.com/docs/83622/il300.pdf
+U26,1,"IPS 3.5"" Display",,,,Display:CR2013-MI2120,
