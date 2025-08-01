@@ -4,6 +4,7 @@ include <van_dimensions.scad>
 include <common_dimensions.scad>
 
 use <common.scad>
+use <electrical.scad>
 
 //
 // Toilet
@@ -70,11 +71,23 @@ Vetus42 = [610, 350, 400];
 Vetus61 = [780, 350, 400];
 
 // Custom L shape
+//     ┣━   a + wheelArch[x]   ━┫
+//  ┳━ ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
+//     ┃                        ┃
+//  b  ┃                        ┃
+//     ┃                        ┃
+//  ┻━ ┗━━━━━━━━━━━━━━━━┓       ┃
+//                      ⎥       ┃
+//                      ┗━━━━━━━┛
+//                      ┣━  a  ━┫
+// 
+
 a = tankL;
 b = cupboard[y]-wheelArch[y]-gap;
 
-tankGap = [10,10,50];
-tank = [a+wheelArch[x], cupboard[y]-gap-framingPly, hotWater[z]-tankGap[z]];
+tankGap = [10,10,10];
+tank = [a+wheelArch[x], cupboard[y]-gap-framingPly,wheelArch[z]];
+// tank = [a+wheelArch[x], cupboard[y]-gap-framingPly,seatHeight-inverter()[z]-clearance-2*framingPly-25];
 
 custom = [
 	[0,0],
@@ -83,13 +96,26 @@ custom = [
 	[a,b],
 	[tank[length],b],
 	[tank[length],0],
-] ; //97.5 litres
+];
+
+w = wheelArch[z]-gap;
+module wheelArchInfill() {
+	translate([a+wheelArch[x],b,-w])
+	rotate([90,0,0])
+	rotate([0,180,0])
+	linear_extrude(wheelArch[y]-gap)
+	difference() {
+		polygon([[0,0],[0,w],[w,w]]);
+		translate([r1-gap,w-r1]) circle(r=r1+gap);
+	}
+}
+
 
 volume = (tank[length]*tank[width]-wheelArch[x]*(wheelArch[y]+gap))*tank[z]/1000/1000;
 tankStr = str("Water Tank ", floor(volume), " litres"); 
 
 function tank() = tank;
-function tankGap() = [10,10,50];
+function tankGap() = tankGap;
 
 //
 // Tank Shelf Height
@@ -98,7 +124,12 @@ function tankShelfHeight() = tank()[z] + tankGap()[z];
 
 module WaterTank() {
 	echo(tank=tank);
-	color("green") linear_extrude(tank[z]) polygon(custom);	
+	union(){
+		color("green") {
+			linear_extrude(tank[z]) polygon(custom);
+			translate([0,0,tank[z]]) wheelArchInfill();
+		}
+	}
 	translate([50,0,100]) rotate([90,0,0]) color("black") text(tankStr, size=40);
 }
 
