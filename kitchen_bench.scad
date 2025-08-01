@@ -86,12 +86,14 @@ module Kitchen(
 	showCupboardDoors,
 	openDrawsAndDoors,
 	showBenchTop,
+	showSplashBack,
 	showAppliances,
 	showBackPanel,
 	drawTypeIsBox,
 	doorOpen,
 	rightOpening) {
 	sinkClearance = 30;
+	hobClearance = 20;
 	
 	if (showBenchTop) {
     color(benchColour)
@@ -106,7 +108,7 @@ module Kitchen(
         translate([centre(sinkBenchX-lip,sink()[x]),sinkClearance , topOfBenchCabinet]) {
             SinkCutout();
         }
-        translate([sinkBenchX+sinkClearance ,champfer+sinkClearance ,topOfBenchCabinet]) {
+        translate([sinkBenchX+sinkClearance ,champfer+hobClearance ,topOfBenchCabinet]) {
             rotate([0,0,0]) HobCutout();            
         }
     }
@@ -115,13 +117,15 @@ module Kitchen(
 	    translate([centre(sinkBenchX-lip,sink()[x]),sinkClearance ,bench[z] - sink()[z]])
 			Sink();
 
-	    translate([sinkBenchX+sinkClearance ,champfer+sinkClearance ,bench[z] - hob()[z]])
+	    translate([sinkBenchX+sinkClearance ,champfer+hobClearance ,bench[z] - hob()[z]+5])
       Hob(1);
 		}
 
     // Add a splash back
-    color(benchColour) translate([0,kitchenBenchTop[y]-benchThickness,bench[z]]) 
-		cube(splashBack);
+    if (showSplashBack) {
+	    color(benchColour) translate([0,kitchenBenchTop[y]-benchThickness,bench[z]]) 
+			cube(splashBack);
+		}
 	}
 
   // Left side fridge panel
@@ -257,7 +261,7 @@ module Kitchen(
     translate([panelThickness+gap,kitchenBenchTop[y] - fridge()[y] - airGap,0])
     Fridge(doorOpen,rightOpening);
 
-		// Water Filter and Pump
+		// Water Filter
 		translate([
 		    kitchenOffset[2]+panelThickness+clearance,
 		    bench[y]+lip-framingPly,
@@ -265,22 +269,22 @@ module Kitchen(
 		]) {
 			// Filter
 			translate([0,0,-filter(filter)[h]]) Filter(filter);
-			// Pump
-			translate([
-				filter(filter)[diameter]+clearance,
-				0,
-				-pump()[z]
-			])
-			Pump();
+			// // Pump
+			// translate([
+			// 	filter(filter)[diameter]+clearance,
+			// 	0,
+			// 	-pump()[z]
+			// ])
+			// Pump();
 
-			// Strainer
-			translate([
-				filter(filter)[diameter]+clearance+pump()[x]-pumpInlet()[x]+strainer()[x]/2,
-				// 0,
-				pumpInlet()[y],
-				pumpInlet()[z]-pump()[z]
-			])
-			Strainer();
+			// // Strainer
+			// translate([
+			// 	filter(filter)[diameter]+clearance+pump()[x]-pumpInlet()[x]+strainer()[x]/2,
+			// 	// 0,
+			// 	pumpInlet()[y],
+			// 	pumpInlet()[z]-pump()[z]
+			// ])
+			// Strainer();
 		}
 	}
 }
