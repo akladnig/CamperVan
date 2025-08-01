@@ -65,3 +65,5 @@ difference() {
 module DoorFill() {
 	cube([step[x]-doorOpening, step[y],floorPly]);
 }
+
+popTopClearance = 360;
