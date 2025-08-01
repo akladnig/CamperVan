@@ -1,3 +1,8 @@
 use <electrical.scad>
 
-BatteryBox();
+/* [Battery Box Orientation] */
+orientation = "long";
+
+module __Customiser_Limit__() {}
+
+BatteryBox(orientation);
