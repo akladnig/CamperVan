@@ -47,6 +47,9 @@ module Dimensions() {
 	  // Cupboard width
 	  translate([vanInternal[width]-cladding-cupboard[width],0,0])
 	  dim_dimension(length=cupboard[width], weight=$weight, offset=-100);
+	  // Sofabed width
+	  translate([cladding,0,0])
+	  dim_dimension(length=base()[x], weight=$weight, offset=-150);
 	  // Space between cupboard and sofa bed
 	  translate([cladding+base()[length]+slatDepth,0,0])
 	  dim_dimension(length=vanInternal[width]-2*cladding-cupboard[width]-base()[length]-slatDepth, weight=$weight, offset=-100, loc="left");
