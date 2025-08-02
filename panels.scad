@@ -159,7 +159,7 @@ module SinkCoverPanel(showCupboardDoors, showDimensions) {
 	      faceY
 			]);
 			if (showDimensions) {
-				color("black") translate([20,0,10]) rotate(x90) text(str(faceX, " x ", faceY));
+				color("black") translate([20,0,10]) rotate(x90) text(str(faceX, " x ", faceY), size=14);
 			}
 		}
 	}
