@@ -123,10 +123,12 @@ Kitchen(
     fridgeRightOpening
 );
 
-//
-// CupBoard
-// 
-Cupboard(showCupboardDoors, showBackPanel);
+//----------------------------------------------------------------------------------------------
+// CupBoard modules
+//----------------------------------------------------------------------------------------------
+ 
+InternalSlidingDoorCupboard(showCupboardDoors, showBackPanel);
+RearmostCupboard(showCupboardDoors, showBackPanel);
 
 // Panel on side of bed - needs to be robust to support bed
 translate([vi[x]-base()[width], base()[length]+cladding, 0]) {
@@ -135,26 +137,29 @@ translate([vi[x]-base()[width], base()[length]+cladding, 0]) {
     cube([base()[width], panelThickness, base()[height]-slatDepth]);
 }
 
-//
+//----------------------------------------------------------------------------------------------
 // Lagun Table
-//
+//----------------------------------------------------------------------------------------------
+
 if (storeTable) {
     translate([frontSeatOffset-ply15,vi[y]-cladding-lagunTable()[y],0]) rotate([90,0,0]) rotate([0,90,0]) LagunTable(showTableDimensions);
 } else {
     translate([frontSeatOffset,vi[y]-cladding-bench()[width]-lagunTable()[x]-lip,lagunTable()[z]]) LagunTable(showTableDimensions);
 }
 
-//
+//----------------------------------------------------------------------------------------------
 // Sofa Bed placement
-//
+//----------------------------------------------------------------------------------------------
+
 translate([sofaBedOffset[x],cladding,0]) {
     SofaBed(sofaMode, perforatedPanel, showSofaSlats);
     SofaBedCushions(sofaMode, showSofaCushions);
 }
 
-//
+//----------------------------------------------------------------------------------------------
 // HeadBoard Box
-//
+//----------------------------------------------------------------------------------------------
+
 if (showHeadBoard) {
     translate([vi[x],cladding,base()[z]-slatDepth]) HeadBoardBox(rearDrawAngle);
 }
@@ -169,14 +174,9 @@ color(woodColour)
 translate([sofaBedOffset[x],base()[length]-slatDepth+cladding,base()[height]-slatWidth-slatDepth])
 cube([base()[width], slatDepth, slatWidth]);
 
-//
+//----------------------------------------------------------------------------------------------
 // Toilet, Shower and Water Tank Placement
-// 
-
-// Toilet placement
-translate([vi[x], base()[width]-3*slatDepth-cladding+toilet()[width]-toilet()[length],0]) {
-    rotate([0,0,90]) Toilet();
-}
+//----------------------------------------------------------------------------------------------
 
 // WaterTank
 waterTankPanelOffset = vi[x]-wheelArchOffset-tank()[x]-gap;
@@ -201,9 +201,9 @@ translate([
 rotate(x90) rotate(z90)
 Shower();
 
-//
+//----------------------------------------------------------------------------------------------
 // Electrics
-//
+//----------------------------------------------------------------------------------------------
 
 // Battery
 echo(batteryBox=batteryBox());
@@ -224,6 +224,10 @@ translate([
 // rotate([90,0,0]) Inverter();
 rotate([0,0,0]) Inverter();
 
+//----------------------------------------------------------------------------------------------
+// Rear under sofabed storage
+//----------------------------------------------------------------------------------------------
+
 // Packs
 
 xoff=vi[x]-pack("overland")[y]-cx/2+15;
@@ -233,17 +237,20 @@ zoff=pack("overland")[x];
 translate([xoff,yoff,zoff]) rotate([90,90,0]) Pack(model="overland");
 translate([xoff-pack("overland")[y]-spacing,yoff,zoff]) rotate([90,90,0]) Pack(model="overland");
 
-// Show Dimensions
-Dimensions();
+// Toilet placement
+translate([vi[x], base()[width]-3*slatDepth-cladding+toilet()[width]-toilet()[length],0]) {
+    rotate([0,0,90]) Toilet();
+}
 
 //
 // Floor Filler
 //
 color(woodColour) translate([stepOffset+doorOpening,0,-floorPly]) DoorFill();
 
-//
+//----------------------------------------------------------------------------------------------
 // Kitchen Appliances
-//
+//----------------------------------------------------------------------------------------------
+
 translate([panelInnerOffset[2]+airFryer()[y], cupboardFace,tankShelfHeight()+shelfPly]) rotate(z90) AirFryer();
 
 echo(cupboardWidth=cupboardWidth);
@@ -267,8 +274,14 @@ if (showAppliances) {
     }
 }
 
-//
+//----------------------------------------------------------------------------------------------
 // Grey Water Tank
-// 
+//----------------------------------------------------------------------------------------------
 
 translate([wheelArchFront-greyWaterTank()[x],vi[y]-greyWaterTank()[y],-greyWaterTank()[z]]) GreyWaterTank();
+
+//----------------------------------------------------------------------------------------------
+// Show Dimensions
+//----------------------------------------------------------------------------------------------
+ 
+Dimensions();
