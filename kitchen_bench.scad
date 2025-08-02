@@ -27,12 +27,12 @@ kitchenBenchTop = [bench[x], bench[y]+lip, benchThickness];
 sinkBenchX = panelThickness+gap+fridge()[x]+gap+panelThickness+lip;
 
 kitchenPoly = [
-    [0,0],
-    [0, bench[y]+lip],
-    [bench[x],bench[y]+lip],
-    [bench[x],champfer],
-    [sinkBenchX+champfer,champfer], // create a champfer
-    [sinkBenchX,0],
+  [0,0],
+  [0, bench[y]+lip],
+  [bench[x],bench[y]+lip],
+  [bench[x],champfer],
+  [sinkBenchX+champfer,champfer], // create a champfer
+  [sinkBenchX,0],
 ];
 
 splashBack = [bench[x], benchThickness, 100];
