@@ -22,19 +22,20 @@ tankL = 350;
 //
 seatHeight = 460;
 baseWidth = 850;
-// headBoardBoxWidth = 150;
-headBoardBoxWidth = 200;
+headBoardBoxWidth = 150;
+// headBoardBoxWidth = 200;
 
 sofaBedWidth = baseWidth+headBoardBoxWidth;
 sofaBedOffset = [vi[x]-sofaBedWidth,0];
 
 //
-// Kitchen cupboard width calculations based on a 50mm clearance from the end of the bench
+// Kitchen cupboard width calculations based on a 0mm clearance from the end of the bench
 // and the sofa which will effectively set the bench length.
 //
 // benchHeight = 900;
+sofaClearance = 0;
 benchHeight = 850;
-benchLength = sofaBedOffset[x]-clearance-frontSeatOffset;
+benchLength = sofaBedOffset[x]-sofaClearance-frontSeatOffset;
 bench = [benchLength, fridge()[y]-50,benchHeight];
 
 function bench() = bench;
@@ -42,7 +43,7 @@ function bench() = bench;
 fridgeCupboardWidth = fridge()[x]+2*gap; 
 
 // Calculate the width of the 2x kitchen cupboards
-totalCupboardsWidth = vi[x] - frontSeatOffset - panelThickness - fridgeCupboardWidth -panelThickness - sofaBedWidth - clearance - panelThickness;
+totalCupboardsWidth = vi[x] - frontSeatOffset - panelThickness - fridgeCupboardWidth -panelThickness - sofaBedWidth - sofaClearance - panelThickness;
 kitchenCupboardWidth = floor((totalCupboardsWidth-panelThickness)/2);
 
 
@@ -63,7 +64,7 @@ panelOffset = [
 	frontSeatOffset, // Fridge Left
 	panel1, // Fridge Right
 	panel2, // Kitchen Middle
-	sofaBedOffset[x]-clearance-panelThickness, // Bench End
+	sofaBedOffset[x]-sofaClearance-panelThickness, // Bench End
 	wheelArchRear, // Rear of Wheel Arch
 	vi[x], // Rear of Van
 ];
