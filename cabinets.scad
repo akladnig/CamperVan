@@ -83,7 +83,7 @@ module Draw(label,
 				}
 				if (showDimensions) {
 					color("black") translate([20,0,10]) rotate(x90)
-					text(str(label, ": ", faceX, " x ", faceY));		
+					text(str(label, ": ", faceX, " x ", faceY), size=14);		
 				}
 			}
 			color(woodColour3) translate([0,drawDepth-rearGap-drawPly]) DrawFrontBack();
@@ -155,7 +155,7 @@ module FridgeDraw(
 		 rotate(x90) cylinder(d=latchDiameter,h=facePly+drawPly+0.2, center=true);
 		}
 		if (showDimensions) {
-			color("black") translate([20,0,10]) rotate(x90) text(str(faceX, " x ", faceY));		
+			color("black") translate([20,0,10]) rotate(x90) text(str(faceX, " x ", faceY), size=14);		
 		}
 	}
 
@@ -178,60 +178,6 @@ module FridgeDraw(
 		 rotate(x90) cylinder(d=latchDiameter,h=facePly+drawPly+0.2, center=true);
 		}
 	}
-	}
-}
-
-//----------------------------------------------------------------------------------------------
-// Table Design
-//----------------------------------------------------------------------------------------------
-
-tableLength = base()[length]-wheelArch[width]-3*slatDepth-2*spacing;
-tableWidth = 500;
-// Set at 720 so that the top draw can be opened - 750 is the usual table height
-tableHeight = 720;
-r = 50;
-
-table = [[0,0,0], [0,tableLength,r], [tableWidth, tableLength,r], [tableWidth,0,0]];
-
-module Table(showDims) {
-	translate([0,spacing]) color(woodColour) linear_extrude(ply15) polyedge(table);
-
-	if (showDims) {
-		color("white") {
-			translate([0,0,ply15]) rotate([0,0,90])
-			dim_dimension(length=tableLength, weight=$weight, offset=-tableWidth+50, ext=false);
-
-			translate([0,0,ply15]) dim_dimension(length=tableWidth, weight=$weight, offset=50, ext=false);
-		}
-	}
-}
-
-//----------------------------------------------------------------------------------------------
-// Lagun Table
-//----------------------------------------------------------------------------------------------
-
-lagunTable = [750,500,750];
-function lagunTable() = lagunTable;
-
-lagunTablePoly = [
-	[0,0,r],
-	[0,lagunTable[length],r],
-	[lagunTable[width],lagunTable[length],r],
-	[lagunTable[width],0,r]
-];
-
-
-module LagunTable(showDims) {
-	translate([0,spacing]) color(woodColour) linear_extrude(ply15) polyedge(lagunTablePoly);
-
-	if (showDims) {
-		color("white") {
-			translate([0,0,ply15]) rotate([0,0,90])
-			dim_dimension(length=lagunTable[length], weight=$weight, offset=-lagunTable[width]+50, ext=false);
-
-			translate([0,0,ply15])
-			dim_dimension(length=lagunTable[width], weight=$weight, offset=50, ext=false);
-		}
 	}
 }
 

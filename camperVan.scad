@@ -7,6 +7,7 @@ use <windows.scad>
 use <kitchen_bench.scad>
 include <cabinets.scad>
 use <sofa_bed.scad>
+use <tables.scad>
 use <appliances.scad>
 use <water.scad>
 use <electrical.scad>
@@ -91,9 +92,9 @@ if (showTable) {
         Table(showTableDimensions);
     } else {
         translate([
-            vi[x]-base()[width]-headBoardBox()[y]-tableWidth,
+            vi[x]-base()[width]-headBoardBox()[y]-table()[y],
             cladding,
-            tableHeight
+            table()[z]
         ])
         Table(showTableDimensions);
     }
@@ -101,7 +102,7 @@ if (showTable) {
 railLength = vi[x] - base()[width] - stepOffset - step[x];
 echo(railLength=railLength);
 color(woodColour)
-translate([stepOffset+step[x],cladding,tableHeight-rail[x]])
+translate([stepOffset+step[x],cladding,table()[z]-rail[x]])
 cube([railLength,rail[y],rail[x]]);
 
 //----------------------------------------------------------------------------------------------
