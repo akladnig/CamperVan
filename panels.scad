@@ -146,16 +146,23 @@ module FridgeRightPanel() {
 // Sink Cover Panel
 //----------------------------------------------------------------------------------------------
 
-module SinkCoverPanel(showCupboardDoors) {
+module SinkCoverPanel(showCupboardDoors, showDimensions) {
+	faceX = cupboardWidth[fridge];
+	faceY = sink()[z]-benchThickness;
+
   if (showCupboardDoors) {
-    color(woodColour)
-		translate(origin()[2]) 
-    cube([
-      cupboardWidth[fridge],
-      facePly,
-      sink()[z]-benchThickness
-		]);
-  }
+		translate(origin()[2]) {
+	    color(woodColour)
+	    cube([
+	      faceX,
+	      facePly,
+	      faceY
+			]);
+			if (showDimensions) {
+				color("black") translate([20,0,10]) rotate(x90) text(str(faceX, " x ", faceY));
+			}
+		}
+	}
 }
 
 //----------------------------------------------------------------------------------------------

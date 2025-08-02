@@ -30,12 +30,14 @@ latchOffset = 12;
 // - "runner"
 //----------------------------------------------------------------------------------------------
 
-module Draw(frontWidth,
+module Draw(label,
+	frontWidth,
 	frontHeight,
 	drawDepth,
 	isDrawTypeABox,
 	openDrawsAndDoors,
-	showFront=true) {
+	showFront=true,
+	showDimensions) {
 
 	sideGap = isDrawTypeABox ? boxSideGap : runnerSideGap; 
 
@@ -61,11 +63,14 @@ module Draw(frontWidth,
 		union() {
 			// Front panel
 			if (showFront) {
+				faceX = frontWidth-spacing;
+				faceY = frontHeight-spacing;
+
 				translate([spacing/2,0,spacing/2]) color(woodColour)
 				difference() {
-					// The actual draw
+					// The front panel and front part of the draw
 					union() {
-						cube([frontWidth-spacing, facePly+0.1, frontHeight-spacing]);
+						cube([faceX, facePly+0.1, faceY]);
 						color(woodColour3) DrawFrontBack();
 					}
 					// The cutout for the draw latch
@@ -75,6 +80,10 @@ module Draw(frontWidth,
 						frontHeight-latchOffset-latchDiameter/2
 					])
 					 rotate(x90) cylinder(d=latchDiameter,h=facePly+drawPly+0.2, center=true);
+				}
+				if (showDimensions) {
+					color("black") translate([20,0,10]) rotate(x90)
+					text(str(label, ": ", faceX, " x ", faceY));		
 				}
 			}
 			color(woodColour3) translate([0,drawDepth-rearGap-drawPly]) DrawFrontBack();
@@ -97,7 +106,8 @@ module FridgeDraw(
 	openDrawsAndDoors,
 	drainOffset,
 	drainDiameter,
-	showFront=true) {
+	showFront=true,
+	showDimensions) {
 
 	frontWidth = cupboardWidth[fridge];
 	frontHeight = benchHeight-fridge()[z]-sink()[z]-gap;
@@ -129,17 +139,23 @@ module FridgeDraw(
 	translate([0,drawExtension,0]) {
 	// Front panel
 	if (showFront) {
+		faceX = frontWidth-spacing;
+		faceY = frontHeight-spacing;
+
 		translate([spacing/2,0,spacing/2]) color(woodColour)
 		difference() {
 			// the front panel
-			cube([frontWidth-spacing, facePly, frontHeight-spacing]);
+			cube([faceX, facePly, faceY]);
 			// the latch cutout
 			translate([
-				(frontWidth-spacing)/2,
+				faceX/2,
 				(facePly+drawPly)/2,
 				frontHeight-latchOffset-latchDiameter/2
 			])
 		 rotate(x90) cylinder(d=latchDiameter,h=facePly+drawPly+0.2, center=true);
+		}
+		if (showDimensions) {
+			color("black") translate([20,0,10]) rotate(x90) text(str(faceX, " x ", faceY));		
 		}
 	}
 

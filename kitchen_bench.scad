@@ -46,8 +46,8 @@ hobs = 1;
 // incrementing vertically then horizontally
 //----------------------------------------------------------------------------------------------
 
-// Minimum height for cutlery
-cutleryDrawHeight = 80;
+// Minimum height for cutlery plus 10 on top and 10 on bottom for gap
+cutleryDrawHeight = 60 + 20;
 
 // Minimum height for draw in front of water filter
 filterDrawHeight = filter("twin")[z];
@@ -89,6 +89,7 @@ module Kitchen(
 	showSplashBack,
 	showAppliances,
 	showBackPanel,
+	showDimensions,
 	drawTypeIsBox,
 	doorOpen,
 	rightOpening) {
@@ -132,11 +133,11 @@ module Kitchen(
   FridgeLeftPanel();
 
   // Sink cover panel
-  SinkCoverPanel(showCupboardDoors);
+  SinkCoverPanel(showCupboardDoors, showDimensions);
 	
 	// Fridge Draw
 	translate(origin[1])
-	FridgeDraw(drawTypeIsBox, openDrawsAndDoors, drainOffset(), 40, showCupboardDoors);
+	FridgeDraw(drawTypeIsBox, openDrawsAndDoors, drainOffset(), 40, showCupboardDoors, showDimensions);
 	
   // Right side fridge panel
   translate(origin()[3]) 
@@ -150,7 +151,7 @@ module Kitchen(
 
 	// Draw at floor level between fridge and water tank
   translate(origin()[4])
-	Draw(cupboardWidth[wtank], tankShelfHeight()-ply12, drawDepth, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors);
+	Draw("Floor", cupboardWidth[wtank], tankShelfHeight()-ply12, drawDepth, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors, showDimensions);
 
   // Water Tank top shelf
   waterTankShelfWidth = 2*kitchenCupboardWidth+3*panelThickness-2*panelPly;
@@ -164,17 +165,17 @@ module Kitchen(
 
 	// Second Draw
   translate(origin()[6])
-	Draw(cupboardWidth[LHKitchen], secondDrawHeight, drawDepth, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors);
+	Draw("2", cupboardWidth[LHKitchen], secondDrawHeight, drawDepth, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors, showDimensions);
 
 	// Third Draw - allow room behind for water pipes 
 	pipesAndClips = 15;
 	
   translate(origin()[7])
-	Draw(cupboardWidth[LHKitchen], filterDrawHeight, drawDepth-pipesAndClips, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors);
+	Draw("3", cupboardWidth[LHKitchen], filterDrawHeight, drawDepth-pipesAndClips, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors, showDimensions);
 
 	// Cutlery Draw
   translate(origin()[8])
-	Draw(cupboardWidth[LHKitchen], cutleryDrawHeight, drawDepth, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors);
+	Draw("Cutlery", cupboardWidth[LHKitchen], cutleryDrawHeight, drawDepth, drawTypeIsBox, openDrawsAndDoors, showCupboardDoors, showDimensions);
 
 	// Hob cover Panel
 	coverHeight = hob()[z]-benchThickness;
@@ -208,7 +209,7 @@ module Kitchen(
 		champfer+lip,
 		topOfBenchCabinet-drawHeight
 	])
-	Draw(cupboardWidth[RHKitchen], drawHeight, drawDepth, drawTypeIsBox, openDrawsAndDoors,showCupboardDoors);
+	Draw("4", cupboardWidth[RHKitchen], drawHeight, drawDepth, drawTypeIsBox, openDrawsAndDoors,showCupboardDoors, showDimensions);
 
   // End of bench
   translate([kitchenOffset[be],champfer+lip,0])

@@ -50,6 +50,7 @@ showExternalDims = true;
 showApplianceDims = false;
 showKitchenDims = false;
 showTableDimensions = false;
+showCupboardDimensions = false;
 
 module __Customiser_Limit__() {}
 
@@ -103,9 +104,10 @@ color(woodColour)
 translate([stepOffset+step[x],cladding,tableHeight-rail[x]])
 cube([railLength,rail[y],rail[x]]);
 
-//
+//----------------------------------------------------------------------------------------------
 // Kitchen
-// 
+//----------------------------------------------------------------------------------------------
+ 
 translate([frontSeatOffset, vi[y]-bench[y]-lip-cladding,0])
 Kitchen(
     showCupboardDoors,
@@ -114,6 +116,7 @@ Kitchen(
     showSplashBack,
     showAppliances,
     showBackPanel,
+    showCupboardDimensions,
     drawTypeIsBox,
     fridgeDoorOpen,
     fridgeRightOpening
