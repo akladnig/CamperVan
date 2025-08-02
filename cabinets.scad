@@ -8,10 +8,10 @@ use <kitchen_bench.scad>
 use <sofa_bed.scad>
 
 //----------------------------------------------------------------------------------------------
-// Cupboard Module
+// Internal Sliding Door Cupboard Module
 //----------------------------------------------------------------------------------------------
 
-module Cupboard(showDoors, showBackPanel) {
+module InternalSlidingDoorCupboard(showDoors, showBackPanel) {
 	cupboardYOffset =  vi[y]-cupboard[width]-cladding;
 
 	// First Panel
@@ -40,6 +40,21 @@ module Cupboard(showDoors, showBackPanel) {
 		popTopClearance,
 		shelfPly
 	]);
+
+	// Backing Panel
+	if (showBackPanel){
+		CupboardBackingPanel();
+		ChampferPanel("right");
+	}
+
+}
+
+//----------------------------------------------------------------------------------------------
+// Rearmost Cupboard Module
+//----------------------------------------------------------------------------------------------
+
+module RearmostCupboard(showDoors, showBackPanel) {
+	cupboardYOffset =  vi[y]-cupboard[width]-cladding;
 
 	// Panel at rear on side of bed
 	// 90 degrees to other panels
