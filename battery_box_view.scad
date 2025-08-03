@@ -5,4 +5,4 @@ orientation = "long";
 
 module __Customiser_Limit__() {}
 
-BatteryBox(orientation);
+BatteryBox(40,orientation);
