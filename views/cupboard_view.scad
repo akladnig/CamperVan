@@ -1,13 +1,16 @@
 include <../cabinets.scad>
 
 use <../water.scad>
+use <../electrical.scad>
 
 /* [Cupboard and Draws] */
 showCupboardDoors = false;
 showBackPanel = false;
+openDrawsAndDoors = false;
 
 //
 // CupBoard
 // 
-Cupboard(showCupboardDoors, showBackPanel);
+InternalSlidingDoorCupboard(showCupboardDoors, openDrawsAndDoors, showBackPanel);
+RearmostCupboard(showCupboardDoors, showBackPanel);
 
