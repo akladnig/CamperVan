@@ -32,7 +32,6 @@ showAppliances = true;
 showSplashBack = true;
 
 /* [Cupboard and Draws] */
-// cupBoardDepth = 420;
 showCupboardDoors = false;
 showBackPanel = false;
 openDrawsAndDoors = false;
@@ -127,7 +126,7 @@ Kitchen(
 // CupBoard modules
 //----------------------------------------------------------------------------------------------
  
-InternalSlidingDoorCupboard(showCupboardDoors, showBackPanel);
+InternalSlidingDoorCupboard(showCupboardDoors, openDrawsAndDoors, showBackPanel);
 RearmostCupboard(showCupboardDoors, showBackPanel);
 
 // Panel on side of bed - needs to be robust to support bed
