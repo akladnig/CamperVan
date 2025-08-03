@@ -238,8 +238,8 @@ module CupboardFirstPanel() {
 // Cupboard Middle Panel
 //----------------------------------------------------------------------------------------------
 
-module CupboardMiddlePanel() {
-	CupboardBasePanel(cupboard()[width], vi[z]);
+module CupboardMiddlePanel(width) {
+	CupboardBasePanel(width, vi[z]);
 }
 
 //----------------------------------------------------------------------------------------------
@@ -250,6 +250,8 @@ endPanelWidth =  panelOffset[vr]-panelInnerOffset[wa];
 
 endPanelAngle = atan((cupboard()[width]-popTopClearance)/(vi[z]-bench()[z]-panelZOffset));
 endPanelFactor = 1/cos(endPanelAngle);
+
+function topPanelAngles() = [endPanelAngle, endPanelFactor];
 
 endPanelPoly = [
 	[0,0],
