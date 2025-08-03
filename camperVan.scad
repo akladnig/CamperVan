@@ -213,7 +213,8 @@ translate([
     wheelArch[z]+2*gap+slatDepth,
     0
 ]) 
-translate([batteryBox("long")[width],0,0]) rotate([0,0,90]) BatteryBox("long");
+translate([batteryBox("long")[width],0,0]) rotate([0,0,90])
+BatteryBox(ductSize=40,orientation="long");
 
 translate([
     panelInnerOffset[be],
