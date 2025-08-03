@@ -278,7 +278,7 @@ overhang = 50;
 //
 module OuterSlidingSupport() {
 
-	supportX = batteryBox()[y]-duct()[diameter]-ductPosition()[y]-2*slatWidth-gap;
+	supportX = batteryBox()[y]-ductLge()[diameter]-ductPosition()[y]-2*slatWidth-gap;
 	offsetX = supportX+overhang+slatWidth;
 
 	// Top Support
