@@ -1,0 +1,3 @@
+use <../electrical.scad>
+
+Fan();
