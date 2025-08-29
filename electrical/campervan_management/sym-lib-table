@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "camper_van")(type "KiCad")(uri "/Users/adrian/Documents/Campervan/electrical/camper_van.kicad_sym")(options "")(descr ""))
+)

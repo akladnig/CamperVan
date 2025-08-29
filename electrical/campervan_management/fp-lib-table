@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CV_connector")(type "KiCad")(uri "/Users/adrian/Documents/Campervan/electrical/footprints/connector.pretty")(options "")(descr ""))
+  (lib (name "CV_capacitor")(type "KiCad")(uri "/Users/adrian/Documents/Campervan/electrical/footprints/capacitor.pretty")(options "")(descr ""))
+)
