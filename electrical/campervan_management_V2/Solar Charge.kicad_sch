@@ -150,6 +150,168 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:L"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L"
+				(at 1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Inductor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "L_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -747,7 +909,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "camper_van:MDD2302"
+		(symbol "Transistor_FET:Q_PMOS_DGS"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -755,8 +917,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q7"
-				(at 6.35 1.2701 0)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -764,8 +926,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MDD2302"
-				(at 6.35 -1.2699 0)
+			(property "Value" "Q_PMOS_DGS"
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -773,28 +935,16 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 5.08 -1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8588906188805722112"
-				(at 5.08 -3.81 0)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Description" "4A Id, 20V Vds, 25mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
+			(property "Datasheet" "~"
 				(at 0 0 0)
 				(effects
 					(font
@@ -803,7 +953,7 @@
 					(hide yes)
 				)
 			)
-			(property "LCSC PN" "C427390"
+			(property "Description" "P-MOSFET transistor, drain/gate/source"
 				(at 0 0 0)
 				(effects
 					(font
@@ -812,7 +962,7 @@
 					(hide yes)
 				)
 			)
-			(property "Extended" "PE"
+			(property "ki_keywords" "transistor PMOS P-MOS P-MOSFET"
 				(at 0 0 0)
 				(effects
 					(font
@@ -821,25 +971,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "N-Channel HEXFET MOSFET"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MDD2302_0_1"
+			(symbol "Q_PMOS_DGS_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -878,6 +1010,18 @@
 				)
 				(polyline
 					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.762 0.508) (xy 0.762 -0.508)
 					)
 					(stroke
@@ -900,30 +1044,6 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(circle
 					(center 1.651 0)
 					(radius 2.794)
@@ -933,6 +1053,18 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
@@ -983,7 +1115,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.921 0.381) (xy 3.683 0.381)
+						(xy 2.921 -0.381) (xy 3.683 -0.381)
 					)
 					(stroke
 						(width 0)
@@ -995,7 +1127,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
 					)
 					(stroke
 						(width 0)
@@ -1006,7 +1138,7 @@
 					)
 				)
 			)
-			(symbol "MDD2302_1_1"
+			(symbol "Q_PMOS_DGS_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -1017,7 +1149,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1035,7 +1167,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1053,7 +1185,514 @@
 							)
 						)
 					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "camper_van:C_SMD_Ceramic_0402"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C33"
+				(at 2.54 1.2638 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "100nF"
+				(at 2.54 -1.2762 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ceramic SMD capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_SMD_Ceramic_0402_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_SMD_Ceramic_0402_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "camper_van:C_SMD_Ceramic_0805"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C33"
+				(at 2.54 1.2638 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "10uF"
+				(at 2.54 -1.2762 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ceramic SMD capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_SMD_Ceramic_0805_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_SMD_Ceramic_0805_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "camper_van:MCP16311x-xMNY"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U1"
+				(at 0 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MCP16311x-xMNY"
+				(at 0 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+				(at 1.27 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP16311-Family-Data-Sheet-DS20005255C.pdf"
+				(at 0 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1A Output Voltage, 30V Input, integrated switch step-down regulator, PFM/PWM modulation, DFN-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switching buck converter power-supply voltage regulator"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "DFN*1EP*3x2mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MCP16311x-xMNY_0_1"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "MCP16311x-xMNY_1_1"
+				(pin power_in line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "V_{IN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "V_{CC}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -12.7 90)
+					(length 2.54)
+					(name "PGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -12.7 90)
+					(length 2.54)
+					(name "AGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "BOOST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -7.62 180)
+					(length 2.54)
+					(name "Vfb"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1417,82 +2056,146 @@
 		)
 	)
 	(junction
-		(at 97.79 91.44)
+		(at 266.7 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0275949e-3bf6-4611-88aa-b9a104947c63")
+		(uuid "0d6deddc-dca4-4a59-b49d-7ce729d00185")
 	)
 	(junction
-		(at 67.31 85.09)
+		(at 194.31 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "138b42c0-1116-4a4e-beb1-25a28b2fb6a7")
+		(uuid "0f9aff9e-36eb-42f1-baa3-ef699afd0f3f")
 	)
 	(junction
-		(at 128.27 53.34)
+		(at 92.71 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21c6a6c4-30e0-4bd7-a4e0-927372a820eb")
+	)
+	(junction
+		(at 92.71 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34ec8b8a-1c3a-4a69-bd08-092ac88d03cb")
+	)
+	(junction
+		(at 184.15 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3aa6aca0-2bb1-4d39-aad8-9841a923484f")
+	)
+	(junction
+		(at 256.54 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "43257823-418e-4bf8-ae3c-23d7eb7d4df6")
+	)
+	(junction
+		(at 104.14 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6948258f-fd96-463d-98ad-ce71b126c27d")
 	)
 	(junction
-		(at 102.87 113.03)
+		(at 102.87 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8402cd99-99c6-4a6e-bd48-cd093e89e392")
+		(uuid "6b0fa240-3024-4923-8ea2-caf35fbed05c")
 	)
 	(junction
-		(at 97.79 48.26)
+		(at 204.47 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a92b0849-8504-40aa-8a86-268bfb41bd00")
+		(uuid "83656c64-d301-4e83-8328-ded3c85c58a9")
 	)
 	(junction
-		(at 102.87 91.44)
+		(at 247.65 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "aa4fd536-ffc2-4d40-b943-b9470f8f501d")
+		(uuid "8df837e2-bb81-4ebe-a9c2-2966c677c678")
 	)
 	(junction
-		(at 67.31 90.17)
+		(at 68.58 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c7e311bc-75d3-47ba-80f1-80ad0568485d")
+		(uuid "96400178-b3ff-4cb4-b93f-ab0587bfc1a6")
 	)
 	(junction
-		(at 77.47 113.03)
+		(at 102.87 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "dae0068f-3424-4dcc-a081-76611ba9bbee")
+		(uuid "a3e17bcd-b444-4f00-aec7-5b567ea02148")
 	)
 	(junction
-		(at 77.47 123.19)
+		(at 237.49 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f43280d6-f0e5-4af9-bb1b-2fb39bf7d0d2")
+		(uuid "caa187dd-33d8-4e75-b7be-8790d5eecfe5")
+	)
+	(junction
+		(at 102.87 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cdeaba85-256e-404c-8506-41ff14cd146c")
+	)
+	(junction
+		(at 64.77 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1baa9a7-8ca0-4c1d-a588-9206c3c6e802")
+	)
+	(junction
+		(at 102.87 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f394c7a5-ab48-470b-b17b-1ce15d6c43bd")
+	)
+	(junction
+		(at 247.65 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f952c700-2d55-4eb8-8d7a-d75de95174be")
+	)
+	(junction
+		(at 247.65 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa482793-5e09-4209-bdf9-b6ce1eba436e")
 	)
 	(wire
 		(pts
-			(xy 110.49 53.34) (xy 107.95 53.34)
+			(xy 80.01 92.71) (xy 80.01 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "046f9186-6455-483a-991a-de8eab425aaf")
+		(uuid "09a99f2a-7628-4309-8b1e-1f63d26311da")
 	)
 	(wire
 		(pts
-			(xy 92.71 113.03) (xy 102.87 113.03)
+			(xy 205.74 27.94) (xy 204.47 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "077cb84e-c84f-4487-bb94-e3896d3caef8")
+		(uuid "0a1ced77-6376-4947-b28e-97ec14713ddf")
 	)
 	(wire
 		(pts
-			(xy 128.27 48.26) (xy 125.73 48.26)
+			(xy 247.65 54.61) (xy 247.65 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bbcef29-1d09-464a-a83c-868d9c358a16")
+	)
+	(wire
+		(pts
+			(xy 104.14 96.52) (xy 101.6 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1502,27 +2205,47 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 121.92) (xy 102.87 123.19)
+			(xy 83.82 135.89) (xy 83.82 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0f3f1fc3-9df6-4ea0-9759-acff935f34b9")
+		(uuid "17101485-9841-4016-a441-19c1efc81d7f")
 	)
 	(wire
 		(pts
-			(xy 102.87 91.44) (xy 105.41 91.44)
+			(xy 102.87 162.56) (xy 105.41 162.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "13ada9f2-3ca4-4784-9099-9e24d4aa3460")
+		(uuid "1b74c794-a4dc-42ee-a9d5-4c54d07f6bd2")
 	)
 	(wire
 		(pts
-			(xy 128.27 53.34) (xy 132.08 53.34)
+			(xy 102.87 147.32) (xy 134.62 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bcb2455-5263-49bc-8b41-66906af6c74b")
+	)
+	(wire
+		(pts
+			(xy 184.15 25.4) (xy 184.15 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c754518-1a91-4f9c-81d0-d22b874ba13e")
+	)
+	(wire
+		(pts
+			(xy 104.14 101.6) (xy 107.95 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1532,47 +2255,237 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 121.92) (xy 77.47 123.19)
+			(xy 102.87 149.86) (xy 102.87 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "209066fb-e6f9-4d3c-bbe0-4fb9b5660f51")
+		(uuid "21533ca8-6830-4314-8fb6-531d860fdc15")
 	)
 	(wire
 		(pts
-			(xy 102.87 86.36) (xy 105.41 86.36)
+			(xy 100.33 157.48) (xy 102.87 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "235b11d3-eb75-431f-ae29-dc3470ab7afe")
+		(uuid "25438171-3287-4879-864a-b4a584dda5e2")
 	)
 	(wire
 		(pts
-			(xy 102.87 114.3) (xy 102.87 113.03)
+			(xy 266.7 33.02) (xy 266.7 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "483af049-e0b7-4d14-80dc-9a02bbeed7df")
+		(uuid "25d5e6e7-0e06-42a5-bc5c-9ea5f7804e07")
 	)
 	(wire
 		(pts
-			(xy 77.47 124.46) (xy 77.47 123.19)
+			(xy 218.44 43.18) (xy 218.44 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "48f11cac-c463-4b08-844f-22675688eb0b")
+		(uuid "26bf2d64-0ac3-4c4b-be03-bc5f1993b605")
 	)
 	(wire
 		(pts
-			(xy 128.27 55.88) (xy 128.27 53.34)
+			(xy 247.65 45.72) (xy 247.65 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "290bbf3c-73a2-474e-ae3b-010edd7098c5")
+	)
+	(wire
+		(pts
+			(xy 247.65 25.4) (xy 256.54 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a3c1af4-91a1-424c-b89e-ff847894b975")
+	)
+	(wire
+		(pts
+			(xy 247.65 35.56) (xy 247.65 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d1f3956-c227-41c7-bce8-6f79d669a232")
+	)
+	(wire
+		(pts
+			(xy 194.31 25.4) (xy 194.31 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e38090f-e7e5-48a4-ac7c-b837f81f0eba")
+	)
+	(wire
+		(pts
+			(xy 226.06 33.02) (xy 229.87 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f738903-2dff-4143-ab47-c89238883507")
+	)
+	(wire
+		(pts
+			(xy 128.27 157.48) (xy 134.62 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30c1436b-a622-459c-aa3c-8b1d334a9618")
+	)
+	(wire
+		(pts
+			(xy 68.58 172.72) (xy 64.77 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "321ef489-7c3a-4061-8864-730ed35d06b8")
+	)
+	(wire
+		(pts
+			(xy 194.31 25.4) (xy 184.15 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36226744-da79-4f8b-8f8b-584b561d4f99")
+	)
+	(wire
+		(pts
+			(xy 102.87 135.89) (xy 92.71 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3727c732-5ed2-4bf2-846b-a3b6968281b6")
+	)
+	(wire
+		(pts
+			(xy 92.71 147.32) (xy 92.71 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bba22b4-e54c-4ba9-904d-9e5ebc8d32d6")
+	)
+	(wire
+		(pts
+			(xy 204.47 27.94) (xy 204.47 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bd0880e-d78e-463f-86af-5bfbe9958439")
+	)
+	(wire
+		(pts
+			(xy 205.74 25.4) (xy 204.47 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c10376c-710f-4d54-a5ba-265689db0ae8")
+	)
+	(wire
+		(pts
+			(xy 218.44 54.61) (xy 247.65 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d4da4cb-841b-4a86-9fcb-d1299664952d")
+	)
+	(wire
+		(pts
+			(xy 236.22 45.72) (xy 247.65 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e24fcba-a364-4651-9a9c-a7074ec95b50")
+	)
+	(wire
+		(pts
+			(xy 102.87 147.32) (xy 102.87 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41ba6b5f-8d7b-4b3d-8a7f-7d19edf3e2ec")
+	)
+	(wire
+		(pts
+			(xy 226.06 38.1) (xy 236.22 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4384a655-c057-4229-bf1e-6c647a252d5d")
+	)
+	(wire
+		(pts
+			(xy 256.54 27.94) (xy 256.54 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45677419-5f0a-49c1-8124-5ac3e66453bb")
+	)
+	(wire
+		(pts
+			(xy 184.15 33.02) (xy 184.15 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47eb217d-02e9-4b16-9d7b-395c73a29e40")
+	)
+	(wire
+		(pts
+			(xy 124.46 162.56) (xy 120.65 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f21f734-7094-48c5-8a06-91e1c572be2a")
+	)
+	(wire
+		(pts
+			(xy 104.14 104.14) (xy 104.14 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1582,67 +2495,137 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 90.17) (xy 67.31 90.17)
+			(xy 83.82 162.56) (xy 83.82 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "53179c87-2820-43be-9966-3ce9b6009502")
+		(uuid "543595ef-ae1d-44dd-9cef-977e1da446b8")
 	)
 	(wire
 		(pts
-			(xy 67.31 90.17) (xy 67.31 107.95)
+			(xy 83.82 172.72) (xy 68.58 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "574e19d2-9424-49f6-b4a6-9ce95649f251")
+		(uuid "5b55e718-2a83-420a-9c9d-39c35cc14565")
 	)
 	(wire
 		(pts
-			(xy 110.49 48.26) (xy 107.95 48.26)
+			(xy 194.31 33.02) (xy 194.31 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "617e2101-167c-40e8-a9b9-0caddae7b3cc")
+		(uuid "648a2531-5a5d-423a-9843-64cf8cdb5970")
 	)
 	(wire
 		(pts
-			(xy 86.36 48.26) (xy 97.79 48.26)
+			(xy 80.01 81.28) (xy 80.01 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "63d8246a-d80f-4e28-8188-57645cb6be17")
+		(uuid "64ec529a-e392-4293-b7c7-23b95dff4c90")
 	)
 	(wire
 		(pts
-			(xy 77.47 114.3) (xy 77.47 113.03)
+			(xy 58.42 172.72) (xy 64.77 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6b7984c3-2281-4596-a77c-3f980f6481e7")
+		(uuid "6857dba3-7ad5-4ecf-b944-fedd3250170f")
 	)
 	(wire
 		(pts
-			(xy 128.27 86.36) (xy 134.62 86.36)
+			(xy 81.28 101.6) (xy 86.36 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6fa44b5b-f7b4-41b3-95a3-ce8da63170bd")
+		(uuid "6aeb3773-114a-4662-97bb-cfc4f5d8ac7d")
 	)
 	(wire
 		(pts
-			(xy 128.27 53.34) (xy 125.73 53.34)
+			(xy 92.71 135.89) (xy 83.82 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e381dca-cfb4-427e-9e3a-4e99ef12c032")
+	)
+	(wire
+		(pts
+			(xy 256.54 33.02) (xy 256.54 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e6f64b6-1cd8-4a1f-91fc-f27808a3ac80")
+	)
+	(wire
+		(pts
+			(xy 102.87 162.56) (xy 102.87 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fc038db-5026-4beb-ad37-2783c5824fe2")
+	)
+	(wire
+		(pts
+			(xy 92.71 157.48) (xy 95.25 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "726eb3b6-71dc-4d7f-a011-ea15cf0bcd34")
+	)
+	(wire
+		(pts
+			(xy 247.65 44.45) (xy 247.65 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81f05b50-e4bb-4b33-9035-cf9beeee032d")
+	)
+	(wire
+		(pts
+			(xy 247.65 27.94) (xy 247.65 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84da31c3-5339-4564-9ba2-fc667e354d55")
+	)
+	(wire
+		(pts
+			(xy 256.54 25.4) (xy 266.7 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85c33717-18d3-43ae-b3a0-34ae607d8d63")
+	)
+	(wire
+		(pts
+			(xy 104.14 101.6) (xy 101.6 101.6)
 		)
 		(stroke
 			(width 0)
@@ -1652,77 +2635,137 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 85.09) (xy 90.17 86.36)
+			(xy 102.87 149.86) (xy 76.2 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8cc7918b-22f6-4636-a0df-67715fb12cb6")
+		(uuid "8e1de6af-7ad9-474e-a2a0-55488d137c45")
 	)
 	(wire
 		(pts
-			(xy 102.87 91.44) (xy 102.87 113.03)
+			(xy 114.3 135.89) (xy 102.87 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "91aea94f-18fb-4008-89c7-b255c8ab6e41")
+		(uuid "8f14e57b-6fa2-47b0-ad46-9377ac5d4c4d")
 	)
 	(wire
 		(pts
-			(xy 124.46 93.98) (xy 124.46 91.44)
+			(xy 237.49 33.02) (xy 237.49 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9216c27a-df34-444c-92bb-c5eb8aa2245d")
+		(uuid "8f735152-69db-427b-8709-186ec35be9e4")
 	)
 	(wire
 		(pts
-			(xy 67.31 76.2) (xy 67.31 85.09)
+			(xy 246.38 25.4) (xy 247.65 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "93457e1c-7404-4b39-96af-478d9bb81253")
+		(uuid "955802f0-42a5-40a1-b89d-c0aaf895690b")
 	)
 	(wire
 		(pts
-			(xy 97.79 48.26) (xy 97.79 91.44)
+			(xy 200.66 33.02) (xy 205.74 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a6ceea7d-9b84-4ae3-8fcc-a74758f1c785")
+		(uuid "a2158ec5-d54e-4e40-bcb5-7aac039d1dcc")
 	)
 	(wire
 		(pts
-			(xy 124.46 91.44) (xy 120.65 91.44)
+			(xy 204.47 25.4) (xy 194.31 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a933ea7b-573e-4a5a-ae1c-64efc817913e")
+		(uuid "a7a6ba8c-902c-4bd9-9384-cad1af467602")
 	)
 	(wire
 		(pts
-			(xy 77.47 113.03) (xy 87.63 113.03)
+			(xy 200.66 41.91) (xy 200.66 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "abb4b54c-6786-4657-8120-84af47257f2d")
+		(uuid "a8b21677-718b-4a29-bb55-39f06086ff05")
 	)
 	(wire
 		(pts
-			(xy 128.27 44.45) (xy 128.27 48.26)
+			(xy 266.7 25.4) (xy 270.51 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab085926-b982-4005-b0fd-af67b149fbda")
+	)
+	(wire
+		(pts
+			(xy 200.66 36.83) (xy 200.66 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adc0dda3-18d0-4705-968e-f0b88d16f52f")
+	)
+	(wire
+		(pts
+			(xy 226.06 25.4) (xy 237.49 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af2bc76e-daf9-4b8c-ad37-0b8b5da2821f")
+	)
+	(wire
+		(pts
+			(xy 184.15 25.4) (xy 181.61 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1458222-fb36-4767-ab8c-daf77d864806")
+	)
+	(wire
+		(pts
+			(xy 60.96 143.51) (xy 64.77 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b18fb219-f89c-4dd6-8981-7905a8145562")
+	)
+	(wire
+		(pts
+			(xy 64.77 172.72) (xy 64.77 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4f38bf1-f65a-495d-b9ba-48d35fec11f5")
+	)
+	(wire
+		(pts
+			(xy 104.14 92.71) (xy 104.14 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1732,117 +2775,225 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 96.52) (xy 90.17 99.06)
+			(xy 124.46 165.1) (xy 124.46 162.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b645e0da-7431-417c-9413-5df67757dc85")
+		(uuid "b743aea8-f38f-4cd1-a55f-9ca49c12d22b")
 	)
 	(wire
 		(pts
-			(xy 67.31 118.11) (xy 67.31 123.19)
+			(xy 236.22 38.1) (xy 236.22 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b71d0b89-fb4a-45c9-9472-59d0a2d86a92")
+		(uuid "c30e1c13-5a60-4fb1-b963-c6c55d25075e")
 	)
 	(wire
 		(pts
-			(xy 107.95 53.34) (xy 107.95 55.88)
+			(xy 102.87 135.89) (xy 102.87 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c0574523-a9bd-4937-9dc7-e2c53f19e800")
+		(uuid "c41079f6-8428-4ad3-926c-3e8f59db5129")
 	)
 	(wire
 		(pts
-			(xy 81.28 85.09) (xy 90.17 85.09)
+			(xy 92.71 135.89) (xy 92.71 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d00006f6-767d-43e9-b5ac-ffc37487ee42")
+		(uuid "c5ab7085-6a53-4b6d-9963-f09ce5316f0a")
 	)
 	(wire
 		(pts
-			(xy 102.87 82.55) (xy 102.87 86.36)
+			(xy 102.87 157.48) (xy 105.41 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d49536bb-80ca-4def-ba4b-ab5797056da8")
+		(uuid "cb45db62-e133-4509-b453-da52256befe8")
 	)
 	(wire
 		(pts
-			(xy 67.31 123.19) (xy 77.47 123.19)
+			(xy 91.44 157.48) (xy 92.71 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dafba008-d44c-41c6-ae8b-bebbaf6418d1")
+		(uuid "cb7149fb-8924-4cbc-a1e2-f72aa801b683")
 	)
 	(wire
 		(pts
-			(xy 74.93 113.03) (xy 77.47 113.03)
+			(xy 266.7 27.94) (xy 266.7 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e22b276f-2f17-4406-826a-4160928ece63")
+		(uuid "e0f8d0b3-d136-4fa6-9620-580867237408")
 	)
 	(wire
 		(pts
-			(xy 97.79 48.26) (xy 100.33 48.26)
+			(xy 234.95 33.02) (xy 237.49 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eb0c5ddd-34b5-4327-8264-3647de6959d1")
+		(uuid "e20cc514-94d8-4cea-9e8d-5aae7a7732f0")
 	)
 	(wire
 		(pts
-			(xy 67.31 85.09) (xy 67.31 90.17)
+			(xy 76.2 157.48) (xy 72.39 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eb3ea8c7-e00a-4b4f-a9b1-f3cce8372490")
+		(uuid "f2550696-4bde-4ec1-9b34-6009a9393e9d")
 	)
 	(wire
 		(pts
-			(xy 97.79 91.44) (xy 102.87 91.44)
+			(xy 80.01 96.52) (xy 86.36 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eff6e375-6a3f-4d0d-b14c-1e1128d05bf8")
+		(uuid "f662a595-ca87-4229-8028-338115a4dbe5")
 	)
 	(wire
 		(pts
-			(xy 67.31 85.09) (xy 73.66 85.09)
+			(xy 64.77 143.51) (xy 64.77 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f8d06d87-286e-432c-8777-220e9c4b27ea")
+		(uuid "f81a3fc7-5ea3-4b7e-b0f7-920caa26305b")
 	)
-	(hierarchical_label "Solar Charge Battery 2 Switch"
+	(wire
+		(pts
+			(xy 238.76 25.4) (xy 237.49 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8556a3d-f28b-42c3-abbc-dc167872dc79")
+	)
+	(wire
+		(pts
+			(xy 76.2 149.86) (xy 76.2 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f93fb0fd-09ca-4dc4-82a9-2ac17ffc77de")
+	)
+	(global_label "VIN"
 		(shape input)
-		(at 86.36 48.26 180)
+		(at 181.61 25.4 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1966bb52-dce5-4040-9619-12a2611a3aaa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175.6009 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VIN"
+		(shape input)
+		(at 114.3 135.89 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67daa6ea-5210-4618-80fa-a0fafee51637")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.3091 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VCC_4V1"
+		(shape input)
+		(at 60.96 143.51 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8008599c-5e54-44aa-ba88-093a187e6866")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 51.0805 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VCC_4V1"
+		(shape input)
+		(at 270.51 25.4 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a41cc985-3523-4ef8-bdc0-ec0f40f1d688")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 280.3895 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(hierarchical_label "Solar Charge Battery 2 Relay"
+		(shape output)
+		(at 58.42 172.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1851,24 +3002,24 @@
 			)
 			(justify right)
 		)
-		(uuid "34a34659-e391-416e-88a2-9e79e66974e7")
+		(uuid "0475ed4a-342b-4aae-b4b9-41182555a292")
 	)
-	(hierarchical_label "Solar Charge Battery 2 On"
+	(hierarchical_label "Solar Charge Battery 2 Switch"
 		(shape input)
-		(at 134.62 86.36 0)
+		(at 81.28 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.254)
 				(bold yes)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "3544a25e-ffee-4dfb-b9ec-df0aa6a1ed9a")
+		(uuid "4330f2ac-3e98-494b-9bd9-9581b2578e82")
 	)
 	(hierarchical_label "Solar Charge Battery 2 Switch Sensor"
 		(shape output)
-		(at 132.08 53.34 0)
+		(at 107.95 101.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1879,22 +3030,35 @@
 		)
 		(uuid "5997b777-aa63-406a-a1ff-658ad5184c0d")
 	)
-	(hierarchical_label "Solar Charge Battery 2 Relay"
-		(shape output)
-		(at 52.07 90.17 180)
+	(hierarchical_label "Solar Charge Battery 2 On"
+		(shape input)
+		(at 134.62 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.254)
 				(bold yes)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "747ac35e-55bb-4e17-85a4-079f57eb75f6")
+		(uuid "b9723b10-7c7b-4751-bec5-bf7ec06a7b26")
+	)
+	(hierarchical_label "Solar Charge Battery 2 Switch"
+		(shape input)
+		(at 134.62 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "d067de09-d31c-4c12-8b76-b11386243948")
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 77.47 124.46 0)
+		(at 68.58 180.34 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1902,9 +3066,9 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "042b7736-980f-4009-b070-06c9e011402c")
-		(property "Reference" "#PWR087"
-			(at 77.47 130.81 0)
+		(uuid "088565f0-75ad-44f1-ac25-31ffdcb33d9c")
+		(property "Reference" "#PWR019"
+			(at 68.58 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1913,16 +3077,15 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 77.47 129.54 0)
+			(at 68.58 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 124.46 0)
+			(at 68.58 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1931,7 +3094,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 124.46 0)
+			(at 68.58 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1940,7 +3103,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 77.47 124.46 0)
+			(at 68.58 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1949,98 +3112,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "5fcc2a44-883a-4ca4-81ce-1205f95f7281")
+			(uuid "ca24e31c-fa07-4db6-98ad-4f06efa172e5")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "#PWR087")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 102.87 123.19 0)
-		(mirror y)
+		(lib_id "camper_van:C_SMD_Ceramic_0805")
+		(at 256.54 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "172932f6-d887-4bcc-9fa6-3056b8db1d4f")
-		(property "Reference" "#PWR090"
-			(at 102.87 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 102.87 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 102.87 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 102.87 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 102.87 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f9df6e02-b002-47a2-8075-dafc6175f392")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "#PWR090")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 77.47 118.11 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "27d9e796-97b9-44b8-8ba2-ce233db76620")
-		(property "Reference" "R22"
-			(at 74.93 116.8399 0)
+		(uuid "19c2865e-d334-4984-9062-ba4a7eb70de3")
+		(property "Reference" "C46"
+			(at 259.08 29.2162 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2048,8 +3142,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1M"
-			(at 74.93 119.3799 0)
+		(property "Value" "10uF"
+			(at 259.08 31.7562 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2057,8 +3151,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 79.248 118.11 90)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 256.54 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2067,7 +3161,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 77.47 118.11 0)
+			(at 256.54 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2075,8 +3169,114 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 77.47 118.11 0)
+		(property "Description" "Ceramic SMD capacitor, small symbol"
+			(at 256.54 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C13585"
+			(at 256.54 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 256.54 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66ee4849-28c9-4c59-ac97-19415918355e")
+		)
+		(pin "2"
+			(uuid "e0e55f8b-65d9-42f7-846f-088f32831186")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "C46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4001")
+		(at 64.77 166.37 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22c47bbb-3e91-4986-8932-6544d64a8417")
+		(property "Reference" "D2"
+			(at 67.31 165.0999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "M7"
+			(at 67.31 167.6399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 64.77 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 64.77 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2085,7 +3285,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 77.47 118.11 0)
+			(at 64.77 166.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2093,8 +3293,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C17514"
-			(at 77.47 118.11 0)
+		(property "LCSC PN" "C95872"
+			(at 64.77 166.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2103,7 +3303,7 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 77.47 118.11 0)
+			(at 64.77 166.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2111,70 +3311,51 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "faa0607d-1861-4f95-8694-f24c7eed2467")
-		)
 		(pin "1"
-			(uuid "ad196eb4-aa69-4c4e-818c-bc3793c61a80")
+			(uuid "e3e84aa4-09d6-4006-9545-308cd30432d5")
+		)
+		(pin "2"
+			(uuid "f95ecd27-b24f-4fd6-8861-a0197db320b6")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "R22")
+					(reference "D2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Isolator:LTV-357T")
-		(at 113.03 88.9 0)
-		(mirror y)
+		(lib_id "Device:R")
+		(at 247.65 31.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "29a29930-855c-44a7-9d5b-e38431724027")
-		(property "Reference" "U3"
-			(at 113.03 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LTV-817S-TA1-C"
-			(at 113.03 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SO-4_4.4x3.6mm_P2.54mm"
-			(at 118.11 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.buerklin.com/medias/sys_master/download/download/h91/ha0/8892020588574.pdf"
-			(at 113.03 88.9 0)
+		(fields_autoplaced yes)
+		(uuid "293d3308-8bfe-480b-8148-9c6e4d14fde1")
+		(property "Reference" "R13"
+			(at 250.19 30.4799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Description" "DC Optocoupler, Vce 35V, CTR 50%, SO-4"
-			(at 113.03 88.9 0)
+		(property "Value" "68k"
+			(at 250.19 33.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 245.872 31.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2182,8 +3363,26 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C109227"
-			(at 113.03 88.9 0)
+		(property "Datasheet" "~"
+			(at 247.65 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 247.65 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17801"
+			(at 247.65 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2192,7 +3391,7 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 113.03 88.9 0)
+			(at 247.65 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2200,22 +3399,154 @@
 				(hide yes)
 			)
 		)
-		(pin "3"
-			(uuid "93731a5d-b34c-48cd-b53f-7494a8f44273")
+		(pin "2"
+			(uuid "4887836a-9cf8-467c-b245-ea3fe68c7abe")
 		)
 		(pin "1"
-			(uuid "c4c71ddd-378c-4bd5-bda0-e4724e3dff33")
-		)
-		(pin "2"
-			(uuid "b4c98f39-bdf9-4ade-9c3a-3edab9054fc9")
-		)
-		(pin "4"
-			(uuid "974db5fa-75fd-4ba3-86a9-ab87bedf193b")
+			(uuid "8b20642b-92a9-40ab-9dea-61ab90aac39d")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "U3")
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 184.15 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2c18ddbe-e5aa-4445-924b-81bcf514367d")
+		(property "Reference" "#PWR073"
+			(at 184.15 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 184.15 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 184.15 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "995dd720-9340-4dab-9f44-f4f3da78f168")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_PMOS_DGS")
+		(at 86.36 157.48 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2ff9b47b-8924-4fe3-8ca0-b8f53e1983ae")
+		(property "Reference" "Q7"
+			(at 80.01 158.7501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_PMOS_DGS"
+			(at 80.01 156.2101 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 81.28 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "P-MOSFET transistor, drain/gate/source"
+			(at 86.36 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0eb2ce1f-2117-40e8-975d-69350d6099cd")
+		)
+		(pin "1"
+			(uuid "d5595edd-6702-4fa5-a061-27b265bcb665")
+		)
+		(pin "3"
+			(uuid "ae6dc89c-bbb8-4905-84d8-1783ba588ab7")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -2223,7 +3554,7 @@
 	)
 	(symbol
 		(lib_id "Isolator:LTV-357T")
-		(at 118.11 50.8 0)
+		(at 93.98 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2231,7 +3562,7 @@
 		(dnp no)
 		(uuid "325d6603-7612-4d58-a148-36c5b8284d68")
 		(property "Reference" "U8"
-			(at 118.11 41.91 0)
+			(at 93.98 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2239,7 +3570,7 @@
 			)
 		)
 		(property "Value" "LTV-817S-TA1-C"
-			(at 118.11 44.45 0)
+			(at 93.98 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2247,7 +3578,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-4_4.4x3.6mm_P2.54mm"
-			(at 113.03 55.88 0)
+			(at 88.9 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2258,7 +3589,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.buerklin.com/medias/sys_master/download/download/h91/ha0/8892020588574.pdf"
-			(at 118.11 50.8 0)
+			(at 93.98 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2268,7 +3599,7 @@
 			)
 		)
 		(property "Description" "DC Optocoupler, Vce 35V, CTR 50%, SO-4"
-			(at 118.11 50.8 0)
+			(at 93.98 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2277,7 +3608,7 @@
 			)
 		)
 		(property "LCSC PN" "C109227"
-			(at 118.11 50.8 0)
+			(at 93.98 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2286,7 +3617,7 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 118.11 50.8 0)
+			(at 93.98 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2316,17 +3647,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 102.87 118.11 0)
-		(mirror y)
+		(lib_id "camper_van:C_SMD_Ceramic_0805")
+		(at 194.31 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "34660803-8012-4e17-bd98-3717fa73fbe4")
-		(property "Reference" "R24"
-			(at 100.33 116.8399 0)
+		(fields_autoplaced yes)
+		(uuid "371d1adf-08d9-4365-a6a8-42ce321f2a3a")
+		(property "Reference" "C43"
+			(at 196.85 29.2162 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2334,8 +3665,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2k2"
-			(at 100.33 119.3799 0)
+		(property "Value" "10uF"
+			(at 196.85 31.7562 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2343,8 +3674,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 104.648 118.11 90)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 194.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2353,7 +3684,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 102.87 118.11 0)
+			(at 194.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2361,8 +3692,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 102.87 118.11 0)
+		(property "Description" "Ceramic SMD capacitor, small symbol"
+			(at 194.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2370,17 +3701,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Type" ""
-			(at 102.87 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C17520"
-			(at 102.87 118.11 0)
+		(property "LCSC PN" "C13585"
+			(at 194.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2389,395 +3711,24 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 102.87 118.11 0)
+			(at 194.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "07f66a29-5339-4a89-91dc-6c35214b03c8")
 		)
 		(pin "2"
-			(uuid "75e449e9-f2a3-4240-83b7-120e163fa609")
-		)
-		(pin "1"
-			(uuid "195f163a-52c5-4d1e-a862-43b4ade29a9c")
+			(uuid "3d346098-3128-4523-a723-fdf6e88943a9")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "R24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 124.46 86.36 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "41f3690d-f039-4fd0-84d4-3f326211f69e")
-		(property "Reference" "R6"
-			(at 124.46 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "150"
-			(at 124.46 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 124.46 88.138 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 124.46 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 124.46 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 124.46 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C17471"
-			(at 124.46 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" "B"
-			(at 124.46 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "df1edf8a-25a8-4e4d-9f7c-460c6150e36c")
-		)
-		(pin "2"
-			(uuid "2cafd08d-16e6-467e-894f-add6512aa159")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "camper_van:MDD2302")
-		(at 92.71 91.44 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4324a8ff-98b9-48d2-8163-b046f17ad514")
-		(property "Reference" "Q2"
-			(at 86.36 90.1699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MDD2302"
-			(at 86.36 92.7099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 87.63 93.345 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8588906188805722112"
-			(at 87.63 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "4A Id, 20V Vds, 25mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
-			(at 92.71 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C427390"
-			(at 92.71 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" "PE"
-			(at 92.71 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "94f4330f-b25e-4ac4-974a-7a2d3a4e649f")
-		)
-		(pin "1"
-			(uuid "c5955f28-dac7-46e9-b059-d85d589a9b60")
-		)
-		(pin "2"
-			(uuid "ec76bab9-873d-41d2-8fe5-692ba3d6fd89")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDD")
-		(at 67.31 68.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5ee468b2-766d-4ddf-96c8-192c7f5ab574")
-		(property "Reference" "#PWR086"
-			(at 67.31 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VIN"
-			(at 67.31 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 67.31 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 67.31 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 67.31 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0d3ca845-17e0-437d-8080-29901af3cad0")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "#PWR086")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4001")
-		(at 67.31 72.39 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5f65c0d2-b897-475c-950a-ba1b5e33a7f6")
-		(property "Reference" "D5"
-			(at 69.85 71.1199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M7"
-			(at 69.85 73.6599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 67.31 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 67.31 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
-			(at 67.31 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 67.31 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 67.31 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 67.31 72.39 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C95872"
-			(at 67.31 72.39 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" "B"
-			(at 67.31 72.39 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "061e74a9-1076-4ccc-9157-89b695c1c729")
-		)
-		(pin "2"
-			(uuid "b17a31a8-d0bc-4dcb-8a31-1748df3d494a")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "D5")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -2785,16 +3736,16 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 90.17 113.03 90)
-		(mirror x)
+		(at 200.66 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "64ccedf9-d6cb-4522-a3fe-b1542e6b782b")
-		(property "Reference" "C20"
-			(at 88.9062 115.57 0)
+		(fields_autoplaced yes)
+		(uuid "56c33322-c509-4f97-ac86-913c8bd436d9")
+		(property "Reference" "C44"
+			(at 203.2 38.1062 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2802,8 +3753,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
-			(at 91.4462 115.57 0)
+		(property "Value" "1uF"
+			(at 203.2 40.6462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2812,7 +3763,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 90.17 113.03 0)
+			(at 200.66 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2821,7 +3772,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 113.03 0)
+			(at 200.66 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2830,7 +3781,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 90.17 113.03 0)
+			(at 200.66 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2838,17 +3789,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Type" ""
-			(at 90.17 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C28233"
-			(at 90.17 113.03 0)
+		(property "LCSC PN" "C28323"
+			(at 200.66 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2857,7 +3799,7 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 90.17 113.03 0)
+			(at 200.66 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2866,81 +3808,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "4dc4343d-6143-4cff-bae8-d937c80c38ba")
+			(uuid "428aeaed-acc3-4440-ad9a-9f9353816253")
 		)
 		(pin "2"
-			(uuid "04a52099-325b-4b0e-a833-c391782c2415")
+			(uuid "0cad70be-050a-48be-bba4-e3feadac1e93")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "C20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDD")
-		(at 102.87 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "65f621df-d203-43c6-91fe-836f56d07dab")
-		(property "Reference" "#PWR089"
-			(at 102.87 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VIN"
-			(at 102.87 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 102.87 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 102.87 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 102.87 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c159a667-5d52-41e4-93e2-3deb7e59d3d8")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "#PWR089")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -2948,17 +3824,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 124.46 93.98 0)
-		(mirror y)
+		(at 256.54 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6655d945-6b5b-4783-8ccb-0a9f13baff56")
-		(property "Reference" "#PWR092"
-			(at 124.46 100.33 0)
+		(uuid "66570834-cae5-4c0e-a1f0-de5841cc4ec2")
+		(property "Reference" "#PWR0114"
+			(at 256.54 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2967,7 +3842,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 124.46 99.06 0)
+			(at 256.54 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2975,7 +3850,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 93.98 0)
+			(at 256.54 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2984,7 +3859,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 93.98 0)
+			(at 256.54 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2993,7 +3868,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 124.46 93.98 0)
+			(at 256.54 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3002,12 +3877,117 @@
 			)
 		)
 		(pin "1"
-			(uuid "9cada1a5-2b5b-45b5-a7cc-398a306a1d62")
+			(uuid "39d3de94-b0c7-491a-a703-3ffbfa6b9100")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "#PWR092")
+					(reference "#PWR0114")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "camper_van:MCP16311x-xMNY")
+		(at 215.9 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "68f35fb5-0ccf-4adb-8a32-894cc53b8180")
+		(property "Reference" "U25"
+			(at 215.9 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP16311T-E/MNS"
+			(at 215.9 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+			(at 217.17 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP16311-Family-Data-Sheet-DS20005255C.pdf"
+			(at 215.9 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1A Output Voltage, 30V Input, integrated switch step-down regulator, PFM/PWM modulation, DFN-8"
+			(at 215.9 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C627024"
+			(at 215.9 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "E"
+			(at 215.9 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "e2f4ab16-eac7-4ee0-804a-247853475c3f")
+		)
+		(pin "5"
+			(uuid "a7d9d0af-46b9-442c-8fd0-69f8290aefd6")
+		)
+		(pin "4"
+			(uuid "c3898737-4cb3-4162-9950-99885c419d8f")
+		)
+		(pin "7"
+			(uuid "44adde3f-591c-4c6e-b416-b219a94704b7")
+		)
+		(pin "1"
+			(uuid "b904c9fa-8554-4553-869b-7d785376a3d9")
+		)
+		(pin "6"
+			(uuid "8bb92ebb-1ee6-45ee-9df7-d51cef1a21b4")
+		)
+		(pin "2"
+			(uuid "b895e85f-bded-4787-845f-9ceef6f2a2ed")
+		)
+		(pin "3"
+			(uuid "33237db0-594a-468b-9430-245ee7445777")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "U25")
 					(unit 1)
 				)
 			)
@@ -3015,7 +3995,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 90.17 99.06 0)
+		(at 124.46 165.1 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3023,9 +4003,9 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "67ec6d42-955f-4e09-9ddf-c6a8f8e61d36")
-		(property "Reference" "#PWR088"
-			(at 90.17 105.41 0)
+		(uuid "6bb1138c-4679-47ec-8a85-dabb4f3be5b9")
+		(property "Reference" "#PWR072"
+			(at 124.46 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3034,7 +4014,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 90.17 104.14 0)
+			(at 124.46 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3042,7 +4022,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 99.06 0)
+			(at 124.46 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3051,7 +4031,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 99.06 0)
+			(at 124.46 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3060,7 +4040,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 90.17 99.06 0)
+			(at 124.46 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3069,46 +4049,228 @@
 			)
 		)
 		(pin "1"
-			(uuid "528e546c-b51f-4eb0-9b82-8a565132ce0d")
+			(uuid "637a2739-6dbe-44d6-8034-31f41f180382")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "#PWR088")
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 104.14 48.26 270)
-		(mirror x)
+		(lib_id "Diode:1N4001")
+		(at 68.58 176.53 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "86feecad-11dc-4c68-aad7-b49fa68d0a48")
-		(property "Reference" "R23"
-			(at 104.14 41.91 90)
+		(uuid "6d7fba8f-060a-4686-ba7d-618f8b844feb")
+		(property "Reference" "D1"
+			(at 71.12 175.2599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "M7"
+			(at 71.12 177.7999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 68.58 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 68.58 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
+			(at 68.58 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 68.58 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 68.58 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 68.58 176.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C95872"
+			(at 68.58 176.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 68.58 176.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b79ae4e3-def6-4817-b364-234501cc18b6")
+		)
+		(pin "2"
+			(uuid "fa222e5e-44da-4254-91f6-c23c6e72950b")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 194.31 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "713e5fa6-0bde-4160-849b-4db0d2b50513")
+		(property "Reference" "#PWR0108"
+			(at 194.31 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 194.31 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "680"
-			(at 104.14 44.45 90)
+		(property "Footprint" ""
+			(at 194.31 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 104.14 50.038 90)
+		(property "Datasheet" ""
+			(at 194.31 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 194.31 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae97a0bc-986e-4fe7-b9a6-a1cd13f51b7b")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "#PWR0108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "camper_van:C_SMD_Ceramic_0805")
+		(at 184.15 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "719a330d-12a2-450b-80d6-4106ab2c74ac")
+		(property "Reference" "C42"
+			(at 186.69 29.2162 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 186.69 31.7562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 184.15 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3117,7 +4279,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 104.14 48.26 0)
+			(at 184.15 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3125,8 +4287,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 104.14 48.26 0)
+		(property "Description" "Ceramic SMD capacitor, small symbol"
+			(at 184.15 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3134,17 +4296,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Type" ""
-			(at 104.14 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C17798"
-			(at 104.14 48.26 90)
+		(property "LCSC PN" "C13585"
+			(at 184.15 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3153,7 +4306,199 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 104.14 48.26 90)
+			(at 184.15 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fd5aa2d0-46c9-406d-be9d-60e6297b45f3")
+		)
+		(pin "2"
+			(uuid "fa53c195-7c88-4b60-ac30-cc55804366e3")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "C42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 124.46 157.48 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77e74457-477f-4005-a112-e3e62dfe47c8")
+		(property "Reference" "R18"
+			(at 124.46 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150"
+			(at 124.46 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 124.46 159.258 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 124.46 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 124.46 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17471"
+			(at 124.46 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 124.46 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a04bd3d-6f52-49a3-bcb6-fbeaa7ac94b5")
+		)
+		(pin "2"
+			(uuid "79ea6b03-fba6-4114-8e95-9551a6629411")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 80.01 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "86feecad-11dc-4c68-aad7-b49fa68d0a48")
+		(property "Reference" "R23"
+			(at 77.47 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "680"
+			(at 77.47 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 78.232 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 80.01 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 80.01 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17798"
+			(at 80.01 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 80.01 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3178,17 +4523,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 107.95 55.88 0)
-		(mirror y)
+		(at 200.66 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "891c607c-84f7-4c46-81f6-c671345ff84a")
-		(property "Reference" "#PWR091"
-			(at 107.95 62.23 0)
+		(uuid "87fd8aa0-dbfe-40ea-85fd-942f92a476cc")
+		(property "Reference" "#PWR0109"
+			(at 200.66 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3197,7 +4541,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 107.95 60.96 0)
+			(at 200.66 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3205,7 +4549,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 107.95 55.88 0)
+			(at 200.66 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3214,7 +4558,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 55.88 0)
+			(at 200.66 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3223,7 +4567,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 107.95 55.88 0)
+			(at 200.66 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3232,12 +4576,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c0face86-23e9-42e7-b6f5-a92b8c372287")
+			(uuid "bbfae532-57b8-4a9a-a9b4-361934f6411e")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "#PWR091")
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -3245,7 +4589,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 128.27 60.96 0)
+		(at 104.14 109.22 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3255,7 +4599,7 @@
 		(fields_autoplaced yes)
 		(uuid "89e0eb49-b67f-4388-beff-614e55140a77")
 		(property "Reference" "#PWR094"
-			(at 128.27 67.31 0)
+			(at 104.14 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3264,7 +4608,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 128.27 66.04 0)
+			(at 104.14 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3272,7 +4616,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 60.96 0)
+			(at 104.14 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3281,7 +4625,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 60.96 0)
+			(at 104.14 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3290,7 +4634,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 128.27 60.96 0)
+			(at 104.14 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3312,16 +4656,17 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 77.47 85.09 270)
-		(mirror x)
+		(at 92.71 143.51 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8ff82a8b-64f7-4bf4-8717-de475976296c")
-		(property "Reference" "R20"
-			(at 74.93 78.74 90)
+		(fields_autoplaced yes)
+		(uuid "8c58fd84-627a-4aa2-be52-ecf78d179cb9")
+		(property "Reference" "R14"
+			(at 90.17 142.2399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3329,8 +4674,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100 2W"
-			(at 74.93 81.28 90)
+		(property "Value" "1M"
+			(at 90.17 144.7799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3338,8 +4683,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 77.47 86.868 90)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 94.488 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3348,7 +4693,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 77.47 85.09 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3357,7 +4702,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 77.47 85.09 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3366,7 +4711,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 77.47 85.09 0)
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3374,105 +4719,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C414893"
-			(at 77.47 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" "E"
-			(at 77.47 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9bc120f9-37d7-48ad-b3fb-95195aa461d6")
-		)
-		(pin "1"
-			(uuid "29bdea57-db90-411b-96a4-5c0b73da9d49")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 128.27 58.42 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b0c0750c-2ef1-4df5-b0e9-ea5f2c46f7af")
-		(property "Reference" "C19"
-			(at 125.73 57.1562 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 125.73 59.6962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 128.27 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 128.27 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 128.27 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 128.27 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC PN" "C28233"
-			(at 128.27 58.42 0)
+		(property "LCSC PN" "C17514"
+			(at 92.71 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3481,7 +4729,426 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 128.27 58.42 0)
+			(at 92.71 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2dbe4233-c5ab-4aea-8176-54c2ba9c9e99")
+		)
+		(pin "1"
+			(uuid "04d8ac5e-aba2-4c5a-8f2a-46e730d66c5c")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 102.87 167.64 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e7ae45f-f273-4d34-a430-cdf33120c993")
+		(property "Reference" "#PWR021"
+			(at 102.87 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 102.87 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 102.87 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad7233ea-49fc-43df-b551-9cb19748cc32")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:LTV-357T")
+		(at 113.03 160.02 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "94371230-720b-4a59-a576-e7a3bc1b37d9")
+		(property "Reference" "U24"
+			(at 113.03 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LTV-817S-TA1-C"
+			(at 113.03 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SO-4_4.4x3.6mm_P2.54mm"
+			(at 118.11 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.buerklin.com/medias/sys_master/download/download/h91/ha0/8892020588574.pdf"
+			(at 113.03 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Optocoupler, Vce 35V, CTR 50%, SO-4"
+			(at 113.03 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C109227"
+			(at 113.03 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 113.03 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "97af8ffc-edc5-4830-a102-da3c856d9dfb")
+		)
+		(pin "1"
+			(uuid "f8521f89-2048-4aab-afb6-6689898aced4")
+		)
+		(pin "2"
+			(uuid "654ba3e1-9f47-4e38-ad32-9ff80fdfbcc7")
+		)
+		(pin "4"
+			(uuid "55e4e869-e0c9-472f-abec-ef9654c03a47")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "U24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 247.65 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "949004fb-4d0d-40ac-b251-082808381842")
+		(property "Reference" "R39"
+			(at 250.19 49.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 250.19 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 245.872 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 247.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 247.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C25804"
+			(at 247.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 247.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "62e845e3-baa6-4296-8d2b-b9af3a5e9096")
+		)
+		(pin "1"
+			(uuid "412e1fc1-0ea2-4b1b-8995-634bc7812534")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_PMOS_DGS")
+		(at 67.31 157.48 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a2a0c393-019a-4141-8221-32fcca193b86")
+		(property "Reference" "Q10"
+			(at 60.96 158.7501 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_PMOS_DGS"
+			(at 60.96 156.2101 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 62.23 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "P-MOSFET transistor, drain/gate/source"
+			(at 67.31 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0a59ca8e-ed57-43e9-8888-75b132475d5d")
+		)
+		(pin "1"
+			(uuid "0694cdf7-eb85-497c-bb1c-c5cf137079d1")
+		)
+		(pin "3"
+			(uuid "6a857c9b-a6c3-462d-b4bc-cbe04e4a10f5")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "Q10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 104.14 106.68 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b0c0750c-2ef1-4df5-b0e9-ea5f2c46f7af")
+		(property "Reference" "C19"
+			(at 101.6 105.4162 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 101.6 107.9562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 104.14 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 104.14 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 104.14 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C28233"
+			(at 104.14 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 104.14 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3505,26 +5172,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 128.27 44.45 0)
-		(mirror y)
+		(lib_id "camper_van:C_SMD_Ceramic_0805")
+		(at 266.7 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c5cd43f5-3b04-4543-87cd-90da22a5b044")
-		(property "Reference" "#PWR093"
-			(at 128.27 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 129.54 39.37 0)
+		(fields_autoplaced yes)
+		(uuid "b34cedcb-45a7-4b3c-a413-918ae4b79505")
+		(property "Reference" "C47"
+			(at 269.24 29.2162 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3532,8 +5190,104 @@
 				(justify left)
 			)
 		)
+		(property "Value" "10uF"
+			(at 269.24 31.7562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 266.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 266.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ceramic SMD capacitor, small symbol"
+			(at 266.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C13585"
+			(at 266.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 266.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43980411-656b-41ff-905a-d5e884ef2260")
+		)
+		(pin "2"
+			(uuid "5c984498-d70d-426e-b2ae-ba11f37c9fc4")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "C47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 213.36 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6b08ac3-70eb-4687-8132-5d38fb1ad573")
+		(property "Reference" "#PWR0112"
+			(at 213.36 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 213.36 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" ""
-			(at 128.27 44.45 0)
+			(at 213.36 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3542,7 +5296,171 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 44.45 0)
+			(at 213.36 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 213.36 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8343c69d-423f-436a-99e7-a5ed71b2d671")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "#PWR0112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 102.87 143.51 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c05d8bf5-b730-41d1-9bfd-566e1580131c")
+		(property "Reference" "R17"
+			(at 100.33 142.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k2"
+			(at 100.33 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 104.648 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 102.87 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 102.87 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 102.87 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17520"
+			(at 102.87 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 102.87 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "63fbf002-9331-48da-aff7-6a081aa7d627")
+		)
+		(pin "1"
+			(uuid "bc350053-9ffd-4594-86c1-e0ef03c92d14")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 104.14 92.71 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c5cd43f5-3b04-4543-87cd-90da22a5b044")
+		(property "Reference" "#PWR093"
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC_3V3"
+			(at 105.41 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3551,7 +5469,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 128.27 44.45 0)
+			(at 104.14 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3572,17 +5490,17 @@
 		)
 	)
 	(symbol
-		(lib_id "camper_van:MDD2302")
-		(at 69.85 113.03 0)
-		(mirror y)
+		(lib_id "Device:C_Small")
+		(at 97.79 157.48 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ef8988fe-ed0d-42de-a395-c7613df6c822")
-		(property "Reference" "Q1"
-			(at 63.5 111.7599 0)
+		(uuid "c5f2ff3e-32ee-4748-8837-d521ccfc57a2")
+		(property "Reference" "C41"
+			(at 96.5262 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3590,8 +5508,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MDD2302"
-			(at 63.5 114.2999 0)
+		(property "Value" "100nF"
+			(at 99.0662 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3599,29 +5517,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 64.77 114.935 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8588906188805722112"
-			(at 64.77 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "4A Id, 20V Vds, 25mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
-			(at 69.85 113.03 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 97.79 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3629,8 +5526,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C427390"
-			(at 69.85 113.03 0)
+		(property "Datasheet" "~"
+			(at 97.79 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3638,8 +5535,8 @@
 				(hide yes)
 			)
 		)
-		(property "Extended" "PE"
-			(at 69.85 113.03 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 97.79 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3647,19 +5544,500 @@
 				(hide yes)
 			)
 		)
-		(pin "3"
-			(uuid "c80cb5e7-1595-4b27-a6f7-4ee0c57d331f")
+		(property "Sim.Type" ""
+			(at 97.79 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C28233"
+			(at 97.79 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 97.79 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "1"
-			(uuid "d17811e4-6c10-49ef-b070-f24588aadf6d")
+			(uuid "1d03376c-63e2-475f-aa73-90ceba9d9456")
 		)
 		(pin "2"
-			(uuid "d4e44486-727b-4f8e-80b6-7b75bfcc83c7")
+			(uuid "b64cb464-d8b8-40dc-ac9d-c61bf6f8dd41")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
-					(reference "Q1")
+					(reference "C41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 266.7 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd21dde3-49d0-4882-8431-cb88231e8d11")
+		(property "Reference" "#PWR0118"
+			(at 266.7 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 266.7 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 266.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98510fc4-6eac-4e55-9e77-d577ad0fc39b")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "#PWR0118")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "camper_van:C_SMD_Ceramic_0402")
+		(at 232.41 33.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ced547f7-919e-4b73-b1fb-224d9510c1c3")
+		(property "Reference" "C45"
+			(at 232.4163 26.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 232.4163 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 232.41 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 232.41 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ceramic SMD capacitor, small symbol"
+			(at 232.41 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C28233"
+			(at 232.41 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 232.41 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "168c2101-185a-41bd-b303-d6a90620eace")
+		)
+		(pin "2"
+			(uuid "2e4d89df-bbb9-44ec-8515-4370613143fc")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "C45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDD")
+		(at 80.01 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2763a88-5824-4673-8111-655aa7af0d2e")
+		(property "Reference" "#PWR037"
+			(at 80.01 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VIN"
+			(at 80.01 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 80.01 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e16b4e60-99d3-4d62-9c4b-501dede42f25")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 247.65 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d4a549cc-43ab-4322-818a-36b8cfb1955e")
+		(property "Reference" "#PWR0113"
+			(at 247.65 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 247.65 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 247.65 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "338a6116-ef7b-4567-b377-678426db708f")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "#PWR0113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 242.57 25.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e12fda66-edea-48fa-94e9-07b75249b715")
+		(property "Reference" "L2"
+			(at 242.57 20.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "18uH"
+			(at 242.57 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_Coilcraft_MSS1038-XXX"
+			(at 242.57 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 242.57 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 242.57 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "E"
+			(at 242.57 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C19191679"
+			(at 242.57 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "09f902e3-dc25-4bd6-af68-aae76dd7e9b7")
+		)
+		(pin "2"
+			(uuid "7c6a2130-f1b8-4b47-aa1a-8707132b0117")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 247.65 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f141b3d6-3a9a-462d-a9b6-04d49218f662")
+		(property "Reference" "R36"
+			(at 250.19 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 250.19 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 245.872 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 247.65 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 247.65 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C25804"
+			(at 247.65 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" "B"
+			(at 247.65 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c815c8c2-2b3b-4a38-a654-8fff0903882b")
+		)
+		(pin "1"
+			(uuid "aff3224d-c237-4f07-9c2d-e0e448b08b09")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d660ade9-7cc1-406f-a2c6-d65746f825ab"
+					(reference "R36")
 					(unit 1)
 				)
 			)

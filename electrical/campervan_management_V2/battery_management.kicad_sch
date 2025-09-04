@@ -5024,7 +5024,7 @@
 		(dnp no)
 		(uuid "cf76134d-0037-4007-90be-971aa10b1478")
 		(property "Reference" "Q6"
-			(at 127 93.98 0)
+			(at 156.21 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
