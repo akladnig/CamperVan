@@ -3068,16 +3068,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 34.29) (xy 39.37 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d6119fb-d631-4f60-b74c-684a757cc15b")
-	)
-	(wire
-		(pts
 			(xy 379.73 34.29) (xy 396.24 34.29)
 		)
 		(stroke
@@ -3155,6 +3145,16 @@
 			(type default)
 		)
 		(uuid "2bc4a187-ae3a-41f2-a942-ac8f2de0db6a")
+	)
+	(wire
+		(pts
+			(xy 25.4 36.83) (xy 44.45 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dc50f5e-807b-46dc-8e6d-8a87c400d50c")
 	)
 	(wire
 		(pts
@@ -3508,16 +3508,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 34.29) (xy 39.37 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "78d907cd-467b-4b69-b7c5-35e234a2c6eb")
-	)
-	(wire
-		(pts
 			(xy 219.71 242.57) (xy 226.06 242.57)
 		)
 		(stroke
@@ -3635,6 +3625,16 @@
 			(type default)
 		)
 		(uuid "92da4424-35c6-4f8f-b42e-26c21dfcdb9f")
+	)
+	(wire
+		(pts
+			(xy 25.4 29.21) (xy 29.21 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "933ef903-ea03-4a94-b87b-0726d61c6041")
 	)
 	(wire
 		(pts
@@ -3878,6 +3878,16 @@
 	)
 	(wire
 		(pts
+			(xy 25.4 31.75) (xy 44.45 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf4d61f5-4d77-4850-a9c6-d66fa2cab879")
+	)
+	(wire
+		(pts
 			(xy 193.04 86.36) (xy 194.31 86.36)
 		)
 		(stroke
@@ -3885,16 +3895,6 @@
 			(type default)
 		)
 		(uuid "cf62cba1-27a7-44fa-9b7b-988333772a04")
-	)
-	(wire
-		(pts
-			(xy 33.02 31.75) (xy 44.45 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1cedda6-a5df-401e-8904-cc941e3fba2b")
 	)
 	(wire
 		(pts
@@ -3985,6 +3985,16 @@
 			(type default)
 		)
 		(uuid "da3d8e8f-2d72-416a-b86e-6c884a489dcd")
+	)
+	(wire
+		(pts
+			(xy 25.4 34.29) (xy 29.21 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd899da6-31c5-4968-98f4-4a688937c48f")
 	)
 	(wire
 		(pts
@@ -4463,6 +4473,50 @@
 			(justify left bottom)
 		)
 		(uuid "fdabf641-ae2d-4499-a3dd-9504482db25d")
+	)
+	(global_label "VIN"
+		(shape input)
+		(at 29.21 34.29 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "967604dd-3a42-4766-98fb-caa23a8b237e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 35.2191 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VCC_4V1"
+		(shape input)
+		(at 29.21 29.21 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ad2faf6f-1187-4b23-b45b-eda1df230bcd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 39.0895 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
 	(global_label "VCC_7V"
 		(shape input)
@@ -5514,6 +5568,80 @@
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x04_Socket")
+		(at 20.32 31.75 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "355be135-047b-40f1-81bf-125e78244f8f")
+		(property "Reference" "J11"
+			(at 21.59 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Power On/Off Switch"
+			(at 29.21 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical"
+			(at 20.32 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 20.32 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 20.32 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1707cca6-6d74-45ce-a4f9-fe53a956ccae")
+		)
+		(pin "1"
+			(uuid "2fc1ae08-06fb-4829-811d-4818056cfb4f")
+		)
+		(pin "3"
+			(uuid "08ed9c0c-99f9-409b-b579-f9cc60decda7")
+		)
+		(pin "4"
+			(uuid "a41641e9-7054-43bc-83c0-fb2dbd4eaf53")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
+					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -6668,73 +6796,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 39.37 36.83 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "94b8d623-1a65-46a1-a779-52927ac99bfe")
-		(property "Reference" "#PWR02"
-			(at 39.37 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 39.37 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 39.37 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 39.37 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b04455e1-0f77-4426-be22-bc18534d36e9")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 208.28 129.54 0)
 		(mirror y)
 		(unit 1)
@@ -6958,84 +7019,6 @@
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
 					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Socket")
-		(at 27.94 34.29 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c896f31f-848d-4a52-a739-ee4c863b401f")
-		(property "Reference" "J4"
-			(at 25.4 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Power On/Off"
-			(at 22.86 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical"
-			(at 27.94 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 27.94 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 27.94 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" ""
-			(at 27.94 34.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f4aaa971-7898-4fe6-bbaf-71831b7d02b4")
-		)
-		(pin "1"
-			(uuid "63b01496-21bc-4095-bc20-fb7cbf855af7")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -7883,7 +7866,7 @@
 				(justify right)
 			)
 		)
-		(pin "Battery 1" output
+		(pin "Battery 1 Relay" output
 			(at 101.6 26.67 0)
 			(uuid "63683589-847d-41a2-b764-8528a5c38318")
 			(effects
@@ -7893,7 +7876,7 @@
 				(justify right)
 			)
 		)
-		(pin "Battery 2" output
+		(pin "Battery 2 Relay" output
 			(at 101.6 29.21 0)
 			(uuid "d67b27b6-9006-456a-9197-bfd733c8d9d6")
 			(effects
@@ -7923,16 +7906,6 @@
 				(justify left)
 			)
 		)
-		(pin "Power On/Off Switch" input
-			(at 44.45 31.75 180)
-			(uuid "ac172e03-c946-4313-a354-45a24db7b50b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "Battery 2 On/Off" input
 			(at 101.6 50.8 0)
 			(uuid "cc070705-a55b-4f34-86d5-328fcfad6814")
@@ -7941,6 +7914,26 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "Power On Switch - 4V1" input
+			(at 44.45 31.75 180)
+			(uuid "bd31f703-051d-4072-83ee-d17408775305")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Power On Switch - Vin" input
+			(at 44.45 36.83 180)
+			(uuid "86a4020a-b789-40c7-9790-f3015e6dc637")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances

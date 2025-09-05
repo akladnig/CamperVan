@@ -2665,6 +2665,17 @@
 		)
 		(uuid "d501544f-a713-4731-9037-3953ef8de523")
 	)
+	(text "Add capacitor for delay when switching batteries\n"
+		(exclude_from_sim no)
+		(at 64.77 63.5 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "efe1b325-74f8-44a8-b4d5-40faabd5837a")
+	)
 	(text "Battery 1 / Battery 2 Selection"
 		(exclude_from_sim no)
 		(at 55.88 17.78 0)
@@ -14345,7 +14356,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 228.092 38.1 90)
 			(effects
 				(font
@@ -14372,7 +14383,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C17801"
+		(property "LCSC PN" ""
 			(at 229.87 38.1 0)
 			(effects
 				(font
@@ -14381,7 +14392,7 @@
 				(hide yes)
 			)
 		)
-		(property "Extended" "B"
+		(property "Extended" ""
 			(at 229.87 38.1 0)
 			(effects
 				(font
