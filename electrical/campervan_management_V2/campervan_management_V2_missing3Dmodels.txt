@@ -1,0 +1,25 @@
+### Missing 3D models - created on 2025-09-10 10:03
+### Printed by checking_3D_models plugin
+Board file: /Users/adrian/Documents/Campervan/electrical/campervan_management_V2/campervan_management_V2.kicad_pcb
+3D missing models written to:
+/Users/adrian/Documents/Campervan/electrical/campervan_management_V2/campervan_management_V2_missing3Dmodels.txt
+-------
+('A1', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Module.3dshapes/Arduino_Nano_WithMountingHoles.step')
+('J11', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('J2', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('J3', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('J10', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical.step')
+('J13', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('J12', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('J4', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('J8', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical.step')
+('J1', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('J9', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_Molex.3dshapes/Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical.step')
+('TP2', '/Users/adrian/Documents/Campervan/electrical/campervan_management_V2/5001.stp')
+('F2', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Fuse.3dshapes/Fuseholder_Littelfuse_Nano2_157x.step')
+('F1', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Fuse.3dshapes/Fuseholder_Littelfuse_Nano2_157x.step')
+('TP3', '/Users/adrian/Documents/Campervan/electrical/campervan_management_V2/5001.stp')
+('TP1', '/Users/adrian/Documents/Campervan/electrical/campervan_management_V2/5001.stp')
+-------
+NUM of 3D missing models:16
+checked extensions ['.stp', '.step', '.stpZ']

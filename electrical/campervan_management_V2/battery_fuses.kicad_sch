@@ -1127,7 +1127,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "379e77a4-afb1-4476-a10b-31282b2123a4")
-		(property "Reference" "U16"
+		(property "Reference" "U12"
 			(at 80.01 77.47 0)
 			(effects
 				(font
@@ -1206,7 +1206,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/7b6855ec-62ba-489d-a9bd-50cc04116ffb"
-					(reference "U16")
+					(reference "U12")
 					(unit 1)
 				)
 			)
@@ -1222,7 +1222,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "384196c7-77e9-484c-9c10-71fb3ac8eae4")
-		(property "Reference" "U12"
+		(property "Reference" "U8"
 			(at 80.01 45.72 0)
 			(effects
 				(font
@@ -1301,7 +1301,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/7b6855ec-62ba-489d-a9bd-50cc04116ffb"
-					(reference "U12")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -1516,7 +1516,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85259d5a-d0b4-4ed9-bcc7-f3120fa4a6fc")
-		(property "Reference" "R44"
+		(property "Reference" "R23"
 			(at 93.98 77.47 90)
 			(effects
 				(font
@@ -1595,7 +1595,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/7b6855ec-62ba-489d-a9bd-50cc04116ffb"
-					(reference "R44")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -1677,7 +1677,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9077ff14-4301-4362-b6d8-4fa9438ab749")
-		(property "Reference" "R38"
+		(property "Reference" "R18"
 			(at 93.98 45.72 90)
 			(effects
 				(font
@@ -1756,7 +1756,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/7b6855ec-62ba-489d-a9bd-50cc04116ffb"
-					(reference "R38")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -1839,7 +1839,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "db110f00-f420-4763-a797-0496d0fc0760")
-		(property "Reference" "C34"
+		(property "Reference" "C36"
 			(at 67.31 93.9862 0)
 			(effects
 				(font
@@ -1920,7 +1920,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/7b6855ec-62ba-489d-a9bd-50cc04116ffb"
-					(reference "C34")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -1936,7 +1936,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ef426c8d-7139-4c48-b7aa-ab5ba62cc585")
-		(property "Reference" "C33"
+		(property "Reference" "C35"
 			(at 67.31 62.2362 0)
 			(effects
 				(font
@@ -2017,7 +2017,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/7b6855ec-62ba-489d-a9bd-50cc04116ffb"
-					(reference "C33")
+					(reference "C35")
 					(unit 1)
 				)
 			)
