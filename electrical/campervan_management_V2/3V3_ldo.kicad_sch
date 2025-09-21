@@ -887,7 +887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7271a8d7-d808-4d6b-a443-850181cc3734")
-		(property "Reference" "C5"
+		(property "Reference" "C15"
 			(at 109.22 96.5262 0)
 			(effects
 				(font
@@ -950,6 +950,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 106.68 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 106.68 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 106.68 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "adedbd22-1521-4a3f-a618-163dc831bea5")
 		)
@@ -959,11 +986,11 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/af2552d0-9fb4-47ca-97f2-e4c8a0326568"
-					(reference "C9")
+					(reference "C36")
 					(unit 1)
 				)
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/bc027ce7-791c-49ac-a4a6-c15c61794209"
-					(reference "C5")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -1119,7 +1146,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b05bac87-e8c6-4b06-9978-9e51c04d0614")
-		(property "Reference" "C3"
+		(property "Reference" "C17"
 			(at 138.43 96.0881 0)
 			(effects
 				(font
@@ -1182,6 +1209,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 135.89 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 135.89 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 135.89 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e9969763-cf07-4957-a0c7-886a78c348f5")
 		)
@@ -1191,11 +1245,11 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/af2552d0-9fb4-47ca-97f2-e4c8a0326568"
-					(reference "C10")
+					(reference "C38")
 					(unit 1)
 				)
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/bc027ce7-791c-49ac-a4a6-c15c61794209"
-					(reference "C3")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -1211,7 +1265,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1bf20ef-ddd1-4de5-ba26-c57f7c7284e6")
-		(property "Reference" "C7"
+		(property "Reference" "C18"
 			(at 148.59 96.0881 0)
 			(effects
 				(font
@@ -1274,6 +1328,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 146.05 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 146.05 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 146.05 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fc2629fb-bba2-400f-8fc8-d4b83e8b3597")
 		)
@@ -1283,11 +1364,11 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/af2552d0-9fb4-47ca-97f2-e4c8a0326568"
-					(reference "C6")
+					(reference "C37")
 					(unit 1)
 				)
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/bc027ce7-791c-49ac-a4a6-c15c61794209"
-					(reference "C7")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -1303,7 +1384,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f481fa08-ee0b-42a8-9113-5ce0298848f2")
-		(property "Reference" "U2"
+		(property "Reference" "U5"
 			(at 121.92 87.63 0)
 			(effects
 				(font
@@ -1311,7 +1392,7 @@
 				)
 			)
 		)
-		(property "Value" "AMS1117-3.3"
+		(property "Value" "AMS1117-3.3/TLV761"
 			(at 121.92 90.17 0)
 			(effects
 				(font
@@ -1364,6 +1445,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 121.92 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 121.92 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 121.92 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "630a295c-bcd4-4961-ad6f-c10a900a1152")
 		)
@@ -1376,11 +1484,11 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/af2552d0-9fb4-47ca-97f2-e4c8a0326568"
-					(reference "U4")
+					(reference "U22")
 					(unit 1)
 				)
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa/d6c26a68-5132-41c9-800c-60e2b42b3e90/bc027ce7-791c-49ac-a4a6-c15c61794209"
-					(reference "U2")
+					(reference "U5")
 					(unit 1)
 				)
 			)

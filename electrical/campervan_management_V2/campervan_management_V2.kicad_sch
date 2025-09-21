@@ -2380,6 +2380,24 @@
 		(uuid "a9e734b3-8e0e-4b6b-82f2-14a283a949fc")
 	)
 	(junction
+		(at 228.6 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "03e26371-0dfd-42f9-86f4-fbecc2517e52")
+	)
+	(junction
+		(at 374.65 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06d25788-e955-4692-a480-37648d37855c")
+	)
+	(junction
+		(at 379.73 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ce9e7a7-db92-465b-ba3c-d921f5bf504a")
+	)
+	(junction
 		(at 194.31 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2390,12 +2408,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "16088b27-21ef-482a-ae6e-d0540541d4e4")
-	)
-	(junction
-		(at 379.73 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2881cf54-68b1-49f0-9f06-a43f6e28c062")
 	)
 	(junction
 		(at 375.92 227.33)
@@ -2416,18 +2428,6 @@
 		(uuid "3e1de185-37bd-4a44-a581-cdaf5b8cdfc6")
 	)
 	(junction
-		(at 374.65 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "466c8ea2-1294-45bc-85a2-4c0530e298b5")
-	)
-	(junction
-		(at 228.6 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "52529c94-6769-42f4-8a14-d15b2abdee4a")
-	)
-	(junction
 		(at 375.92 217.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2446,16 +2446,16 @@
 		(uuid "b6eb4d86-d0c3-4740-b561-eecf5924d8f8")
 	)
 	(junction
+		(at 240.03 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce31bed1-48b6-4e6a-8004-e673dd66b66d")
+	)
+	(junction
 		(at 375.92 222.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e4075b72-24d6-4b47-a266-91dae73d56f2")
-	)
-	(junction
-		(at 226.06 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e6996921-b800-4144-a825-85466739714e")
 	)
 	(junction
 		(at 194.31 86.36)
@@ -2480,12 +2480,12 @@
 		(uuid "01d4d348-03ec-4602-8624-6b34995c6cdb")
 	)
 	(no_connect
-		(at 198.12 154.94)
-		(uuid "283d36d1-bcfa-48f9-82a9-89eb9f4aa747")
-	)
-	(no_connect
 		(at 219.71 274.32)
 		(uuid "3555dfa5-271b-4f24-b760-f64f6b44fd00")
+	)
+	(no_connect
+		(at 162.56 142.24)
+		(uuid "5d149463-35e1-405f-9d82-e8d4e9dc3c34")
 	)
 	(no_connect
 		(at 198.12 119.38)
@@ -2519,7 +2519,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 149.86) (xy 162.56 149.86)
+			(xy 158.75 147.32) (xy 162.56 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2536,16 +2536,6 @@
 			(type default)
 		)
 		(uuid "0324ca05-0066-4d3b-9fd4-34ed39f747f0")
-	)
-	(wire
-		(pts
-			(xy 353.06 34.29) (xy 379.73 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "034eeba4-e241-42b7-8c96-d08cd66210aa")
 	)
 	(wire
 		(pts
@@ -2599,7 +2589,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 96.52) (xy 45.72 124.46)
+			(xy 45.72 120.65) (xy 45.72 124.46)
 		)
 		(stroke
 			(width 0)
@@ -2639,6 +2629,16 @@
 	)
 	(wire
 		(pts
+			(xy 26.67 88.9) (xy 29.21 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14e91813-182e-4b76-8f60-5244f30e74d6")
+	)
+	(wire
+		(pts
 			(xy 217.17 92.71) (xy 228.6 92.71)
 		)
 		(stroke
@@ -2649,13 +2649,23 @@
 	)
 	(wire
 		(pts
-			(xy 379.73 34.29) (xy 396.24 34.29)
+			(xy 379.73 36.83) (xy 379.73 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "226eef77-68ad-40e8-aee3-f316797d7ad8")
+		(uuid "1d7f9fa5-1abf-41fb-8a56-4823e2c0540a")
+	)
+	(wire
+		(pts
+			(xy 353.06 34.29) (xy 379.73 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e4c7790-e72d-45eb-831b-c84dd20cd30f")
 	)
 	(wire
 		(pts
@@ -2699,26 +2709,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 147.32) (xy 125.73 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2698d836-102d-42f5-b2b0-4b1b67038f6e")
-	)
-	(wire
-		(pts
-			(xy 367.03 63.5) (xy 367.03 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26bc3cc8-1beb-4a97-a32e-9a8b983aa32e")
-	)
-	(wire
-		(pts
 			(xy 363.22 127) (xy 384.81 127)
 		)
 		(stroke
@@ -2729,7 +2719,7 @@
 	)
 	(wire
 		(pts
-			(xy 379.73 101.6) (xy 379.73 34.29)
+			(xy 379.73 101.6) (xy 379.73 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2769,7 +2759,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 96.52) (xy 45.72 96.52)
+			(xy 26.67 120.65) (xy 45.72 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2789,7 +2779,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 63.5) (xy 367.03 63.5)
+			(xy 359.41 63.5) (xy 386.08 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2806,6 +2796,16 @@
 			(type default)
 		)
 		(uuid "33bf8f98-ab56-4bf3-8468-547391c26679")
+	)
+	(wire
+		(pts
+			(xy 386.08 34.29) (xy 386.08 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33f154f6-71da-4a46-bf38-6aea666cfa16")
 	)
 	(wire
 		(pts
@@ -2859,33 +2859,13 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 138.43) (xy 262.89 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b5becb1-62ea-446f-9f25-b4324df17f83")
-	)
-	(wire
-		(pts
-			(xy 26.67 99.06) (xy 30.48 99.06)
+			(xy 26.67 123.19) (xy 30.48 123.19)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3c70d03d-2eda-4744-aa18-fc59865241e5")
-	)
-	(wire
-		(pts
-			(xy 158.75 144.78) (xy 162.56 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c9ed739-8769-42b2-a4aa-9547ec2f8dcb")
 	)
 	(wire
 		(pts
@@ -2926,6 +2906,16 @@
 			(type default)
 		)
 		(uuid "48e7882b-6bc3-4926-8d71-228b1a87f693")
+	)
+	(wire
+		(pts
+			(xy 29.21 88.9) (xy 29.21 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4baa4fbb-3cd3-47e6-b892-4a32cb0e3561")
 	)
 	(wire
 		(pts
@@ -3039,16 +3029,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 92.71) (xy 262.89 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6331a63c-6329-48f3-bb9f-392127a01657")
-	)
-	(wire
-		(pts
 			(xy 219.71 269.24) (xy 228.6 269.24)
 		)
 		(stroke
@@ -3056,6 +3036,16 @@
 			(type default)
 		)
 		(uuid "66ee4c85-ac76-4784-bfe7-a15cf4565363")
+	)
+	(wire
+		(pts
+			(xy 240.03 144.78) (xy 240.03 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a9353eb-3629-4192-bd0a-b0b640f4fa31")
 	)
 	(wire
 		(pts
@@ -3089,7 +3079,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 142.24) (xy 162.56 142.24)
+			(xy 158.75 149.86) (xy 162.56 149.86)
 		)
 		(stroke
 			(width 0)
@@ -3139,6 +3129,16 @@
 	)
 	(wire
 		(pts
+			(xy 353.06 31.75) (xy 374.65 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cb5f8f4-05e8-4ddc-b28b-b0e0af0be872")
+	)
+	(wire
+		(pts
 			(xy 370.84 66.04) (xy 370.84 39.37)
 		)
 		(stroke
@@ -3159,13 +3159,23 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 86.36) (xy 39.37 93.98)
+			(xy 396.24 34.29) (xy 386.08 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8687e1cf-94e4-4a4e-88ae-55578d90819b")
+		(uuid "8032610d-01f0-4219-b626-40ed1a474c28")
+	)
+	(wire
+		(pts
+			(xy 125.73 144.78) (xy 125.73 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "868cd831-2f4f-427d-a1ba-68f29920cc29")
 	)
 	(wire
 		(pts
@@ -3189,23 +3199,13 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 99.06) (xy 30.48 100.33)
+			(xy 30.48 123.19) (xy 30.48 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8c44f8ee-c94b-459b-9cf9-846e427c3e69")
-	)
-	(wire
-		(pts
-			(xy 162.56 147.32) (xy 125.73 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ce7f38e-979f-4fbe-bcdb-83e11d2d6006")
 	)
 	(wire
 		(pts
@@ -3269,6 +3269,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 144.78) (xy 162.56 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98a84ac4-a7a7-411c-a85b-6caf460bfe94")
+	)
+	(wire
+		(pts
 			(xy 374.65 31.75) (xy 374.65 95.25)
 		)
 		(stroke
@@ -3286,16 +3296,6 @@
 			(type default)
 		)
 		(uuid "9ed13575-06db-4ce0-8281-31e1cadc3d1f")
-	)
-	(wire
-		(pts
-			(xy 226.06 138.43) (xy 226.06 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f0e034a-43ec-46d9-af24-2ce8fed1c751")
 	)
 	(wire
 		(pts
@@ -3319,13 +3319,23 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 93.98) (xy 39.37 93.98)
+			(xy 228.6 92.71) (xy 262.89 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a79f6d48-816c-4e22-9ca4-f133dfd4430c")
+		(uuid "a115b389-da8a-4faa-8e2a-61281bad9961")
+	)
+	(wire
+		(pts
+			(xy 240.03 139.7) (xy 262.89 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1fe2f97-e3b6-4ce0-b770-bb3d9540c71b")
 	)
 	(wire
 		(pts
@@ -3346,6 +3356,16 @@
 			(type default)
 		)
 		(uuid "ab031b65-9cae-4326-93de-fb2779608cda")
+	)
+	(wire
+		(pts
+			(xy 379.73 36.83) (xy 396.24 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac864584-1baa-4406-8d95-bd3173605466")
 	)
 	(wire
 		(pts
@@ -3439,16 +3459,6 @@
 	)
 	(wire
 		(pts
-			(xy 367.03 36.83) (xy 396.24 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5b2f925-7485-4245-bbd6-7c66d98422db")
-	)
-	(wire
-		(pts
 			(xy 220.98 186.69) (xy 218.44 186.69)
 		)
 		(stroke
@@ -3539,7 +3549,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 144.78) (xy 226.06 144.78)
+			(xy 198.12 144.78) (xy 240.03 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3649,23 +3659,13 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 144.78) (xy 226.06 149.86)
+			(xy 198.12 154.94) (xy 201.93 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e07a83cc-daba-41b5-8763-fccdf60cfc1a")
-	)
-	(wire
-		(pts
-			(xy 353.06 31.75) (xy 374.65 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4b79cd4-4885-4a56-bfde-fc41d1c25c1d")
+		(uuid "e52ddda7-e1f7-45ee-9ae5-50de00301099")
 	)
 	(wire
 		(pts
@@ -3719,6 +3719,16 @@
 	)
 	(wire
 		(pts
+			(xy 240.03 139.7) (xy 240.03 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9bd0736-3e99-47e6-8001-eedceed22556")
+	)
+	(wire
+		(pts
 			(xy 198.12 152.4) (xy 201.93 152.4)
 		)
 		(stroke
@@ -3767,6 +3777,17 @@
 		)
 		(uuid "fe64dd5f-fe99-4aba-9a1d-5c9908b239d3")
 	)
+	(label "Battery Box Fan2 Sensor"
+		(at 201.93 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left bottom)
+		)
+		(uuid "00fd58da-2602-4af1-90d5-5604621b49a1")
+	)
 	(label "Input Flow Sensor"
 		(at 233.68 245.11 0)
 		(effects
@@ -3787,25 +3808,16 @@
 		)
 		(uuid "0dbed36f-ee4f-47fd-9d33-8b66840374c2")
 	)
-	(label "Batteries On"
+	(label "Battery Box Fan1 Sensor"
 		(at 201.93 149.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.1588)
 			)
 			(justify left bottom)
 		)
-		(uuid "0df1ce2d-a7e8-4364-8e56-2a7d140c9928")
-	)
-	(label "Power Supply Control"
-		(at 201.93 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1e882dc8-116e-4b5a-9930-f0a9d4610fcc")
+		(uuid "12ff33fe-4430-4864-9137-993084e8d52e")
 	)
 	(label "Output Flow Sensor"
 		(at 228.6 269.24 0)
@@ -3817,26 +3829,15 @@
 		)
 		(uuid "2ea46bf6-b780-4c6b-9c4d-774cb26a7047")
 	)
-	(label "Battery 2 On{slash}Off"
-		(at 201.93 147.32 0)
+	(label "Batteries On"
+		(at 158.75 147.32 180)
 		(effects
 			(font
 				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2ef9640b-bacf-4e03-a04d-3379991207eb")
-	)
-	(label "Battery Box Fan2 Sensor"
-		(at 158.75 142.24 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
 			)
 			(justify right bottom)
 		)
-		(uuid "3712813b-66ce-4715-a313-b29115f2dfbc")
+		(uuid "41ab23c6-7410-49d2-b37f-81ce20859078")
 	)
 	(label "Battery 2 On{slash}Off Switch Sensor"
 		(at 107.95 59.69 0)
@@ -3847,6 +3848,16 @@
 			(justify left bottom)
 		)
 		(uuid "46040b73-8e06-441b-a280-ef83c2f14be0")
+	)
+	(label "Power Supply Control"
+		(at 158.75 152.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4c241869-02bc-4b0c-9646-bb3566937281")
 	)
 	(label "Input Flow Sensor"
 		(at 158.75 154.94 180)
@@ -3867,17 +3878,6 @@
 			(justify right bottom)
 		)
 		(uuid "55bc68a1-77fd-4760-abcd-2fd8a531a439")
-	)
-	(label "Battery Box Fan1 Sensor"
-		(at 158.75 144.78 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify right bottom)
-		)
-		(uuid "5665d37c-b9f2-48e2-ba01-ae607835dd65")
 	)
 	(label "Solar Charge Battery 2 Relay"
 		(at 46.99 137.16 180)
@@ -3940,6 +3940,16 @@
 		)
 		(uuid "8add5248-a10d-41d2-b240-6c8cf556888e")
 	)
+	(label "Battery 2 On{slash}Off"
+		(at 158.75 149.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9529a2d4-1833-4826-87a8-bc43ea4528ea")
+	)
 	(label "Power Supply Control"
 		(at 295.91 38.1 180)
 		(effects
@@ -3949,17 +3959,6 @@
 			(justify right bottom)
 		)
 		(uuid "95d16620-206e-4b1c-b147-64c950322b3b")
-	)
-	(label "Battery Box Fan1 Control"
-		(at 158.75 149.86 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-			(justify right bottom)
-		)
-		(uuid "9865a36d-a1fd-48ff-8eb2-4c2bb8e5b0c6")
 	)
 	(label "Battery 2 Fuse State"
 		(at 158.75 139.7 180)
@@ -4033,15 +4032,15 @@
 		(uuid "d1ebe9e1-8f4b-4293-96cb-1607ded82361")
 	)
 	(label "Battery Box Fan2 Control"
-		(at 158.75 152.4 180)
+		(at 201.93 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 				(thickness 0.1588)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "dfe6d549-fa17-4bad-b91a-a7fbbb48f4a4")
+		(uuid "dfb3d0a3-97dd-420a-baeb-6f759e2c0654")
 	)
 	(label "Tx"
 		(at 163.83 88.9 180)
@@ -4083,6 +4082,17 @@
 			(justify left bottom)
 		)
 		(uuid "f35bb188-b4ef-4c7d-a402-3cec0a27a8e4")
+	)
+	(label "Battery Box Fan1 Control"
+		(at 201.93 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left bottom)
+		)
+		(uuid "f3e11890-a5b4-4e7d-a5c8-1f3af98f0512")
 	)
 	(label "Battery Box Fan2 Control"
 		(at 137.16 241.3 0)
@@ -4225,6 +4235,33 @@
 			)
 		)
 		(property "Extended" ""
+			(at 180.34 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 180.34 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 180.34 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
 			(at 180.34 139.7 0)
 			(effects
 				(font
@@ -4387,6 +4424,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 378.46 212.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 378.46 212.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 378.46 212.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d4dc2b1e-3e87-4744-97ff-b2f3b7242f27")
 		)
@@ -4401,7 +4465,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 30.48 100.33 0)
+		(at 30.48 124.46 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4411,7 +4475,7 @@
 		(fields_autoplaced yes)
 		(uuid "10f3d4d9-12ed-4140-aa41-45d99b16329e")
 		(property "Reference" "#PWR01"
-			(at 30.48 106.68 0)
+			(at 30.48 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4420,7 +4484,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 30.48 105.41 0)
+			(at 30.48 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4428,7 +4492,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 100.33 0)
+			(at 30.48 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4437,7 +4501,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 100.33 0)
+			(at 30.48 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4446,7 +4510,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 30.48 100.33 0)
+			(at 30.48 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4588,6 +4652,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 378.46 217.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 378.46 217.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 378.46 217.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b3361166-ea54-4a37-b2ff-ce3ff9507cd9")
 		)
@@ -4611,7 +4702,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1acc0ae9-e579-42c7-bb32-7ba47e4ef11f")
-		(property "Reference" "R9"
+		(property "Reference" "R17"
 			(at 196.85 80.0099 0)
 			(effects
 				(font
@@ -4683,6 +4774,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 194.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 194.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 194.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c05588e7-33a9-4725-9ebd-d03cb0b8bd7b")
 		)
@@ -4692,7 +4810,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "R9")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -4708,7 +4826,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1e0f342a-1c0a-41f8-8464-2212ce7ed9a6")
-		(property "Reference" "J7"
+		(property "Reference" "J9"
 			(at 392.43 127 90)
 			(effects
 				(font
@@ -4762,6 +4880,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 389.89 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 389.89 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 389.89 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "761e0630-3f16-4fc8-893c-aa8d1763763c")
 		)
@@ -4771,7 +4916,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J7")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -4779,7 +4924,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 226.06 152.4 0)
+		(at 240.03 152.4 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4787,8 +4932,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "20364879-dbc5-45bf-b3e8-8621ab7cfe2b")
-		(property "Reference" "C40"
-			(at 223.52 151.1362 0)
+		(property "Reference" "C26"
+			(at 237.49 151.1362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4797,7 +4942,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 223.52 153.6762 0)
+			(at 237.49 153.6762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4806,7 +4951,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 226.06 152.4 0)
+			(at 240.03 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4815,7 +4960,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 226.06 152.4 0)
+			(at 240.03 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4824,7 +4969,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 226.06 152.4 0)
+			(at 240.03 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4833,7 +4978,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 226.06 152.4 0)
+			(at 240.03 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4842,7 +4987,7 @@
 			)
 		)
 		(property "LCSC PN" "C28233"
-			(at 226.06 152.4 0)
+			(at 240.03 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4851,7 +4996,34 @@
 			)
 		)
 		(property "Extended" "B"
-			(at 226.06 152.4 0)
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 240.03 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4868,7 +5040,7 @@
 		(instances
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "C40")
+					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -4951,7 +5123,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3266c3f6-cd2d-479c-8f67-1b6a267a5024")
-		(property "Reference" "R10"
+		(property "Reference" "R18"
 			(at 195.58 88.8999 0)
 			(effects
 				(font
@@ -5023,6 +5195,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 193.04 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 193.04 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 193.04 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "31cdf22c-9ec6-4060-88ca-ee16759d0fb0")
 		)
@@ -5032,7 +5231,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "R10")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -5115,7 +5314,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "355be135-047b-40f1-81bf-125e78244f8f")
-		(property "Reference" "J6"
+		(property "Reference" "J4"
 			(at 21.59 22.86 0)
 			(effects
 				(font
@@ -5158,6 +5357,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 20.32 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 20.32 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 20.32 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1707cca6-6d74-45ce-a4f9-fe53a956ccae")
 		)
@@ -5173,7 +5399,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J6")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -5247,8 +5473,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
-		(at 401.32 36.83 0)
-		(mirror x)
+		(at 401.32 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5272,7 +5497,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical"
-			(at 401.32 36.83 0)
+			(at 401.32 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5281,7 +5506,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 401.32 36.83 0)
+			(at 401.32 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5290,7 +5515,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 401.32 36.83 0)
+			(at 401.32 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5299,7 +5524,34 @@
 			)
 		)
 		(property "Extended" ""
-			(at 401.32 36.83 90)
+			(at 401.32 34.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 401.32 34.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 401.32 34.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 401.32 34.29 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5337,7 +5589,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "41aa5b20-974e-40b0-8bba-8c6baaea3baf")
-		(property "Reference" "J2"
+		(property "Reference" "J5"
 			(at 210.82 78.74 90)
 			(effects
 				(font
@@ -5391,6 +5643,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 208.28 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 208.28 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 208.28 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6179ded4-cc86-45be-836a-53cbd01b11d7")
 		)
@@ -5400,7 +5679,7 @@
 		(instances
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J2")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -5416,7 +5695,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "435b25e4-24d3-4000-9951-2abcd6aaee77")
-		(property "Reference" "C47"
+		(property "Reference" "C28"
 			(at 226.06 100.3362 0)
 			(effects
 				(font
@@ -5488,6 +5767,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 228.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 228.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 228.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "96fb2bb8-ff60-4088-9991-418087518b82")
 		)
@@ -5497,7 +5803,7 @@
 		(instances
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "C47")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -5580,7 +5886,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "45b2c144-a264-4840-8e0e-34afbfe6a024")
-		(property "Reference" "J4"
+		(property "Reference" "J10"
 			(at 215.265 261.62 0)
 			(effects
 				(font
@@ -5632,6 +5938,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 214.63 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 214.63 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 214.63 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e8eec627-7c74-4c98-bdf0-c629169126f4")
 		)
@@ -5647,7 +5980,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J4")
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -5663,7 +5996,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "45cf3c2d-4749-47e5-a6a7-6886eeb93ad2")
-		(property "Reference" "J5"
+		(property "Reference" "J11"
 			(at 215.265 237.49 0)
 			(effects
 				(font
@@ -5715,6 +6048,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 214.63 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 214.63 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 214.63 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "38c78e28-eb3a-4777-ac25-9a9c20ba87ea")
 		)
@@ -5730,7 +6090,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J5")
+					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -5745,7 +6105,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "481dd547-ffd8-4c98-a272-8f4195f4d1c1")
-		(property "Reference" "J3"
+		(property "Reference" "J8"
 			(at 225.425 176.53 0)
 			(effects
 				(font
@@ -5797,6 +6157,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 226.06 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 226.06 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 226.06 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "167df97a-f229-4ebf-892e-f0ab71e6f79a")
 		)
@@ -5812,7 +6199,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J3")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -5885,6 +6272,111 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 21.59 91.44 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4cf9e611-4009-4ae8-b53b-4893af8c3f11")
+		(property "Reference" "J2"
+			(at 19.05 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Battery 2"
+			(at 16.51 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical"
+			(at 21.59 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 21.59 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 21.59 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" ""
+			(at 21.59 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 21.59 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 21.59 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 21.59 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c77c7c9c-4a20-489c-a4a6-044a27595c8a")
+		)
+		(pin "1"
+			(uuid "a16c9bfe-02d5-46ac-91a6-a8ce43e90291")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 378.46 222.25 270)
 		(unit 1)
@@ -5894,7 +6386,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "560a9c74-ef76-45b2-8b71-dd5781707bd2")
-		(property "Reference" "H4"
+		(property "Reference" "H3"
 			(at 382.27 220.9799 90)
 			(effects
 				(font
@@ -5939,13 +6431,40 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 378.46 222.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 378.46 222.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 378.46 222.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f29db75e-abe9-4dcc-a12c-daca68234798")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "H4")
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -5961,7 +6480,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ae8fd33-e22b-4298-a539-6142c079c25e")
-		(property "Reference" "U5"
+		(property "Reference" "U8"
 			(at 181.2133 66.04 0)
 			(effects
 				(font
@@ -6024,6 +6543,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" "1.67"
+			(at 179.07 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" "12"
+			(at 179.07 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 179.07 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "5835498b-286e-431d-8373-17ffd1c1b462")
 		)
@@ -6051,7 +6597,7 @@
 		(instances
 			(project ""
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "U5")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -6067,7 +6613,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6dee2d25-9b7e-43c3-a3d0-6bdb73c75f09")
-		(property "Reference" "H3"
+		(property "Reference" "H4"
 			(at 382.27 226.0599 90)
 			(effects
 				(font
@@ -6112,13 +6658,40 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 378.46 227.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 378.46 227.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 378.46 227.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "19131937-d675-4167-b94c-2fc3a324eb48")
 		)
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "H3")
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -6192,6 +6765,112 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 21.59 120.65 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7f534daf-39d0-4a22-82d6-6376bba41df8")
+		(property "Reference" "J3"
+			(at 19.05 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Solar Charge"
+			(at 16.51 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical"
+			(at 21.59 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 21.59 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 21.59 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Extended" ""
+			(at 21.59 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 21.59 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 21.59 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 21.59 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bc2da6a6-b6b7-4548-875c-26522e578424")
+		)
+		(pin "1"
+			(uuid "4a32cbc0-6755-4b04-92ee-97a662975f19")
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 378.46 132.08 0)
 		(unit 1)
@@ -6258,7 +6937,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 226.06 154.94 0)
+		(at 240.03 154.94 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6268,7 +6947,7 @@
 		(fields_autoplaced yes)
 		(uuid "84d0f2a3-75f2-4f9f-aa4a-ad96b00738f3")
 		(property "Reference" "#PWR013"
-			(at 226.06 161.29 0)
+			(at 240.03 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6277,7 +6956,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 226.06 160.02 0)
+			(at 240.03 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6285,7 +6964,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 154.94 0)
+			(at 240.03 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6294,7 +6973,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 154.94 0)
+			(at 240.03 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6303,7 +6982,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 226.06 154.94 0)
+			(at 240.03 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6398,7 +7077,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "91af7144-1610-489c-801c-36742400759f")
-		(property "Reference" "C44"
+		(property "Reference" "C27"
 			(at 226.06 121.9262 0)
 			(effects
 				(font
@@ -6470,6 +7149,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 228.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 228.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 228.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9aaca9df-f992-4e9d-816d-a52bb5e91deb")
 		)
@@ -6479,7 +7185,7 @@
 		(instances
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "C44")
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -6563,7 +7269,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba412ff2-4424-4568-a287-5b7631d91081")
-		(property "Reference" "J9"
+		(property "Reference" "J7"
 			(at 191.77 30.48 90)
 			(effects
 				(font
@@ -6615,6 +7321,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 186.69 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 186.69 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 186.69 31.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "c8366347-cbd3-4d10-b69a-3227d2f0dc92")
 		)
@@ -6630,7 +7363,7 @@
 		(instances
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J9")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -6714,7 +7447,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc1b8a65-da01-4f9d-b43d-f1c9cd1dd196")
-		(property "Reference" "R8"
+		(property "Reference" "R16"
 			(at 195.58 71.1199 0)
 			(effects
 				(font
@@ -6786,6 +7519,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB" ""
+			(at 193.04 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 193.04 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
+			(at 193.04 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fc304bd6-305e-4324-b6e0-f4bbc8ede971")
 		)
@@ -6795,7 +7555,7 @@
 		(instances
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "R8")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -6873,6 +7633,33 @@
 			)
 		)
 		(property "Extended" "B"
+			(at 203.2 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" ""
+			(at 203.2 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "e14" ""
+			(at 203.2 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Component Class" ""
 			(at 203.2 127 0)
 			(effects
 				(font
@@ -7030,7 +7817,7 @@
 	)
 	(symbol
 		(lib_id "power:VDD")
-		(at 39.37 86.36 0)
+		(at 29.21 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7039,7 +7826,7 @@
 		(fields_autoplaced yes)
 		(uuid "efb13f4c-452e-46b7-ab46-61c47c8f20d2")
 		(property "Reference" "#PWR03"
-			(at 39.37 90.17 0)
+			(at 29.21 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7048,7 +7835,7 @@
 			)
 		)
 		(property "Value" "VIN"
-			(at 39.37 81.28 0)
+			(at 29.21 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7056,7 +7843,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 86.36 0)
+			(at 29.21 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7065,7 +7852,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 86.36 0)
+			(at 29.21 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7074,7 +7861,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 39.37 86.36 0)
+			(at 29.21 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7086,7 +7873,7 @@
 			(uuid "928e856c-2316-4bd8-a5ab-96e2d854a227")
 		)
 		(instances
-			(project "campervan_management"
+			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
 					(reference "#PWR03")
 					(unit 1)
@@ -7156,89 +7943,6 @@
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Socket")
-		(at 21.59 93.98 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fe1942fb-b796-46b9-9589-fd5d863c8339")
-		(property "Reference" "J8"
-			(at 22.225 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Battery 2"
-			(at 22.225 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical"
-			(at 21.59 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 21.59 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 21.59 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" ""
-			(at 21.59 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1a2e4053-d17c-41de-9368-ba6a72b1f759")
-		)
-		(pin "3"
-			(uuid "733bac3f-9d3a-4f1c-856c-24eaee8375f2")
-		)
-		(pin "1"
-			(uuid "8633a657-b1f8-4b0e-bb2d-2fa569b1ed8e")
-		)
-		(pin "4"
-			(uuid "970f889c-07b2-47e0-aa45-d1c2c662c69e")
-		)
-		(instances
-			(project "campervan_management"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -7395,7 +8099,7 @@
 			)
 		)
 		(pin "Battery 2 Voltage" output
-			(at 262.89 138.43 180)
+			(at 262.89 92.71 180)
 			(uuid "a15b56bf-76da-466e-b6a2-fca801f29077")
 			(effects
 				(font
@@ -7405,7 +8109,7 @@
 			)
 		)
 		(pin "Starter Battery Voltage" output
-			(at 262.89 92.71 180)
+			(at 262.89 139.7 180)
 			(uuid "35b0a45b-c4f9-467c-8a29-c9fb0e40380e")
 			(effects
 				(font
@@ -7762,7 +8466,7 @@
 			)
 		)
 		(pin "Battery 1 Vin" input
-			(at 353.06 31.75 0)
+			(at 353.06 34.29 0)
 			(uuid "7967280a-8ecf-4168-91cf-4513de2b0f3c")
 			(effects
 				(font
@@ -7772,7 +8476,7 @@
 			)
 		)
 		(pin "Battery 2 Vin" input
-			(at 353.06 34.29 0)
+			(at 353.06 31.75 0)
 			(uuid "14853d63-0603-49b8-afa7-8912983948be")
 			(effects
 				(font
