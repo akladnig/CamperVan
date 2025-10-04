@@ -1,9 +1,9 @@
-include <constants.scad>
 include <BOSL2/std.scad>
 
 $overlap = 0.002;
 shiftout = 0.01;
 cutout = 0.1;
+tolerance = 0.3;
 
 //----------------------------------------------------------------------------------------------
 // Twin 40mm Fan Duct for Sanyo Denki 9GAX0412P3S001
@@ -130,7 +130,7 @@ module TopCone() {
       union() {
 
         diff() {
-          tube(coneHeight, od1=couplerOd, od2=pvcOd)
+          tube(coneHeight, od1=couplerOd, od2=pvcOd, wall=wall)
             tag("remove") align(TOP)
                 grid_copies(fanWidth - 2 * m, n=2)
                   down(m3.z) cylinder(m3.z + cutout, d=m3.y, anchor=TOP);
@@ -144,14 +144,14 @@ module TopCone() {
 
 //----------------------------------------------------------------------------------------------
 // The Coupler which sits below the TopCone and is used to couple to a standard 40mm
-// PVC pipe
+// PVC pipe. The inside of the coupler is tapered to account for tolerances.
 //----------------------------------------------------------------------------------------------
 
 module Duct40mmCoupler() {
   attachable(h=couplingHeight, d=couplerOd, anchor=TOP) {
     tag_scope()
       union() {
-        tube(h=couplingHeight, id=pvcOd, wall=wall)
+        tube(h=couplingHeight, id1=pvcOd+tolerance, id2=pvcOd, wall=wall, ichamfer=tolerance)
           align(TOP, inside=true)
             // end stop for PVC pipe
             tube(h=2 * wall, od1=pvcOd + 0.1, od2=pvcOd + 0.1, id1=pvcId, id2=pvcOd);
@@ -160,11 +160,11 @@ module Duct40mmCoupler() {
   }
 }
 
-module TwinDucts() {
+module TwinDucts(n=2) {
   attachable(size=[2 * fanWidth + ductSpacing, couplerOd, coneHeight + couplingHeight], anchor=TOP + BACK) {
     tag_scope()
       up((coneHeight + couplingHeight) / 2)
-        xcopies(spacing=fanWidth + ductSpacing, n=2)
+        xcopies(spacing=fanWidth + ductSpacing, n=n)
           TopCone()
             align(anchor=BOTTOM)
               Duct40mmCoupler();
@@ -216,14 +216,15 @@ module BasePlate() {
 // The Duct Plate connects the MountingPlate to the Duct 
 //----------------------------------------------------------------------------------------------
 
-module DuctPlate(small = false) {
+module DuctPlate(small = false, isSolid = false) {
   // Shim is the distance from the mounting plate to the cone.
   theta = atan((couplerOr - pvcOr) / coneHeight);
   shim = (coneHeight + basePlate - (mountingPlateWidth - wall)) * tan(theta);
   dSmall = couplerOd - 2 * shim;
 
+  wallSize = isSolid ? mountingPlateWidth : wall;
   plateWidth = small ? fanHoleSpacing - m3.y : couplerOd;
-  size = [plateWidth, couplerOr, wall];
+  size = [plateWidth, couplerOr, wallSize];
   d = small ? dSmall : couplerOd;
 
   attachable(size=size) {
@@ -231,7 +232,7 @@ module DuctPlate(small = false) {
       cube(size, anchor=CENTER)
         tag("remove")
           position(FRONT)
-            cylinder(d=d - cutout, h=wall + cutout, anchor=CENTER);
+            cylinder(d=d - cutout, h=wallSize + cutout, anchor=CENTER);
     }
     children();
   }
@@ -250,7 +251,7 @@ module MountingPlate() {
   attachable(size=plateSize) {
     diff() {
       cuboid(plateSize, edges="Z", rounding=r)
-        tag("remove") xcopies(plateSize[x] - 2 * m, n=2) mountingHole();
+        tag("remove") xcopies(plateSize.x - 2 * m, n=2) mountingHole();
     }
     children();
   }
@@ -280,7 +281,8 @@ module BottomMountingPlate() {
   attachable(size=plateSize) {
     MountingPlate()
       attach(TOP, BACK, align=FRONT)
-        back((mountingPlateWidth - wall) / 2) grid_copies([fanWidth + ductSpacing, mountingPlateWidth - wall]) DuctPlate();
+        xcopies(fanWidth + ductSpacing) DuctPlate(isSolid=true);
+    // grid_copies([fanWidth + ductSpacing, mountingPlateWidth - wall]) DuctPlate(isSolid=true);
     children();
   }
 }
@@ -303,5 +305,6 @@ module TwinFanDuct() {
   }
 }
 
-TopMountingPlate();
-// TwinFanDuct();
+// TwinDucts(n=1);
+// TopMountingPlate();
+TwinFanDuct();

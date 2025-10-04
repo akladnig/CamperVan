@@ -22,7 +22,7 @@ tankL = 350;
 //
 seatHeight = 460;
 baseWidth = 850;
-headBoardBoxWidth = 150;
+headBoardBoxWidth = 200;
 // headBoardBoxWidth = 200;
 
 sofaBedWidth = baseWidth+headBoardBoxWidth;
