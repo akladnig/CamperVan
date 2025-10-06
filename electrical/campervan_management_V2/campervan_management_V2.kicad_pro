@@ -553,7 +553,6 @@
     },
     "net_colors": {
       "/Battery Management/Power On Switch - 4V1": "rgb(255, 255, 255)",
-      "/Battery Management/Power On Switch - Vin": "rgb(255, 0, 0)",
       "GND": "rgb(0, 255, 0)",
       "VCC_3V3": "rgb(255, 0, 255)",
       "VCC_3V3A": "rgb(0, 255, 255)",
@@ -840,6 +839,10 @@
     [
       "af2552d0-9fb4-47ca-97f2-e4c8a0326568",
       "3V3 LDO1"
+    ],
+    [
+      "37297b33-2fc6-4e16-92e6-9c5c7349d50e",
+      "Flow Sensors"
     ]
   ],
   "text_variables": {}

@@ -2434,12 +2434,6 @@
 		(uuid "73d8d6fc-bee5-43d6-b5f5-f7b7ffae2960")
 	)
 	(junction
-		(at 226.06 242.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "83371524-7dbc-41be-8042-3c4011ef44c0")
-	)
-	(junction
 		(at 193.04 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2480,20 +2474,12 @@
 		(uuid "01d4d348-03ec-4602-8624-6b34995c6cdb")
 	)
 	(no_connect
-		(at 219.71 274.32)
-		(uuid "3555dfa5-271b-4f24-b760-f64f6b44fd00")
-	)
-	(no_connect
 		(at 162.56 142.24)
 		(uuid "5d149463-35e1-405f-9d82-e8d4e9dc3c34")
 	)
 	(no_connect
 		(at 198.12 119.38)
 		(uuid "cc37e500-085e-4352-8e38-f664e0a62bbf")
-	)
-	(no_connect
-		(at 219.71 250.19)
-		(uuid "d4104dcd-62c0-47a3-85e1-62393598ed88")
 	)
 	(no_connect
 		(at 198.12 121.92)
@@ -2536,16 +2522,6 @@
 			(type default)
 		)
 		(uuid "0324ca05-0066-4d3b-9fd4-34ed39f747f0")
-	)
-	(wire
-		(pts
-			(xy 219.71 245.11) (xy 233.68 245.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "035ae08b-b64c-4606-a16a-0a5f4de19d9b")
 	)
 	(wire
 		(pts
@@ -2596,26 +2572,6 @@
 			(type default)
 		)
 		(uuid "08db5fe4-b3a2-4111-90f9-a68b6b90790b")
-	)
-	(wire
-		(pts
-			(xy 222.25 271.78) (xy 222.25 273.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "090fba28-f6f7-41bb-9e98-4da5e3945a28")
-	)
-	(wire
-		(pts
-			(xy 219.71 271.78) (xy 222.25 271.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f96ff5e-b0a1-4e6b-8036-0e2d03f2d848")
 	)
 	(wire
 		(pts
@@ -2949,16 +2905,6 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 266.7) (xy 226.06 266.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "504a685f-bba3-4928-8dfb-585e1fbe60ef")
-	)
-	(wire
-		(pts
 			(xy 125.73 142.24) (xy 114.3 142.24)
 		)
 		(stroke
@@ -2989,16 +2935,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 248.92) (xy 222.25 247.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "569cc6a8-7c82-4b5d-a111-9f25166a7207")
-	)
-	(wire
-		(pts
 			(xy 189.23 76.2) (xy 193.04 76.2)
 		)
 		(stroke
@@ -3026,16 +2962,6 @@
 			(type default)
 		)
 		(uuid "60825afc-ea1d-41fe-99f3-5fa267111e58")
-	)
-	(wire
-		(pts
-			(xy 219.71 269.24) (xy 228.6 269.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66ee4c85-ac76-4784-bfe7-a15cf4565363")
 	)
 	(wire
 		(pts
@@ -3089,16 +3015,6 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 247.65) (xy 222.25 247.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72fae96d-2eca-4384-85d8-da08dde9c8c3")
-	)
-	(wire
-		(pts
 			(xy 193.04 76.2) (xy 194.31 76.2)
 		)
 		(stroke
@@ -3106,16 +3022,6 @@
 			(type default)
 		)
 		(uuid "7570f1a4-b559-4e1e-991a-f1912b034900")
-	)
-	(wire
-		(pts
-			(xy 219.71 242.57) (xy 226.06 242.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a523daa-315a-46dd-8436-27de54f8e015")
 	)
 	(wire
 		(pts
@@ -3176,16 +3082,6 @@
 			(type default)
 		)
 		(uuid "868cd831-2f4f-427d-a1ba-68f29920cc29")
-	)
-	(wire
-		(pts
-			(xy 226.06 238.76) (xy 226.06 242.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88ff6bd0-f3ca-4888-9986-a6cbfd563814")
 	)
 	(wire
 		(pts
@@ -3629,6 +3525,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 214.63) (xy 238.76 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddc751a6-41f5-483e-83db-7497edd3df7d")
+	)
+	(wire
+		(pts
 			(xy 101.6 26.67) (xy 181.61 26.67)
 		)
 		(stroke
@@ -3689,16 +3595,6 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 242.57) (xy 226.06 266.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9bb5cde-6555-4b0b-85ab-82426c86cff5")
-	)
-	(wire
-		(pts
 			(xy 101.6 59.69) (xy 107.95 59.69)
 		)
 		(stroke
@@ -3749,6 +3645,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 219.71) (xy 238.76 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcb479e9-a87b-4a60-b11c-e20961d5f435")
+	)
+	(wire
+		(pts
 			(xy 228.6 115.57) (xy 228.6 120.65)
 		)
 		(stroke
@@ -3788,16 +3694,6 @@
 		)
 		(uuid "00fd58da-2602-4af1-90d5-5604621b49a1")
 	)
-	(label "Input Flow Sensor"
-		(at 233.68 245.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "023cc914-27eb-409a-9468-ff0122517ade")
-	)
 	(label "Batteries On"
 		(at 107.95 55.88 0)
 		(effects
@@ -3820,7 +3716,7 @@
 		(uuid "12ff33fe-4430-4864-9137-993084e8d52e")
 	)
 	(label "Output Flow Sensor"
-		(at 228.6 269.24 0)
+		(at 238.76 219.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4061,6 +3957,16 @@
 			(justify right bottom)
 		)
 		(uuid "e8bc6904-c863-4966-8db0-009f6e0d8b99")
+	)
+	(label "Input Flow Sensor"
+		(at 238.76 214.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea455b87-5f7b-4fa6-8f6e-673b90f33dd5")
 	)
 	(label "Rx"
 		(at 158.75 124.46 180)
@@ -4525,73 +4431,6 @@
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 226.06 238.76 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "12b7ba0b-79d8-4d84-9700-7c48cd2812d8")
-		(property "Reference" "#PWR014"
-			(at 226.06 242.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC_3V3"
-			(at 227.33 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 226.06 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 226.06 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 226.06 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ec274aa9-5987-43bd-988d-efffa8ec0f31")
-		)
-		(instances
-			(project "campervan_management"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -5406,72 +5245,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 222.25 273.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "39cffc21-7a2c-4d08-8aec-d1512aa547d9")
-		(property "Reference" "#PWR012"
-			(at 222.25 279.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 222.25 278.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 222.25 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "95068fb4-eafc-4250-94f7-6d75901df0d0")
-		)
-		(instances
-			(project "campervan_management"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
 		(at 401.32 34.29 0)
 		(unit 1)
@@ -5871,226 +5644,6 @@
 			(project "campervan_management"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Socket")
-		(at 214.63 269.24 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "45b2c144-a264-4840-8e0e-34afbfe6a024")
-		(property "Reference" "J10"
-			(at 215.265 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Output Flow Sensor"
-			(at 215.265 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical"
-			(at 214.63 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 214.63 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 214.63 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" ""
-			(at 214.63 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" ""
-			(at 214.63 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "e14" ""
-			(at 214.63 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Component Class" ""
-			(at 214.63 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e8eec627-7c74-4c98-bdf0-c629169126f4")
-		)
-		(pin "3"
-			(uuid "45309b13-1b06-4009-99f9-98bc1d514188")
-		)
-		(pin "1"
-			(uuid "139a4686-c2fa-43de-9ba5-bf12060b623c")
-		)
-		(pin "4"
-			(uuid "34fd7e96-3930-4c7c-90b0-c2d7996562a8")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Socket")
-		(at 214.63 245.11 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "45cf3c2d-4749-47e5-a6a7-6886eeb93ad2")
-		(property "Reference" "J11"
-			(at 215.265 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Input Flow Sensor"
-			(at 215.265 240.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical"
-			(at 214.63 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 214.63 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 214.63 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Extended" ""
-			(at 214.63 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" ""
-			(at 214.63 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "e14" ""
-			(at 214.63 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Component Class" ""
-			(at 214.63 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "38c78e28-eb3a-4777-ac25-9a9c20ba87ea")
-		)
-		(pin "3"
-			(uuid "e420be05-e4d7-4c9c-84eb-a7685178471f")
-		)
-		(pin "1"
-			(uuid "33325b03-eee4-431d-bd29-1a5a60982837")
-		)
-		(pin "4"
-			(uuid "7f13db98-9094-4d0d-8971-d5c0cf7e6112")
-		)
-		(instances
-			(project "campervan_management_V2"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -7750,72 +7303,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 222.25 248.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eb10acda-1e53-4250-bfae-f4c6aa496c4a")
-		(property "Reference" "#PWR011"
-			(at 222.25 255.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 222.25 254 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 222.25 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "419f3771-e1c7-475b-aa67-9dc56e02a225")
-		)
-		(instances
-			(project "campervan_management"
-				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
-					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VDD")
 		(at 29.21 86.36 0)
 		(unit 1)
@@ -8256,6 +7743,70 @@
 			(project "campervan_management_V2"
 				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
 					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 199.39 207.01)
+		(size 31.75 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "37297b33-2fc6-4e16-92e6-9c5c7349d50e")
+		(property "Sheetname" "Flow Sensors"
+			(at 200.66 210.82 0)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.254)
+					(bold yes)
+					(color 0 0 255 1)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "flow_sensors.kicad_sch"
+			(at 199.39 227.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Input Flow Sensor" output
+			(at 231.14 214.63 0)
+			(uuid "7bb05dfa-0256-46df-80d3-87adb01bf938")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Output Flow Sensor" output
+			(at 231.14 219.71 0)
+			(uuid "796b3036-cb6f-4fd2-b3de-ebb714ccde6f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "campervan_management_V2"
+				(path "/870a08cc-a6e6-4310-b4b3-ae6af01530aa"
+					(page "10")
 				)
 			)
 		)
